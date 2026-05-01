@@ -10,12 +10,20 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import {
-  US_13F_HOLDINGS,
+  US_13F_HOLDINGS as MOCK_US_13F,
   type Us13FHolding,
 } from "@/lib/mock-data/smart-money";
+import live13F from "@/data/us-13f.json";
 import { cn } from "@/lib/utils";
 import { ActionBadge } from "./action-badge";
 import { SortableHeader, type SortDir } from "./sortable-header";
+
+// Use real SEC EDGAR data when available; fall back to mock if the GitHub
+// Actions workflow hasn't seeded data yet.
+const liveHoldings = (live13F.holdings ?? []) as Us13FHolding[];
+const US_13F_HOLDINGS: Us13FHolding[] =
+  liveHoldings.length > 0 ? liveHoldings : MOCK_US_13F;
+const IS_LIVE = liveHoldings.length > 0;
 
 type SortKey = keyof Pick<
   Us13FHolding,
@@ -65,6 +73,24 @@ export function Us13F() {
 
   return (
     <>
+      <div className="mb-3 flex items-center gap-2 text-xs md:text-sm">
+        {IS_LIVE ? (
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-2.5 py-1 font-semibold text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />
+            LIVE · SEC EDGAR
+          </span>
+        ) : (
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-100 px-2.5 py-1 font-semibold text-amber-700 dark:bg-amber-950/60 dark:text-amber-300">
+            📦 데모 데이터
+          </span>
+        )}
+        <span className="text-muted-foreground">
+          {IS_LIVE
+            ? "분기마다 자동 갱신 (45일 지연 공시)"
+            : "실데이터는 다음 자동 갱신 시 채워집니다"}
+        </span>
+      </div>
+
       {/* 모바일 카드 리스트 */}
       <ul className="flex flex-col gap-3 md:hidden">
         {sorted.map((h) => (
@@ -75,10 +101,14 @@ export function Us13F() {
             <div className="flex items-start justify-between gap-3">
               <div className="min-w-0">
                 <div className="flex items-baseline gap-2">
-                  <p className="text-base font-semibold">{h.ticker}</p>
-                  <p className="truncate text-xs text-muted-foreground">
-                    {h.stockName}
+                  <p className="text-base font-semibold">
+                    {h.ticker || h.stockName}
                   </p>
+                  {h.ticker && (
+                    <p className="truncate text-xs text-muted-foreground">
+                      {h.stockName}
+                    </p>
+                  )}
                 </div>
                 <p className="mt-1 truncate text-xs text-muted-foreground">
                   {h.fund} · {h.manager}
@@ -183,10 +213,14 @@ export function Us13F() {
                   </div>
                 </TableCell>
                 <TableCell>
-                  <div className="font-semibold">{h.ticker}</div>
-                  <div className="text-xs text-muted-foreground">
-                    {h.stockName}
+                  <div className="font-semibold">
+                    {h.ticker || h.stockName}
                   </div>
+                  {h.ticker && (
+                    <div className="text-xs text-muted-foreground">
+                      {h.stockName}
+                    </div>
+                  )}
                 </TableCell>
                 <TableCell
                   className={cn(

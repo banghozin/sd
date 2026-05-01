@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "fetch:fx": "tsx scripts/fetch-fx.ts",
+    "fetch:13f": "tsx scripts/fetch-13f.ts",
+    "fetch:all": "npm run fetch:fx && npm run fetch:13f"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",
@@ -31,7 +34,9 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
+    "fast-xml-parser": "^5.7.2",
     "tailwindcss": "^4",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }

@@ -1,0 +1,54 @@
+name: Update market data
+
+on:
+  # Every 6 hours at :15 (cron is best-effort, may drift up to ~15 min)
+  schedule:
+    - cron: "15 */6 * * *"
+  # Allow manual trigger from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch FX (Frankfurter)
+        run: npm run fetch:fx
+        continue-on-error: true
+
+      - name: Fetch 13F (SEC EDGAR)
+        env:
+          SEC_USER_AGENT: "StockDashboard ${{ github.repository_owner }}@users.noreply.github.com"
+        run: npm run fetch:13f
+        continue-on-error: true
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/
+          if git diff --staged --quiet; then
+            echo "No data changes to commit"
+            exit 0
+          fi
+          git commit -m "chore(data): auto-update FX + 13F [skip ci]"
+          git push

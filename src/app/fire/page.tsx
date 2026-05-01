@@ -1,22 +1,27 @@
 import { Flame } from "lucide-react";
 import { FireSimulator } from "@/components/fire/fire-simulator";
 import { GuideSection } from "@/components/layout/guide-section";
+import { FxBadge } from "@/components/layout/fx-badge";
+import fxData from "@/data/fx.json";
 
 export default function FirePage() {
   return (
     <div className="flex flex-col gap-6 md:gap-8">
-      <header className="flex items-start gap-3">
-        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary md:h-12 md:w-12">
-          <Flame className="h-5 w-5 md:h-6 md:w-6" />
+      <header className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+        <div className="flex items-start gap-3">
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary md:h-12 md:w-12">
+            <Flame className="h-5 w-5 md:h-6 md:w-6" />
+          </div>
+          <div className="min-w-0">
+            <h2 className="text-xl font-semibold tracking-tight md:text-2xl">
+              FIRE 배당 스노우볼 시뮬레이터
+            </h2>
+            <p className="mt-0.5 text-sm text-muted-foreground md:text-base">
+              세금과 환율을 반영한 한·미 배당 재투자 시뮬레이션 (DRIP 가정)
+            </p>
+          </div>
         </div>
-        <div className="min-w-0">
-          <h2 className="text-xl font-semibold tracking-tight md:text-2xl">
-            FIRE 배당 스노우볼 시뮬레이터
-          </h2>
-          <p className="mt-0.5 text-sm text-muted-foreground md:text-base">
-            세금과 환율을 반영한 한·미 배당 재투자 시뮬레이션 (DRIP 가정)
-          </p>
-        </div>
+        <FxBadge />
       </header>
 
       <FireSimulator />
@@ -40,7 +45,11 @@ export default function FirePage() {
       />
 
       <p className="text-center text-xs text-muted-foreground">
-        ※ 배당소득세 한국 15.4% / 미국 원천징수 15% · 환율 1$ = 1,350원 (고정 가정)
+        ※ 배당소득세 한국 15.4% / 미국 원천징수 15% · 환율{" "}
+        <span className="font-semibold tabular-nums">
+          1$ = {fxData.rate.toLocaleString("ko-KR", { maximumFractionDigits: 0 })}원
+        </span>{" "}
+        (Frankfurter ECB · {fxData.asOf} 기준)
         <br />
         실제 수익률·세율·환율은 시장 상황에 따라 변동합니다.
       </p>
