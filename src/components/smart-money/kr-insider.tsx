@@ -99,7 +99,7 @@ export function KrInsider() {
         )}
         <span className="text-muted-foreground">
           {IS_LIVE
-            ? "6시간마다 자동 갱신 · 거래 단가는 공시 본문에 있어 주식 수로 표시"
+            ? "1시간마다 자동 갱신 · 거래 단가는 공시 본문에 있어 주식 수로 표시"
             : "실데이터는 다음 자동 갱신 시 채워집니다"}
         </span>
       </div>
