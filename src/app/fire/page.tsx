@@ -2,6 +2,7 @@ import { Flame } from "lucide-react";
 import { FireSimulator } from "@/components/fire/fire-simulator";
 import { GuideSection } from "@/components/layout/guide-section";
 import { FxBadge } from "@/components/layout/fx-badge";
+import { DataDisclaimer } from "@/components/layout/data-disclaimer";
 import fxData from "@/data/fx.json";
 
 export default function FirePage() {
@@ -24,6 +25,14 @@ export default function FirePage() {
         <FxBadge />
       </header>
 
+      <DataDisclaimer>
+        <strong className="font-semibold">미래 수익을 보장하지 않아요.</strong>{" "}
+        시드머니·월 투자금·배당률은 사용자 가정값이고, 실제 주가 상승은
+        반영하지 않은 보수적 시뮬레이션입니다. 환율만 1시간마다 자동
+        갱신되며, 그 외 가정은 시장 상황에 따라 달라질 수 있어요. 참고용으로
+        활용해 주세요.
+      </DataDisclaimer>
+
       <FireSimulator />
 
       <GuideSection
@@ -35,7 +44,7 @@ export default function FirePage() {
           },
           {
             heading: "세금은 어떻게 적용되나요?",
-            body: "한국 주식의 배당은 배당소득세 15.4%(원천 14% + 지방소득세 1.4%)가 자동으로 차감되고, 미국 주식은 미국 정부가 15%를 원천징수합니다. 시뮬레이터는 매년 받은 배당에서 해당 세율을 즉시 차감하고 남은 금액만 재투자하기 때문에, 화면에 보이는 숫자는 모두 '세후 기준'입니다. 환율은 일단 1달러 1,350원으로 고정해 단순화했어요.",
+            body: "한국 주식의 배당은 배당소득세 15.4%(원천 14% + 지방소득세 1.4%)가 자동으로 차감되고, 미국 주식은 미국 정부가 15%를 원천징수합니다. 시뮬레이터는 매년 받은 배당에서 해당 세율을 즉시 차감하고 남은 금액만 재투자하기 때문에, 화면에 보이는 숫자는 모두 '세후 기준'입니다. 환율은 우상단 뱃지에 표시된 ECB 공식 USD/KRW 환율을 1시간마다 자동으로 가져와 적용해요.",
           },
           {
             heading: "이 시뮬레이션의 한계",

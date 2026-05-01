@@ -1,6 +1,7 @@
 import { Layers } from "lucide-react";
 import { OverlapAnalyzer } from "@/components/overlap/overlap-analyzer";
 import { GuideSection } from "@/components/layout/guide-section";
+import { DataDisclaimer } from "@/components/layout/data-disclaimer";
 
 export default function OverlapPage() {
   return (
@@ -18,6 +19,13 @@ export default function OverlapPage() {
           </p>
         </div>
       </header>
+
+      <DataDisclaimer>
+        <strong className="font-semibold">참고용 추정치예요.</strong> ETF의 섹터
+        비중은 분기마다 한 번씩 바뀌는 정적 매핑을 사용하기 때문에 실제 비중과
+        ±5% 정도 오차가 있을 수 있어요. 정확한 비중은 각 ETF 발행사의 상품
+        설명서로 확인해 주세요.
+      </DataDisclaimer>
 
       <OverlapAnalyzer />
 
