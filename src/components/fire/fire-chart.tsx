@@ -12,6 +12,7 @@ import {
 import type { TooltipContentProps } from "recharts/types/component/Tooltip";
 import type { FireYearPoint } from "@/lib/fire-calculation";
 import { formatKRWLong, formatKRWShort } from "@/lib/fire-calculation";
+import { ClientOnly } from "@/components/layout/client-only";
 
 type Props = {
   series: FireYearPoint[];
@@ -48,6 +49,11 @@ function ChartTooltip({ active, payload, label }: TooltipContentProps) {
 export function FireChart({ series }: Props) {
   return (
     <div className="h-72 w-full md:h-80 lg:h-96">
+      <ClientOnly
+        fallback={
+          <div className="h-full w-full animate-pulse rounded-2xl bg-muted/30" />
+        }
+      >
       <ResponsiveContainer width="100%" height="100%">
         <AreaChart
           data={series}
@@ -101,6 +107,7 @@ export function FireChart({ series }: Props) {
           />
         </AreaChart>
       </ResponsiveContainer>
+      </ClientOnly>
     </div>
   );
 }

@@ -3,12 +3,11 @@ import { HeatmapSection } from "@/components/heatmap/heatmap-section";
 import { GuideSection } from "@/components/layout/guide-section";
 
 export default function SectorMapPage() {
-  const today = new Date().toLocaleDateString("ko-KR", {
-    timeZone: "Asia/Seoul",
-    month: "long",
-    day: "numeric",
-    weekday: "short",
-  });
+  // Manual KST formatting (no Intl) to keep server/client output identical
+  const now = new Date();
+  const kst = new Date(now.getTime() + 9 * 60 * 60 * 1000);
+  const KO_DAYS = ["일", "월", "화", "수", "목", "금", "토"];
+  const today = `${kst.getUTCMonth() + 1}월 ${kst.getUTCDate()}일 (${KO_DAYS[kst.getUTCDay()]})`;
 
   return (
     <div className="flex flex-col gap-6 md:gap-8">

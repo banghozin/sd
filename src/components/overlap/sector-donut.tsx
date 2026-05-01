@@ -8,6 +8,7 @@ import {
   formatPct,
   type SectorBreakdown,
 } from "@/lib/portfolio-analysis";
+import { ClientOnly } from "@/components/layout/client-only";
 
 type Props = {
   breakdown: SectorBreakdown[];
@@ -41,28 +42,34 @@ export function SectorDonut({ breakdown, totalAmount }: Props) {
   return (
     <div className="flex flex-col gap-4">
       <div className="relative h-72 md:h-80">
-        <ResponsiveContainer width="100%" height="100%">
-          <PieChart>
-            <Pie
-              data={breakdown}
-              dataKey="amount"
-              nameKey="sector"
-              innerRadius="58%"
-              outerRadius="88%"
-              paddingAngle={1.5}
-              isAnimationActive={false}
-            >
-              {breakdown.map((b) => (
-                <Cell
-                  key={b.sector}
-                  fill={SECTOR_COLORS[b.sector] ?? "#94a3b8"}
-                  stroke="transparent"
-                />
-              ))}
-            </Pie>
-            <Tooltip content={CustomTooltip} />
-          </PieChart>
-        </ResponsiveContainer>
+        <ClientOnly
+          fallback={
+            <div className="h-full w-full animate-pulse rounded-full bg-muted/30" />
+          }
+        >
+          <ResponsiveContainer width="100%" height="100%">
+            <PieChart>
+              <Pie
+                data={breakdown}
+                dataKey="amount"
+                nameKey="sector"
+                innerRadius="58%"
+                outerRadius="88%"
+                paddingAngle={1.5}
+                isAnimationActive={false}
+              >
+                {breakdown.map((b) => (
+                  <Cell
+                    key={b.sector}
+                    fill={SECTOR_COLORS[b.sector] ?? "#94a3b8"}
+                    stroke="transparent"
+                  />
+                ))}
+              </Pie>
+              <Tooltip content={CustomTooltip} />
+            </PieChart>
+          </ResponsiveContainer>
+        </ClientOnly>
         <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center">
           <p className="text-xs text-muted-foreground md:text-sm">총 투자금</p>
           <p className="text-2xl font-bold tabular-nums tracking-tight md:text-3xl">

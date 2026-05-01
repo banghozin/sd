@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { AdBanner } from "@/components/ads/ad-banner";
@@ -12,12 +12,18 @@ import { SectorDonut } from "./sector-donut";
 import { RiskBanner } from "./risk-banner";
 
 export function OverlapAnalyzer() {
+  const [mounted, setMounted] = useState(false);
   const hasHydrated = usePortfolioStore((s) => s.hasHydrated);
   const holdings = usePortfolioStore((s) => s.holdings);
 
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- mount detection for SSR-safe render
+    setMounted(true);
+  }, []);
+
   const analysis = useMemo(() => analyzePortfolio(holdings), [holdings]);
 
-  if (!hasHydrated) {
+  if (!mounted || !hasHydrated) {
     return (
       <div className="grid gap-6 md:gap-8 lg:grid-cols-2">
         <Skeleton className="h-96 rounded-2xl" />

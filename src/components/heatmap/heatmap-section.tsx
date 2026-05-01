@@ -33,17 +33,17 @@ const LEGEND = [
 
 function formatFetchedAt(iso: string | null): string {
   if (!iso) return "";
-  try {
-    return new Date(iso).toLocaleString("ko-KR", {
-      timeZone: "Asia/Seoul",
-      month: "long",
-      day: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
-    });
-  } catch {
-    return "";
-  }
+  // Manual UTC → KST conversion to avoid relying on Intl locale data,
+  // which can differ between Vercel's Node.js runtime and the user's
+  // browser (root cause class for hydration mismatches).
+  const ms = new Date(iso).getTime();
+  if (Number.isNaN(ms)) return "";
+  const kst = new Date(ms + 9 * 60 * 60 * 1000);
+  const month = kst.getUTCMonth() + 1;
+  const day = kst.getUTCDate();
+  const hh = String(kst.getUTCHours()).padStart(2, "0");
+  const mm = String(kst.getUTCMinutes()).padStart(2, "0");
+  return `${month}월 ${day}일 ${hh}:${mm}`;
 }
 
 export function HeatmapSection() {
