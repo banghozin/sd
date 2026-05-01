@@ -52,23 +52,28 @@ export function AdBanner({
       </span>
 
       {/*
-        TODO: 실제 구글 애드센스로 교체할 위치
-        --------------------------------------
-        1) /src/app/layout.tsx 의 <head> 또는 root에 AdSense 로더 한 번만 추가:
-             import Script from "next/script";
-             <Script
-               async
-               strategy="afterInteractive"
-               src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
-               crossOrigin="anonymous"
-             />
+        AdSense loader script is wired in app/layout.tsx (client ca-pub-5250094872537223).
+        Once Google approves the site:
+          1) AdSense 대시보드 → Ads → By ad unit → Create new ad unit
+             각 variant 별로 광고 단위 생성:
+               - inline   → "Display ads" Auto 반응형
+               - horizontal → "Display ads" Horizontal
+               - vertical → "Display ads" Vertical
+          2) 각 단위가 부여하는 numeric slot ID (e.g. "1234567890") 를 받아
+             SLOT_IDS 매핑(아래)에 채워 넣고 placeholder 를 <ins.adsbygoogle> 로 교체:
 
-        2) 이 컴포넌트의 placeholder 마크업을 아래 ins + push로 교체:
+             const SLOT_IDS: Record<string, string> = {
+               "sector-map-infeed": "1234567890",
+               "overlap-infeed":    "1234567891",
+               "bottom-banner":     "1234567892",
+               "right-rail":        "1234567893",
+             };
+
              <ins
                className="adsbygoogle block"
                style={{ display: "block" }}
-               data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-               data-ad-slot={slot}
+               data-ad-client="ca-pub-5250094872537223"
+               data-ad-slot={SLOT_IDS[slot]}
                data-ad-format="auto"
                data-full-width-responsive="true"
              />
@@ -76,14 +81,7 @@ export function AdBanner({
                {`(adsbygoogle = window.adsbygoogle || []).push({});`}
              </Script>
 
-        3) variant 별로 권장 사이즈:
-             - inline   : data-ad-format="fluid" / 반응형
-             - horizontal: 728x90 (PC) ~ 320x100 (모바일) 반응형
-             - vertical : 300x600 (rectangle, sidebar)
-
-        4) 클릭 유도(accidental clicks) 방지:
-             - 버튼/링크와 최소 24px 이상 마진 유지
-             - 광고 위에 고정 헤더/푸터를 겹치지 않게
+          3) 클릭 유도 방지: 버튼/링크와 최소 24px 마진 유지 (현재 컨테이너 spacing 충족).
       */}
     </aside>
   );

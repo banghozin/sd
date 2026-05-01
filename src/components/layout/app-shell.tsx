@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Link from "next/link";
 import { Sidebar } from "./sidebar";
 import { BottomNav } from "./bottom-nav";
 import { AppHeader } from "./app-header";
@@ -16,6 +17,25 @@ export function AppShell({ children }: { children: ReactNode }) {
             <div className="mt-10 xl:hidden">
               <AdBanner variant="horizontal" slot="bottom-banner" />
             </div>
+            <footer className="mt-10 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 border-t border-border pt-6 text-xs text-muted-foreground md:text-sm">
+              <Link
+                href="/privacy"
+                className="hover:text-foreground hover:underline underline-offset-4"
+              >
+                개인정보처리방침
+              </Link>
+              <span aria-hidden>·</span>
+              <a
+                href="https://github.com/banghozin/sd"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-foreground hover:underline underline-offset-4"
+              >
+                GitHub
+              </a>
+              <span aria-hidden>·</span>
+              <span>© {new Date().getFullYear()} 한미 통합 주식 대시보드</span>
+            </footer>
           </main>
 
           <aside

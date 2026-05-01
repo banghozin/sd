@@ -1,8 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { AppShell } from "@/components/layout/app-shell";
 import { ThemeProvider } from "@/components/layout/theme-provider";
+
+const ADSENSE_CLIENT = "ca-pub-5250094872537223";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,21 +45,13 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full">
-        {/*
-          TODO: 구글 애드센스 승인 후 next/script 추가
-          ----------------------------------------
-          import Script from "next/script";
-
-          <Script
-            async
-            strategy="afterInteractive"
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
-            crossOrigin="anonymous"
-          />
-
-          위 한 줄을 <body> 또는 <head> 어디든 한 번만 두면, 모든 AdBanner 컴포넌트의
-          ins.adsbygoogle 가 자동으로 채워집니다. (afterInteractive로 메인 렌더 차단 X)
-        */}
+        <Script
+          id="adsbygoogle-loader"
+          async
+          strategy="afterInteractive"
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+          crossOrigin="anonymous"
+        />
         <ThemeProvider>
           <AppShell>{children}</AppShell>
         </ThemeProvider>
