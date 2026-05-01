@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Shield, TrendingUp } from "lucide-react";
+import { Coffee, Shield, TrendingUp } from "lucide-react";
 import { NAV_ITEMS } from "./nav-config";
 import { cn } from "@/lib/utils";
 
@@ -61,6 +61,18 @@ export function Sidebar() {
       </nav>
 
       <div className="mt-auto border-t border-sidebar-border px-3 py-3 lg:px-6 lg:py-4">
+        <Link
+          href="/support"
+          className={cn(
+            "flex items-center gap-3 rounded-xl px-3 py-2.5 text-xs font-medium transition-colors lg:px-4 lg:text-sm",
+            pathname === "/support"
+              ? "bg-sidebar-accent text-sidebar-accent-foreground"
+              : "text-sidebar-foreground/60 hover:bg-sidebar-accent/60 hover:text-sidebar-accent-foreground",
+          )}
+        >
+          <Coffee className="h-4 w-4 shrink-0" />
+          <span className="hidden lg:inline">개발자에게 커피 한 잔</span>
+        </Link>
         <Link
           href="/privacy"
           className={cn(
