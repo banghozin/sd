@@ -4,7 +4,7 @@
       "id": "us-tech",
       "name": "기술·반도체",
       "market": "US",
-      "changePct": 0.52,
+      "changePct": 0.54,
       "marketCapBillion": 0,
       "topTickers": [
         "AAPL",
@@ -17,7 +17,7 @@
       "id": "us-comm",
       "name": "통신·미디어",
       "market": "US",
-      "changePct": 1.18,
+      "changePct": 1.19,
       "marketCapBillion": 0,
       "topTickers": [
         "GOOGL",
@@ -30,7 +30,7 @@
       "id": "us-disc",
       "name": "소비재 (임의)",
       "market": "US",
-      "changePct": 0.43,
+      "changePct": 0.54,
       "marketCapBillion": 0,
       "topTickers": [
         "AMZN",
@@ -43,7 +43,7 @@
       "id": "us-staples",
       "name": "소비재 (필수)",
       "market": "US",
-      "changePct": 1.98,
+      "changePct": 1.97,
       "marketCapBillion": 0,
       "topTickers": [
         "WMT",
@@ -56,7 +56,7 @@
       "id": "us-health",
       "name": "헬스케어",
       "market": "US",
-      "changePct": 1.3,
+      "changePct": 1.33,
       "marketCapBillion": 0,
       "topTickers": [
         "LLY",
@@ -69,7 +69,7 @@
       "id": "us-finance",
       "name": "금융",
       "market": "US",
-      "changePct": 1.85,
+      "changePct": 1.92,
       "marketCapBillion": 0,
       "topTickers": [
         "JPM",
@@ -82,7 +82,7 @@
       "id": "us-energy",
       "name": "에너지",
       "market": "US",
-      "changePct": 3.89,
+      "changePct": 3.87,
       "marketCapBillion": 0,
       "topTickers": [
         "XOM",
@@ -94,7 +94,7 @@
       "id": "us-ind",
       "name": "산업·방산",
       "market": "US",
-      "changePct": 0.51,
+      "changePct": 0.52,
       "marketCapBillion": 0,
       "topTickers": [
         "GE",
@@ -107,7 +107,7 @@
       "id": "us-materials",
       "name": "소재",
       "market": "US",
-      "changePct": -0.62,
+      "changePct": -0.57,
       "marketCapBillion": 0,
       "topTickers": [
         "LIN",
@@ -119,7 +119,7 @@
       "id": "us-utility",
       "name": "유틸리티",
       "market": "US",
-      "changePct": 2,
+      "changePct": 2.05,
       "marketCapBillion": 0,
       "topTickers": [
         "NEE",
@@ -131,7 +131,7 @@
       "id": "us-realty",
       "name": "부동산",
       "market": "US",
-      "changePct": 1.39,
+      "changePct": 1.4,
       "marketCapBillion": 0,
       "topTickers": [
         "AMT",
@@ -268,7 +268,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-05-01T15:07:40.835Z",
+  "fetchedAt": "2026-05-01T15:10:19.082Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
