@@ -25,16 +25,7 @@ export function AppShell({ children }: { children: ReactNode }) {
                 개인정보처리방침
               </Link>
               <span aria-hidden>·</span>
-              <a
-                href="https://github.com/banghozin/sd"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-foreground hover:underline underline-offset-4"
-              >
-                GitHub
-              </a>
-              <span aria-hidden>·</span>
-              <span>© 2026 한미 통합 주식 대시보드</span>
+              <span>© 2026 StocksNet</span>
             </footer>
           </main>
 

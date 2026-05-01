@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "개인정보처리방침 | 한미 통합 주식 대시보드",
+  title: "개인정보처리방침 | StocksNet",
   description:
-    "한미 통합 주식 대시보드의 개인정보처리방침 — 수집하는 정보, 쿠키, 광고, 외부 데이터 출처 안내.",
+    "StocksNet의 개인정보처리방침 — 수집하는 정보, 쿠키, 광고, 외부 데이터 출처 안내.",
 };
 
 const UPDATED_AT = "2026-05-01";
@@ -21,7 +21,7 @@ export default function PrivacyPage() {
             개인정보처리방침
           </h1>
           <p className="mt-1 text-sm text-muted-foreground md:text-base">
-            한미 통합 주식 대시보드 (stocksnet.vercel.app) · 시행일 {UPDATED_AT}
+            StocksNet (stocksnet.vercel.app) · 시행일 {UPDATED_AT}
           </p>
         </div>
       </header>

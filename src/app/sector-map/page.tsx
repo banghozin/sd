@@ -46,9 +46,6 @@ export default function SectorMapPage() {
         ]}
       />
 
-      <p className="text-center text-xs text-muted-foreground md:text-xs">
-        ※ 데모용 더미 데이터입니다. 실제 시세는 추후 무료 API로 연동됩니다.
-      </p>
     </div>
   );
 }

@@ -19,7 +19,7 @@ export function AppHeader() {
         </div>
         <div className="min-w-0 flex-1">
           <h1 className="truncate text-base font-semibold md:text-lg">
-            {current?.label ?? "한미 통합 대시보드"}
+            {current?.label ?? "StocksNet"}
           </h1>
           {current?.description ? (
             <p className="hidden truncate text-xs text-muted-foreground md:block">

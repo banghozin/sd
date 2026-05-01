@@ -22,8 +22,11 @@ export function Sidebar() {
         <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-primary-foreground">
           <TrendingUp className="h-5 w-5" />
         </div>
-        <span className="hidden lg:block text-lg font-semibold tracking-tight">
-          한미 대시보드
+        <span className="hidden lg:flex lg:flex-col lg:leading-tight">
+          <span className="text-base font-bold tracking-tight">StocksNet</span>
+          <span className="text-[11px] font-normal text-muted-foreground">
+            한·미 주식 분석
+          </span>
         </span>
       </div>
 
@@ -71,9 +74,11 @@ export function Sidebar() {
           <span className="hidden lg:inline">개인정보처리방침</span>
         </Link>
         <p className="mt-3 hidden text-xs text-muted-foreground leading-relaxed lg:block">
-          데이터는 브라우저에 저장됩니다.
+          별다른 결제 없이
           <br />
-          서버 없이 0원으로 운영돼요.
+          0원으로도 이 홈페이지를
+          <br />
+          누릴 수 있습니다.
         </p>
       </div>
     </aside>

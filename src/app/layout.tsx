@@ -18,9 +18,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "한미 통합 주식 대시보드",
+  title: "StocksNet · 한·미 주식 분석",
   description:
-    "한국·미국 주식을 한눈에. 섹터 맵, 포트폴리오 중복 분석, 스마트 머니 추적, FIRE 시뮬레이터.",
+    "StocksNet — 한국과 미국 주식을 한눈에. 섹터 맵, 포트폴리오 중복 분석, 스마트 머니 추적, FIRE 시뮬레이터를 한 화면에서.",
 };
 
 export const viewport: Viewport = {
