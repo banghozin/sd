@@ -122,6 +122,17 @@
       "rceptNo": "20260429000772"
     },
     {
+      "id": "dart-20260429000319",
+      "name": "하지훈",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 52,
+      "action": "BUY",
+      "filedAt": "2026-04-29",
+      "rceptNo": "20260429000319"
+    },
+    {
       "id": "dart-20260429000763",
       "name": "박명수",
       "position": "담당",
@@ -153,21 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-04-28",
       "rceptNo": "20260428000498"
-    },
-    {
-      "id": "dart-20260424000227",
-      "name": "조상연",
-      "position": "상무",
-      "stock": "LG에너지솔루션",
-      "amountKRW": 0,
-      "shareDelta": 1236,
-      "action": "BUY",
-      "filedAt": "2026-04-24",
-      "rceptNo": "20260424000227"
     }
   ],
-  "fetchedAt": "2026-05-01T23:02:07.834Z",
-  "inspected": 1833,
-  "matched": 1818,
+  "fetchedAt": "2026-05-01T23:09:28.312Z",
+  "inspected": 4448,
+  "matched": 4432,
   "source": "DART OpenAPI elestock.json"
 }
