@@ -47,10 +47,6 @@ export default function SmartMoneyPage() {
           <strong className="ml-1 font-semibold">SEC EDGAR</strong> (US 13F)
         </span>
       </footer>
-
-      <p className="text-center text-[11px] text-muted-foreground md:text-xs">
-        ※ 현재 표시된 데이터는 데모용 더미입니다. 실제 공시는 분기/공시일 기준 지연 반영됩니다.
-      </p>
     </div>
   );
 }

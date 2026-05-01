@@ -47,10 +47,6 @@ export default function OverlapPage() {
         ]}
       />
 
-      <p className="text-center text-xs text-muted-foreground">
-        ※ 입력한 데이터는 이 브라우저에만 저장됩니다 (LocalStorage). 서버로
-        전송되지 않아요.
-      </p>
     </div>
   );
 }
