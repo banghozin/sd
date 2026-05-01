@@ -1,7 +1,6 @@
 {
   "funds": [],
   "holdings": [],
-  "fetchedAt": null,
-  "source": "SEC EDGAR 13F-HR",
-  "note": "Will be populated on first GitHub Actions run (SEC blocks some non-US IPs at Akamai layer)."
+  "fetchedAt": "2026-05-01T07:41:17.840Z",
+  "source": "SEC EDGAR 13F-HR"
 }
