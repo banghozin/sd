@@ -1,11 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import { AppShell } from "@/components/layout/app-shell";
 import { ThemeProvider } from "@/components/layout/theme-provider";
-
-const ADSENSE_CLIENT = "ca-pub-5250094872537223";
+import { AdSenseLoader } from "@/components/ads/adsense-loader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,16 +43,10 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full">
-        <Script
-          id="adsbygoogle-loader"
-          async
-          strategy="afterInteractive"
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
-          crossOrigin="anonymous"
-        />
         <ThemeProvider>
           <AppShell>{children}</AppShell>
         </ThemeProvider>
+        <AdSenseLoader />
       </body>
     </html>
   );
