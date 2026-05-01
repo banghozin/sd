@@ -41,6 +41,17 @@ jobs:
         run: npm run fetch:13f
         continue-on-error: true
 
+      - name: Fetch DART (KR insider)
+        env:
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: |
+          if [ -z "$DART_API_KEY" ]; then
+            echo "::warning::DART_API_KEY secret not set; skipping DART fetch"
+            exit 0
+          fi
+          npm run fetch:dart
+        continue-on-error: true
+
       - name: Commit & push if changed
         run: |
           git config user.name "github-actions[bot]"

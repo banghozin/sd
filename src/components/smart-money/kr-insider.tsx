@@ -10,25 +10,53 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import {
-  KR_INSIDER_TRADES,
+  KR_INSIDER_TRADES as MOCK_KR,
   type KrInsiderTrade,
 } from "@/lib/mock-data/smart-money";
+import liveDart from "@/data/kr-insiders.json";
 import { formatKRW } from "@/lib/portfolio-analysis";
 import { ActionBadge } from "./action-badge";
 import { SortableHeader, type SortDir } from "./sortable-header";
+
+type LiveTrade = {
+  id: string;
+  name: string;
+  position: string;
+  stock: string;
+  amountKRW: number;
+  shareDelta?: number;
+  action: "BUY" | "SELL";
+  filedAt: string;
+};
+
+const liveTrades = (liveDart.trades ?? []) as LiveTrade[];
+const KR_INSIDER_TRADES: (KrInsiderTrade & { shareDelta?: number })[] =
+  liveTrades.length > 0 ? liveTrades : MOCK_KR;
+const IS_LIVE = liveTrades.length > 0;
+
+function formatShares(n: number): string {
+  return `${Math.abs(n).toLocaleString("ko-KR")}주`;
+}
 
 type SortKey = keyof Pick<
   KrInsiderTrade,
   "name" | "stock" | "amountKRW" | "filedAt" | "action"
 >;
 
+type SortableTrade = KrInsiderTrade & { shareDelta?: number };
+
 function sortTrades(
-  data: KrInsiderTrade[],
+  data: SortableTrade[],
   key: SortKey,
   dir: SortDir,
-): KrInsiderTrade[] {
+): SortableTrade[] {
   const sign = dir === "asc" ? 1 : -1;
   return [...data].sort((a, b) => {
+    if (key === "amountKRW") {
+      const av = a.amountKRW > 0 ? a.amountKRW : Math.abs(a.shareDelta ?? 0);
+      const bv = b.amountKRW > 0 ? b.amountKRW : Math.abs(b.shareDelta ?? 0);
+      return (av - bv) * sign;
+    }
     const av = a[key];
     const bv = b[key];
     if (typeof av === "number" && typeof bv === "number") {
@@ -58,6 +86,24 @@ export function KrInsider() {
 
   return (
     <>
+      <div className="mb-3 flex flex-wrap items-center gap-2 text-xs md:text-sm">
+        {IS_LIVE ? (
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-2.5 py-1 font-semibold text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />
+            LIVE · DART
+          </span>
+        ) : (
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-100 px-2.5 py-1 font-semibold text-amber-700 dark:bg-amber-950/60 dark:text-amber-300">
+            📦 데모 데이터
+          </span>
+        )}
+        <span className="text-muted-foreground">
+          {IS_LIVE
+            ? "6시간마다 자동 갱신 · 거래 단가는 공시 본문에 있어 주식 수로 표시"
+            : "실데이터는 다음 자동 갱신 시 채워집니다"}
+        </span>
+      </div>
+
       {/* 모바일 카드 리스트 */}
       <ul className="flex flex-col gap-3 md:hidden">
         {sorted.map((t) => (
@@ -76,7 +122,11 @@ export function KrInsider() {
             </div>
             <div className="mt-4 flex items-end justify-between gap-3">
               <p className="text-2xl font-bold tabular-nums tracking-tight">
-                {formatKRW(t.amountKRW)}원
+                {t.amountKRW > 0
+                  ? `${formatKRW(t.amountKRW)}원`
+                  : t.shareDelta != null
+                    ? formatShares(t.shareDelta)
+                    : "—"}
               </p>
               <p className="text-xs text-muted-foreground tabular-nums">
                 {t.filedAt}
@@ -153,7 +203,11 @@ export function KrInsider() {
                 </TableCell>
                 <TableCell className="font-medium">{t.stock}</TableCell>
                 <TableCell className="text-right font-semibold tabular-nums">
-                  {formatKRW(t.amountKRW)}원
+                  {t.amountKRW > 0
+                    ? `${formatKRW(t.amountKRW)}원`
+                    : t.shareDelta != null
+                      ? formatShares(t.shareDelta)
+                      : "—"}
                 </TableCell>
                 <TableCell>
                   <ActionBadge action={t.action} />

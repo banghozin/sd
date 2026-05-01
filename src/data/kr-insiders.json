@@ -1,0 +1,173 @@
+{
+  "trades": [
+    {
+      "id": "dart-20260430001927",
+      "name": "나상록",
+      "position": "전무",
+      "stock": "KB금융",
+      "amountKRW": 0,
+      "shareDelta": 195,
+      "action": "BUY",
+      "filedAt": "2026-04-30",
+      "rceptNo": "20260430001927"
+    },
+    {
+      "id": "dart-20260430000770",
+      "name": "문승욱",
+      "position": "사외이사",
+      "stock": "삼성E&A",
+      "amountKRW": 0,
+      "shareDelta": 46,
+      "action": "BUY",
+      "filedAt": "2026-04-30",
+      "rceptNo": "20260430000770"
+    },
+    {
+      "id": "dart-20260430000968",
+      "name": "이성호",
+      "position": "상무",
+      "stock": "현대자동차",
+      "amountKRW": 0,
+      "shareDelta": 15,
+      "action": "BUY",
+      "filedAt": "2026-04-30",
+      "rceptNo": "20260430000968"
+    },
+    {
+      "id": "dart-20260429000040",
+      "name": "김창보",
+      "position": "사외이사",
+      "stock": "SK텔레콤",
+      "amountKRW": 0,
+      "shareDelta": 800,
+      "action": "BUY",
+      "filedAt": "2026-04-29",
+      "rceptNo": "20260429000040"
+    },
+    {
+      "id": "dart-20260429001147",
+      "name": "금기호",
+      "position": "부사장",
+      "stock": "삼성에스디에스",
+      "amountKRW": 0,
+      "shareDelta": 500,
+      "action": "BUY",
+      "filedAt": "2026-04-29",
+      "rceptNo": "20260429001147"
+    },
+    {
+      "id": "dart-20260429000081",
+      "name": "임태섭",
+      "position": "사외이사",
+      "stock": "SK텔레콤",
+      "amountKRW": 0,
+      "shareDelta": 500,
+      "action": "BUY",
+      "filedAt": "2026-04-29",
+      "rceptNo": "20260429000081"
+    },
+    {
+      "id": "dart-20260429000045",
+      "name": "노미경",
+      "position": "사외이사",
+      "stock": "SK텔레콤",
+      "amountKRW": 0,
+      "shareDelta": 500,
+      "action": "BUY",
+      "filedAt": "2026-04-29",
+      "rceptNo": "20260429000045"
+    },
+    {
+      "id": "dart-20260429000050",
+      "name": "오혜연",
+      "position": "사외이사",
+      "stock": "SK텔레콤",
+      "amountKRW": 0,
+      "shareDelta": 500,
+      "action": "BUY",
+      "filedAt": "2026-04-29",
+      "rceptNo": "20260429000050"
+    },
+    {
+      "id": "dart-20260429000056",
+      "name": "이성엽",
+      "position": "사외이사",
+      "stock": "SK텔레콤",
+      "amountKRW": 0,
+      "shareDelta": 500,
+      "action": "BUY",
+      "filedAt": "2026-04-29",
+      "rceptNo": "20260429000056"
+    },
+    {
+      "id": "dart-20260429001025",
+      "name": "LEE HOJOON",
+      "position": "부사장",
+      "stock": "삼성에스디에스",
+      "amountKRW": 0,
+      "shareDelta": 333,
+      "action": "BUY",
+      "filedAt": "2026-04-29",
+      "rceptNo": "20260429001025"
+    },
+    {
+      "id": "dart-20260429000772",
+      "name": "송창석",
+      "position": "담당",
+      "stock": "SK하이닉스",
+      "amountKRW": 0,
+      "shareDelta": -130,
+      "action": "SELL",
+      "filedAt": "2026-04-29",
+      "rceptNo": "20260429000772"
+    },
+    {
+      "id": "dart-20260429000319",
+      "name": "하지훈",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 52,
+      "action": "BUY",
+      "filedAt": "2026-04-29",
+      "rceptNo": "20260429000319"
+    },
+    {
+      "id": "dart-20260429000763",
+      "name": "박명수",
+      "position": "담당",
+      "stock": "SK하이닉스",
+      "amountKRW": 0,
+      "shareDelta": 18,
+      "action": "BUY",
+      "filedAt": "2026-04-29",
+      "rceptNo": "20260429000763"
+    },
+    {
+      "id": "dart-20260428000487",
+      "name": "김준엽",
+      "position": "상무",
+      "stock": "현대자동차",
+      "amountKRW": 0,
+      "shareDelta": 195,
+      "action": "BUY",
+      "filedAt": "2026-04-28",
+      "rceptNo": "20260428000487"
+    },
+    {
+      "id": "dart-20260428000498",
+      "name": "김준엽",
+      "position": "상무",
+      "stock": "현대자동차",
+      "amountKRW": 0,
+      "shareDelta": 91,
+      "action": "BUY",
+      "filedAt": "2026-04-28",
+      "rceptNo": "20260428000498"
+    }
+  ],
+  "fetchedAt": "2026-05-01T07:43:23.337Z",
+  "inspected": 4448,
+  "matched": 4432,
+  "source": "DART OpenAPI elestock.json"
+}
