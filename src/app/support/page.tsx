@@ -36,9 +36,9 @@ export default function SupportPage() {
         </div>
         <p className="leading-relaxed text-foreground/90 md:text-[15px] md:leading-7">
           StocksNet은 광고 외에 별도의 결제·구독 없이 누구나 무료로 쓸 수
-          있도록 만들었습니다. 다만 사이트를 안정적으로 유지하려면 도메인
-          비용, 데이터 갱신을 위한 자동화 인프라, 외부 API 사용량 등
-          소소한 운영 비용이 꾸준히 발생합니다.
+          있도록 만들었습니다. 다만 사이트를 안정적으로 유지하려면 데이터
+          갱신을 위한 자동화 인프라, 외부 API 사용량 등 소소한 운영 비용이
+          꾸준히 발생합니다.
         </p>
         <p className="leading-relaxed text-foreground/90 md:text-[15px] md:leading-7">
           여러분의 후원은 이 사이트가 계속 살아 움직일 수 있도록 하는 데에
@@ -56,7 +56,7 @@ export default function SupportPage() {
         <ul className="ml-5 list-disc space-y-2 leading-relaxed text-foreground/90 md:text-[15px] md:leading-7">
           <li>
             <strong className="font-semibold">사이트 운영 비용</strong> —
-            도메인, 호스팅, 데이터 자동화 인프라 유지
+            호스팅, 데이터 자동화 인프라 유지
           </li>
           <li>
             <strong className="font-semibold">유료 데이터 API 도입</strong> —
