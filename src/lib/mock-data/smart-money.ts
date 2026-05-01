@@ -20,6 +20,9 @@ export type Us13FHolding = {
   currentWeightPct: number;
   action: ActionType;
   quarter: string;
+  // Optional: percentage-point weight delta vs prior quarter (live data only)
+  weightChangePp?: number;
+  isNew?: boolean;
 };
 
 export const KR_INSIDER_TRADES: KrInsiderTrade[] = [

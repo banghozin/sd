@@ -91,7 +91,8 @@ export const CUSIP_TO_TICKER: Record<string, string> = {
   "743315103": "PG",
   "92826C302": "VRTX",
   "743263105": "PLTR",
-  "69608A108": "PLNT",
+  "69608A108": "PLTR",
+  "550021109": "LULU",
 };
 
 export function lookupTicker(cusip: string): string {

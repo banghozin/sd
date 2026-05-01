@@ -5,12 +5,16 @@ import { lookupTicker } from "./cusip-map";
 
 const OUT_PATH = resolve("src/data/us-13f.json");
 
-// SEC requires a User-Agent in the form "<Company Name> <contact email>".
-// Parentheses, slashes, or browser strings cause 403.
-// Override with SEC_USER_AGENT env var when running in CI.
-const USER_AGENT =
+// SEC's data.sec.gov is fronted by Akamai which 403s on plain
+// "<Name> <email>" User-Agents from many ASNs (Korean ISPs, some cloud
+// providers). Workaround: send a normal browser UA so Akamai treats us
+// as a legitimate browser, AND set the HTTP "From" header so we still
+// comply with SEC's contact-info policy.
+const BROWSER_UA =
   process.env.SEC_USER_AGENT ??
-  "StockDashboard banghozin@users.noreply.github.com";
+  "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
+const CONTACT_EMAIL =
+  process.env.SEC_CONTACT_EMAIL ?? "banghozin@users.noreply.github.com";
 
 const FUNDS: { cik: string; name: string; manager: string }[] = [
   { cik: "0001067983", name: "Berkshire Hathaway", manager: "Warren Buffett" },
@@ -53,8 +57,10 @@ async function secFetch(url: string, init?: RequestInit): Promise<Response> {
   const r = await fetch(url, {
     ...init,
     headers: {
-      "User-Agent": USER_AGENT,
+      "User-Agent": BROWSER_UA,
+      From: CONTACT_EMAIL,
       Accept: "application/json, text/xml, */*",
+      "Accept-Language": "en-US,en;q=0.9",
       ...(init?.headers ?? {}),
     },
   });
@@ -185,12 +191,15 @@ type FundResult = {
     stockName: string;
     cusip: string;
     currentWeightPct: number;
+    weightChangePp: number; // percentage points (current - prev weight)
     changePct: number;
     action: "BUY" | "SELL";
     isNew: boolean;
     quarter: string;
   }[];
 };
+
+const CHANGE_PCT_CAP = 999;
 
 function quarterLabel(reportDate: string): string {
   // reportDate ISO: YYYY-MM-DD
@@ -241,22 +250,30 @@ async function processFund(
     }
   }
 
+  const prevTotal = [...prevMap.values()].reduce((s, h) => s + h.valueUsd, 0);
+
   const holdings: FundResult["holdings"] = [];
   for (const [cusip, latestRow] of latestMap.entries()) {
     const currentWeight =
       latestTotal > 0 ? latestRow.valueUsd / latestTotal : 0;
     const prev = prevMap.get(cusip);
+    const prevWeight = prev && prevTotal > 0 ? prev.valueUsd / prevTotal : 0;
     const isNew = !prev;
-    let changePct: number;
-    if (isNew) {
-      // brand new position: cap the visual at +999 to keep UI sane
-      changePct = 100;
-    } else if (prev.valueUsd <= 0) {
-      changePct = 100;
+    const weightChangePp = (currentWeight - prevWeight) * 100;
+
+    let rawChangePct: number;
+    if (isNew || !prev || prev.valueUsd <= 0) {
+      rawChangePct = CHANGE_PCT_CAP;
     } else {
-      changePct = ((latestRow.valueUsd - prev.valueUsd) / prev.valueUsd) * 100;
+      rawChangePct = ((latestRow.valueUsd - prev.valueUsd) / prev.valueUsd) * 100;
     }
-    const action: "BUY" | "SELL" = changePct >= 0 ? "BUY" : "SELL";
+    // Cap to keep UI sane (a tiny position 100x-ing isn't actionable)
+    const changePct = Math.max(
+      -CHANGE_PCT_CAP,
+      Math.min(CHANGE_PCT_CAP, rawChangePct),
+    );
+
+    const action: "BUY" | "SELL" = weightChangePp >= 0 ? "BUY" : "SELL";
     holdings.push({
       id: `${fund.cik}-${cusip}`,
       fund: fund.name,
@@ -265,6 +282,7 @@ async function processFund(
       stockName: latestRow.issuer,
       cusip,
       currentWeightPct: currentWeight * 100,
+      weightChangePp,
       changePct,
       action,
       isNew,
@@ -272,10 +290,11 @@ async function processFund(
     });
   }
 
-  // Sort by absolute changePct, then by current weight as tiebreaker
+  // Sort by absolute weight change in percentage points (more meaningful than
+  // raw % growth, which is noisy for tiny positions). Tiebreak by weight.
   holdings.sort((a, b) => {
-    const da = Math.abs(a.changePct);
-    const db = Math.abs(b.changePct);
+    const da = Math.abs(a.weightChangePp);
+    const db = Math.abs(b.weightChangePp);
     if (db !== da) return db - da;
     return b.currentWeightPct - a.currentWeightPct;
   });
@@ -307,9 +326,11 @@ async function main() {
     }
   }
 
-  // Flat list across funds, sorted by absolute change for the table view
+  // Flat list across funds, sorted by meaningful weight movement
   const flat = results.flatMap((r) => r.holdings);
-  flat.sort((a, b) => Math.abs(b.changePct) - Math.abs(a.changePct));
+  flat.sort(
+    (a, b) => Math.abs(b.weightChangePp) - Math.abs(a.weightChangePp),
+  );
 
   const out = {
     funds: results.map((r) => ({

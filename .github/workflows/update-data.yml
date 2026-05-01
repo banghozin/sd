@@ -43,7 +43,7 @@ jobs:
 
       - name: Fetch 13F (SEC EDGAR)
         env:
-          SEC_USER_AGENT: "StockDashboard ${{ github.repository_owner }}@users.noreply.github.com"
+          SEC_CONTACT_EMAIL: "${{ github.repository_owner }}@users.noreply.github.com"
         run: npm run fetch:13f
         continue-on-error: true
 

@@ -37,6 +37,14 @@ function sortHoldings(
 ): Us13FHolding[] {
   const sign = dir === "asc" ? 1 : -1;
   return [...data].sort((a, b) => {
+    if (key === "changePct") {
+      // For live data, sort by weight delta (more meaningful than capped %)
+      const av =
+        typeof a.weightChangePp === "number" ? a.weightChangePp : a.changePct;
+      const bv =
+        typeof b.weightChangePp === "number" ? b.weightChangePp : b.changePct;
+      return (av - bv) * sign;
+    }
     const av = a[key];
     const bv = b[key];
     if (typeof av === "number" && typeof bv === "number") {
@@ -49,6 +57,22 @@ function sortHoldings(
 function formatChange(pct: number): string {
   const sign = pct > 0 ? "+" : "";
   return `${sign}${pct.toFixed(1)}%`;
+}
+
+function displayChange(h: Us13FHolding): string {
+  if (h.isNew) return "NEW";
+  // Prefer percentage-point weight delta when available (live data)
+  if (typeof h.weightChangePp === "number") {
+    const v = h.weightChangePp;
+    const sign = v > 0 ? "+" : "";
+    return `${sign}${v.toFixed(2)}%p`;
+  }
+  return formatChange(h.changePct);
+}
+
+function changeSign(h: Us13FHolding): number {
+  if (typeof h.weightChangePp === "number") return Math.sign(h.weightChangePp);
+  return Math.sign(h.changePct);
 }
 
 export function Us13F() {
@@ -122,12 +146,14 @@ export function Us13F() {
                 <p
                   className={cn(
                     "mt-0.5 text-xl font-bold tabular-nums",
-                    h.changePct > 0
+                    changeSign(h) > 0
                       ? "text-emerald-600 dark:text-emerald-400"
-                      : "text-rose-600 dark:text-rose-400",
+                      : changeSign(h) < 0
+                        ? "text-rose-600 dark:text-rose-400"
+                        : "text-muted-foreground",
                   )}
                 >
-                  {formatChange(h.changePct)}
+                  {displayChange(h)}
                 </p>
               </div>
               <div>
@@ -225,12 +251,14 @@ export function Us13F() {
                 <TableCell
                   className={cn(
                     "text-right font-semibold tabular-nums",
-                    h.changePct > 0
+                    changeSign(h) > 0
                       ? "text-emerald-600 dark:text-emerald-400"
-                      : "text-rose-600 dark:text-rose-400",
+                      : changeSign(h) < 0
+                        ? "text-rose-600 dark:text-rose-400"
+                        : "text-muted-foreground",
                   )}
                 >
-                  {formatChange(h.changePct)}
+                  {displayChange(h)}
                 </TableCell>
                 <TableCell className="text-right font-semibold tabular-nums">
                   {h.currentWeightPct.toFixed(1)}%
