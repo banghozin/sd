@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { TrendingUp } from "lucide-react";
+import { Shield, TrendingUp } from "lucide-react";
 import { NAV_ITEMS } from "./nav-config";
 import { cn } from "@/lib/utils";
 
@@ -57,8 +57,20 @@ export function Sidebar() {
         })}
       </nav>
 
-      <div className="hidden lg:block border-t border-sidebar-border px-6 py-4">
-        <p className="text-xs text-muted-foreground leading-relaxed">
+      <div className="mt-auto border-t border-sidebar-border px-3 py-3 lg:px-6 lg:py-4">
+        <Link
+          href="/privacy"
+          className={cn(
+            "flex items-center gap-3 rounded-xl px-3 py-2.5 text-xs font-medium transition-colors lg:px-4 lg:text-sm",
+            pathname === "/privacy"
+              ? "bg-sidebar-accent text-sidebar-accent-foreground"
+              : "text-sidebar-foreground/60 hover:bg-sidebar-accent/60 hover:text-sidebar-accent-foreground",
+          )}
+        >
+          <Shield className="h-4 w-4 shrink-0" />
+          <span className="hidden lg:inline">개인정보처리방침</span>
+        </Link>
+        <p className="mt-3 hidden text-xs text-muted-foreground leading-relaxed lg:block">
           데이터는 브라우저에 저장됩니다.
           <br />
           서버 없이 0원으로 운영돼요.

@@ -4,6 +4,7 @@ import { GuideSection } from "@/components/layout/guide-section";
 
 export default function SectorMapPage() {
   const today = new Date().toLocaleDateString("ko-KR", {
+    timeZone: "Asia/Seoul",
     month: "long",
     day: "numeric",
     weekday: "short",

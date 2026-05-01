@@ -34,7 +34,7 @@ export function AppShell({ children }: { children: ReactNode }) {
                 GitHub
               </a>
               <span aria-hidden>·</span>
-              <span>© {new Date().getFullYear()} 한미 통합 주식 대시보드</span>
+              <span>© 2026 한미 통합 주식 대시보드</span>
             </footer>
           </main>
 

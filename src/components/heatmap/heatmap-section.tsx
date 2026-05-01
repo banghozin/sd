@@ -35,6 +35,7 @@ function formatFetchedAt(iso: string | null): string {
   if (!iso) return "";
   try {
     return new Date(iso).toLocaleString("ko-KR", {
+      timeZone: "Asia/Seoul",
       month: "long",
       day: "numeric",
       hour: "2-digit",

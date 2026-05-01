@@ -158,22 +158,6 @@ export default function PrivacyPage() {
         </p>
       </section>
 
-      <section className="flex flex-col gap-3 leading-relaxed text-foreground/90 md:text-[15px] md:leading-7">
-        <h2 className="text-lg font-semibold md:text-xl">7. 문의</h2>
-        <p>
-          본 처리방침이나 데이터 처리에 대한 문의는 GitHub 저장소{" "}
-          <a
-            className="font-medium text-primary underline underline-offset-4"
-            href="https://github.com/banghozin/sd/issues"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            github.com/banghozin/sd/issues
-          </a>
-          를 통해 이슈로 남겨 주세요.
-        </p>
-      </section>
-
       <p className="text-xs text-muted-foreground">
         시행일: {UPDATED_AT}
       </p>
