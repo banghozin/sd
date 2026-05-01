@@ -74,12 +74,13 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
     },
   },
-  // After verification codes are issued by Google Search Console / Naver
-  // Search Advisor, paste them below to confirm site ownership.
-  // verification: {
-  //   google: "google-site-verification-code-here",
-  //   other: { "naver-site-verification": "naver-code-here" },
-  // },
+  verification: {
+    google: "WzJU2wV95TwoMPH_RPUQ8Lu_fZWKp3XodCLwkotzR8I",
+    other: {
+      "naver-site-verification":
+        "350d1f17837421344e09ef9cb9d6791953762b9d",
+    },
+  },
 };
 
 export const viewport: Viewport = {
