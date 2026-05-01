@@ -1,9 +1,11 @@
 name: Update market data
 
 on:
-  # Every 6 hours at :15 (cron is best-effort, may drift up to ~15 min)
+  # Every hour at :15 (cron is best-effort, may drift up to ~15 min).
+  # The "if no diff, skip commit" step at the bottom prevents redundant
+  # Vercel rebuilds when prices haven't moved (e.g. off-market hours).
   schedule:
-    - cron: "15 */6 * * *"
+    - cron: "15 * * * *"
   # Allow manual trigger from the Actions tab
   workflow_dispatch:
 
@@ -33,6 +35,10 @@ jobs:
 
       - name: Fetch FX (Frankfurter)
         run: npm run fetch:fx
+        continue-on-error: true
+
+      - name: Fetch sector ETFs (Yahoo Finance)
+        run: npm run fetch:sectors
         continue-on-error: true
 
       - name: Fetch 13F (SEC EDGAR)

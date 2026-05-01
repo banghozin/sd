@@ -1,11 +1,28 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { ALL_SECTORS, KR_SECTORS, US_SECTORS } from "@/lib/mock-data/sectors";
+import {
+  ALL_SECTORS as MOCK_ALL,
+  KR_SECTORS as MOCK_KR,
+  US_SECTORS as MOCK_US,
+  type Sector,
+} from "@/lib/mock-data/sectors";
+import liveSectors from "@/data/sectors.json";
 import { AdBanner } from "@/components/ads/ad-banner";
 import { MarketToggle, type MarketFilter } from "./market-toggle";
 import { SectorCard } from "./sector-card";
 import { HighlightStrip } from "./highlight-strip";
+
+const liveList = (liveSectors.sectors ?? []) as Sector[];
+const IS_LIVE = liveList.length > 0;
+const ALL_SECTORS = IS_LIVE ? liveList : MOCK_ALL;
+const KR_SECTORS = IS_LIVE
+  ? liveList.filter((s) => s.market === "KR")
+  : MOCK_KR;
+const US_SECTORS = IS_LIVE
+  ? liveList.filter((s) => s.market === "US")
+  : MOCK_US;
+const FETCHED_AT_ISO = liveSectors.fetchedAt as string | null;
 
 const LEGEND = [
   { label: "한국 상승", className: "bg-red-500" },
@@ -13,6 +30,20 @@ const LEGEND = [
   { label: "미국 상승", className: "bg-emerald-500" },
   { label: "미국 하락", className: "bg-red-500" },
 ];
+
+function formatFetchedAt(iso: string | null): string {
+  if (!iso) return "";
+  try {
+    return new Date(iso).toLocaleString("ko-KR", {
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  } catch {
+    return "";
+  }
+}
 
 export function HeatmapSection() {
   const [filter, setFilter] = useState<MarketFilter>("ALL");
@@ -25,6 +56,24 @@ export function HeatmapSection() {
 
   return (
     <div className="flex flex-col gap-6 md:gap-8">
+      <div className="flex flex-wrap items-center gap-2 text-xs md:text-sm">
+        {IS_LIVE ? (
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-2.5 py-1 font-semibold text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />
+            LIVE · Yahoo Finance
+          </span>
+        ) : (
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-100 px-2.5 py-1 font-semibold text-amber-700 dark:bg-amber-950/60 dark:text-amber-300">
+            📦 데모 데이터
+          </span>
+        )}
+        <span className="text-muted-foreground">
+          {IS_LIVE
+            ? `1시간마다 자동 갱신${FETCHED_AT_ISO ? ` · 마지막 ${formatFetchedAt(FETCHED_AT_ISO)}` : ""}`
+            : "실데이터는 다음 자동 갱신 시 채워집니다"}
+        </span>
+      </div>
+
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <MarketToggle value={filter} onChange={setFilter} />
         <ul className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-muted-foreground md:text-xs">

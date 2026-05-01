@@ -10,7 +10,8 @@
     "fetch:fx": "tsx scripts/fetch-fx.ts",
     "fetch:13f": "tsx scripts/fetch-13f.ts",
     "fetch:dart": "tsx scripts/fetch-dart.ts",
-    "fetch:all": "npm run fetch:fx && npm run fetch:13f && npm run fetch:dart"
+    "fetch:sectors": "tsx scripts/fetch-sectors.ts",
+    "fetch:all": "npm run fetch:fx && npm run fetch:sectors && npm run fetch:dart && npm run fetch:13f"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",
