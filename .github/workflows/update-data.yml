@@ -1,11 +1,12 @@
 name: Update market data
 
 on:
-  # Every hour at :15 (cron is best-effort, may drift up to ~15 min).
-  # The "if no diff, skip commit" step at the bottom prevents redundant
-  # Vercel rebuilds when prices haven't moved (e.g. off-market hours).
+  # Every hour at :07 — GitHub deprioritises scheduled runs that
+  # overlap with "popular" cron minutes (:00, :15, :30, :45). Using
+  # an odd minute reduces the chance of being skipped under load.
+  # Schedule is best-effort and may drift up to ~30 minutes.
   schedule:
-    - cron: "15 * * * *"
+    - cron: "7 * * * *"
   # Allow manual trigger from the Actions tab
   workflow_dispatch:
 
@@ -21,6 +22,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      - name: Heartbeat
+        run: |
+          echo "── trigger: ${{ github.event_name }}"
+          echo "── time:    $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+          echo "── ref:     ${{ github.ref }}"
+
       - name: Checkout
         uses: actions/checkout@v4
 
