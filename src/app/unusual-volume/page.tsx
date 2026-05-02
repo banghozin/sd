@@ -4,6 +4,7 @@ import unusualVolumeData from "@/data/unusual-volume.json";
 import { SignalTable } from "@/components/unusual-volume/signal-table";
 import { LastUpdated } from "@/components/unusual-volume/last-updated";
 import { NextUpdate } from "@/components/layout/next-update";
+import { NotificationToggle } from "@/components/notifications/notification-toggle";
 
 export const metadata: Metadata = {
   title: "조용한 매집 감지 | StocksNet",
@@ -98,6 +99,8 @@ export default function UnusualVolumePage() {
           </span>
         </div>
       </section>
+
+      <NotificationToggle />
 
       <section className="flex flex-col gap-3 rounded-2xl border border-amber-500/30 bg-amber-500/5 p-4 text-sm leading-relaxed md:p-6">
         <div className="flex items-center gap-2 font-semibold text-amber-700 dark:text-amber-400">
