@@ -121,9 +121,31 @@ export function NewsFeed() {
   }, []);
 
   useEffect(() => {
-    loadNews();
-    const id = setInterval(loadNews, POLL_INTERVAL_MS);
-    return () => clearInterval(id);
+    let id: ReturnType<typeof setInterval> | null = null;
+
+    const start = () => {
+      if (id !== null) return;
+      loadNews();
+      id = setInterval(loadNews, POLL_INTERVAL_MS);
+    };
+    const stop = () => {
+      if (id !== null) {
+        clearInterval(id);
+        id = null;
+      }
+    };
+
+    if (document.visibilityState === "visible") start();
+
+    const onVisibility = () => {
+      if (document.visibilityState === "visible") start();
+      else stop();
+    };
+    document.addEventListener("visibilitychange", onVisibility);
+    return () => {
+      document.removeEventListener("visibilitychange", onVisibility);
+      stop();
+    };
   }, [loadNews]);
 
   // Re-render every 30s so relative timestamps stay fresh

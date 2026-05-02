@@ -1,20 +1,18 @@
-name: Update market data
+name: Update DART insider trades
+
+# Korean insider trade disclosures (DART) update during KR business
+# hours but not constantly. Refreshing every 6 hours covers the
+# disclosure cadence comfortably while staying within DART's daily
+# request quota.
 
 on:
-  # Every hour at :07 — GitHub deprioritises scheduled runs that
-  # overlap with "popular" cron minutes (:00, :15, :30, :45). Using
-  # an odd minute reduces the chance of being skipped under load.
-  # Schedule is best-effort and may drift up to ~30 minutes.
-  schedule:
-    - cron: "7 * * * *"
-  # Allow manual trigger from the Actions tab
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: update-data
+  group: update-dart
   cancel-in-progress: false
 
 jobs:
@@ -26,7 +24,6 @@ jobs:
         run: |
           echo "── trigger: ${{ github.event_name }}"
           echo "── time:    $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
-          echo "── ref:     ${{ github.ref }}"
 
       - name: Checkout
         uses: actions/checkout@v5
@@ -40,26 +37,27 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Fetch FX (Frankfurter)
-        run: npm run fetch:fx
-        continue-on-error: true
-
-      - name: Fetch sector ETFs (Yahoo Finance)
-        run: npm run fetch:sectors
+      - name: Fetch DART (KR insider)
+        env:
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: |
+          if [ -z "$DART_API_KEY" ]; then
+            echo "::warning::DART_API_KEY secret not set; skipping DART fetch"
+            exit 0
+          fi
+          npm run fetch:dart
         continue-on-error: true
 
       - name: Commit & push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/
+          git add src/data/kr-insiders.json
           if git diff --staged --quiet; then
-            echo "No data changes to commit"
+            echo "No DART changes to commit"
             exit 0
           fi
-          git commit -m "chore(data): auto-update FX + sectors [skip ci]"
-          # Retry push with rebase on conflict — handles concurrent runs
-          # racing each other to push to main.
+          git commit -m "chore(data): refresh DART insiders [skip ci]"
           for attempt in 1 2 3 4 5; do
             if git push; then
               echo "Push succeeded on attempt $attempt"
