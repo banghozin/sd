@@ -38,7 +38,6 @@ jobs:
 
       - name: Build universe
         run: npm run fetch:universe
-        continue-on-error: true
 
       - name: Commit & push if changed
         run: |
