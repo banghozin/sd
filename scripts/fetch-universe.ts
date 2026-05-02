@@ -1,7 +1,7 @@
 // Universe builder for unusual volume scanner.
-// Fetches all US-listed tickers from NASDAQ Trader, then filters by
-// market cap range and minimum average volume via Yahoo Finance.
-// Runs once per day (after US market close) to refresh the universe.
+// Uses Yahoo Finance's v7 quote endpoint (with cookie+crumb auth) to
+// batch-fetch market cap and avg volume for ~7000 US-listed tickers,
+// then filters by mcap range and minimum volume.
 
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
@@ -9,43 +9,37 @@ import { dirname, resolve } from "node:path";
 const OUT_PATH = resolve("src/data/universe.json");
 
 // Filter criteria
-const MIN_MARKET_CAP = 5_000_000; // $5M
-const MAX_MARKET_CAP = 1_300_000_000; // $1.3B
-const MIN_AVG_VOLUME = 50_000; // 50k shares/day (filters out pump-and-dump candidates)
+const MIN_MARKET_CAP = 5_000_000;
+const MAX_MARKET_CAP = 1_300_000_000;
+const MIN_AVG_VOLUME = 50_000;
 
-// Concurrency tuning — Yahoo Finance rate-limits aggressive parallel calls
-const CONCURRENCY = 6;
-const BATCH_DELAY_MS = 80;
+// Batch tuning — v7 quote can take ~250 symbols per request
+const BATCH_SIZE = 100;
+const BATCH_DELAY_MS = 600;
 const RETRY = 2;
-const MAX_CONSECUTIVE_FAILED_BATCHES = 8;
 
-type ChartResponse = {
-  chart: {
-    result?: Array<{
-      meta: {
-        symbol?: string;
-        shortName?: string;
-        longName?: string;
-        marketCap?: number;
-        regularMarketPrice?: number;
-      };
-      indicators?: {
-        quote?: Array<{ volume?: (number | null)[] }>;
-      };
-      timestamp?: number[];
-    }>;
+const UA =
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36";
+
+type QuoteResult = {
+  symbol: string;
+  shortName?: string;
+  longName?: string;
+  marketCap?: number;
+  averageDailyVolume10Day?: number;
+  averageDailyVolume3Month?: number;
+};
+
+type QuoteResponse = {
+  quoteResponse?: {
+    result?: QuoteResult[];
     error?: { code?: string; description?: string } | null;
   };
 };
 
 async function fetchText(url: string): Promise<string | null> {
   try {
-    const r = await fetch(url, {
-      headers: {
-        "User-Agent":
-          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
-      },
-    });
+    const r = await fetch(url, { headers: { "User-Agent": UA } });
     if (!r.ok) {
       console.warn(`[universe] HTTP ${r.status} fetching ${url}`);
       return null;
@@ -106,84 +100,89 @@ async function fetchTickerList(): Promise<string[]> {
   return [...tickers].sort();
 }
 
-async function fetchTickerData(
-  ticker: string,
-  attempt = 0,
-): Promise<{
-  ticker: string;
-  name: string;
-  marketCap: number;
-  avg5dVolume: number;
-} | null> {
-  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}?interval=1d&range=10d`;
-  try {
-    const r = await fetch(url, {
-      headers: {
-        "User-Agent":
-          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
-        Accept: "application/json",
-        "Accept-Language": "en-US,en;q=0.9",
-      },
-    });
-    if ((r.status === 429 || r.status === 503) && attempt < RETRY) {
-      await sleep(800 * (attempt + 1));
-      return fetchTickerData(ticker, attempt + 1);
-    }
-    if (!r.ok) return null;
-    const data = (await r.json()) as ChartResponse;
-    if (data.chart.error || !data.chart.result?.length) return null;
-    const result = data.chart.result[0];
-    const mcap = result.meta.marketCap ?? 0;
-    if (!mcap) return null;
-    const volumes = (result.indicators?.quote?.[0]?.volume ?? []).filter(
-      (v): v is number => typeof v === "number" && v > 0,
-    );
-    if (volumes.length < 3) return null;
-    const last5 = volumes.slice(-5);
-    const avg5dVolume = last5.reduce((sum, v) => sum + v, 0) / last5.length;
-    const name = result.meta.shortName ?? result.meta.longName ?? ticker;
-    return { ticker, name, marketCap: mcap, avg5dVolume };
-  } catch {
-    return null;
-  }
-}
-
 function sleep(ms: number): Promise<void> {
   return new Promise((res) => setTimeout(res, ms));
 }
 
-async function processBatch(
-  tickers: string[],
-  concurrency: number,
-): Promise<NonNullable<Awaited<ReturnType<typeof fetchTickerData>>>[]> {
-  const results: NonNullable<Awaited<ReturnType<typeof fetchTickerData>>>[] = [];
-  let consecutiveEmptyBatches = 0;
-  for (let i = 0; i < tickers.length; i += concurrency) {
-    const slice = tickers.slice(i, i + concurrency);
-    const batch = await Promise.all(slice.map((t) => fetchTickerData(t)));
-    const successes = batch.filter(
-      (r): r is NonNullable<typeof r> => r !== null,
-    );
-    if (successes.length === 0) {
-      consecutiveEmptyBatches++;
-      if (consecutiveEmptyBatches >= MAX_CONSECUTIVE_FAILED_BATCHES) {
-        console.error(
-          `[universe] aborting: ${MAX_CONSECUTIVE_FAILED_BATCHES} consecutive empty batches — likely rate-limited / blocked by Yahoo Finance`,
-        );
-        throw new Error("rate-limited");
-      }
-    } else {
-      consecutiveEmptyBatches = 0;
-      for (const r of successes) results.push(r);
-    }
-    if (i > 0 && i % 500 === 0) {
-      console.log(
-        `[universe] progress: ${i}/${tickers.length} (kept ${results.length})`,
-      );
-    }
-    if (BATCH_DELAY_MS > 0) await sleep(BATCH_DELAY_MS);
+// Yahoo's v7 quote endpoint requires a cookie + crumb token since 2023.
+// We grab one at startup and reuse for all batch quote requests.
+async function getCrumb(): Promise<{ cookie: string; crumb: string }> {
+  console.log("[universe] obtaining Yahoo crumb...");
+  // Step 1: grab a cookie from Yahoo's consent endpoint
+  const consentRes = await fetch("https://fc.yahoo.com/", {
+    headers: { "User-Agent": UA },
+    redirect: "manual",
+  });
+  const setCookieHeader =
+    consentRes.headers.get("set-cookie") ??
+    (consentRes.headers as unknown as { getSetCookie?: () => string[] }).getSetCookie?.()?.join(", ") ??
+    "";
+  // Extract just the cookie name=value portions (drop domain, path, expiry, etc.)
+  const cookies = setCookieHeader
+    .split(/,(?=\s*[A-Za-z0-9_-]+=)/)
+    .map((c) => c.split(";")[0].trim())
+    .filter(Boolean)
+    .join("; ");
+
+  if (!cookies) {
+    throw new Error("could not obtain Yahoo session cookie");
   }
-  return results;
+
+  // Step 2: exchange cookie for a crumb
+  const crumbRes = await fetch(
+    "https://query1.finance.yahoo.com/v1/test/getcrumb",
+    {
+      headers: { "User-Agent": UA, Cookie: cookies, Accept: "text/plain" },
+    },
+  );
+  if (!crumbRes.ok) {
+    throw new Error(`crumb fetch HTTP ${crumbRes.status}`);
+  }
+  const crumb = (await crumbRes.text()).trim();
+  if (!crumb || crumb.length > 64) {
+    throw new Error(`invalid crumb response: ${crumb.slice(0, 80)}`);
+  }
+  console.log(`[universe] got crumb (length=${crumb.length})`);
+  return { cookie: cookies, crumb };
+}
+
+async function fetchQuoteBatch(
+  symbols: string[],
+  auth: { cookie: string; crumb: string },
+  attempt = 0,
+): Promise<QuoteResult[] | null> {
+  const url =
+    `https://query1.finance.yahoo.com/v7/finance/quote` +
+    `?symbols=${encodeURIComponent(symbols.join(","))}` +
+    `&crumb=${encodeURIComponent(auth.crumb)}`;
+  try {
+    const r = await fetch(url, {
+      headers: {
+        "User-Agent": UA,
+        Cookie: auth.cookie,
+        Accept: "application/json",
+      },
+    });
+    if ((r.status === 429 || r.status === 503) && attempt < RETRY) {
+      await sleep(1500 * (attempt + 1));
+      return fetchQuoteBatch(symbols, auth, attempt + 1);
+    }
+    if (!r.ok) {
+      console.warn(`[universe] batch HTTP ${r.status} (attempt ${attempt})`);
+      return null;
+    }
+    const data = (await r.json()) as QuoteResponse;
+    if (data.quoteResponse?.error) {
+      console.warn(
+        `[universe] batch error: ${data.quoteResponse.error.description}`,
+      );
+      return null;
+    }
+    return data.quoteResponse?.result ?? [];
+  } catch (e) {
+    console.warn(`[universe] batch fetch error:`, e);
+    return null;
+  }
 }
 
 async function main() {
@@ -198,23 +197,58 @@ async function main() {
     process.exit(1);
   }
 
-  console.log(
-    `[universe] fetching data (concurrency=${CONCURRENCY}, batch delay=${BATCH_DELAY_MS}ms)...`,
-  );
-  const data = await processBatch(tickers, CONCURRENCY);
-  console.log(`[universe] received data for ${data.length}/${tickers.length} tickers`);
+  const auth = await getCrumb();
 
-  if (data.length === 0) {
-    console.error("[universe] no successful fetches — aborting (probably rate-limited)");
+  console.log(
+    `[universe] fetching quote data in batches of ${BATCH_SIZE} (delay ${BATCH_DELAY_MS}ms)...`,
+  );
+  const results: QuoteResult[] = [];
+  let consecutiveEmpty = 0;
+  for (let i = 0; i < tickers.length; i += BATCH_SIZE) {
+    const slice = tickers.slice(i, i + BATCH_SIZE);
+    const batchResult = await fetchQuoteBatch(slice, auth);
+    if (!batchResult || batchResult.length === 0) {
+      consecutiveEmpty++;
+      if (consecutiveEmpty >= 5) {
+        console.error(
+          `[universe] aborting: 5 consecutive empty batches — likely auth/rate-limit failure`,
+        );
+        process.exit(1);
+      }
+    } else {
+      consecutiveEmpty = 0;
+      results.push(...batchResult);
+    }
+    if (i % 1000 === 0 && i > 0) {
+      console.log(
+        `[universe] progress: ${i}/${tickers.length} (received ${results.length})`,
+      );
+    }
+    await sleep(BATCH_DELAY_MS);
+  }
+  console.log(
+    `[universe] received quote data for ${results.length}/${tickers.length} tickers`,
+  );
+
+  if (results.length === 0) {
+    console.error("[universe] no quote data received — aborting");
     process.exit(1);
   }
 
-  const filtered = data.filter(
-    (d) =>
-      d.marketCap >= MIN_MARKET_CAP &&
-      d.marketCap <= MAX_MARKET_CAP &&
-      d.avg5dVolume >= MIN_AVG_VOLUME,
-  );
+  const filtered = results
+    .map((q) => {
+      const mcap = q.marketCap ?? 0;
+      const avgVol =
+        q.averageDailyVolume10Day ?? q.averageDailyVolume3Month ?? 0;
+      const name = q.shortName ?? q.longName ?? q.symbol;
+      return { ticker: q.symbol, name, marketCap: mcap, avg5dVolume: avgVol };
+    })
+    .filter(
+      (d) =>
+        d.marketCap >= MIN_MARKET_CAP &&
+        d.marketCap <= MAX_MARKET_CAP &&
+        d.avg5dVolume >= MIN_AVG_VOLUME,
+    );
 
   console.log(
     `[universe] filtered to ${filtered.length} tickers ($${MIN_MARKET_CAP / 1_000_000}M ≤ mcap ≤ $${MAX_MARKET_CAP / 1_000_000}M, avg vol ≥ ${MIN_AVG_VOLUME})`,
