@@ -9,6 +9,8 @@ import { dirname, resolve } from "node:path";
 
 const UNIVERSE_PATH = resolve("src/data/universe.json");
 const OUT_PATH = resolve("src/data/unusual-volume.json");
+const HISTORY_PATH = resolve("src/data/signal-history.json");
+const HISTORY_KEEP_DAYS = 90;
 
 // Signal criteria
 const RVOL_THRESHOLD = 3;
@@ -363,6 +365,94 @@ async function main() {
   await writeFile(OUT_PATH, JSON.stringify(out) + "\n", "utf8");
   console.log(
     `[unusual-volume] wrote ${OUT_PATH} · ${top.length} signals · ${out.elapsedSeconds}s`,
+  );
+
+  // Append today's signals to the persistent history (de-duplicated by date+ticker)
+  await appendToHistory(top);
+}
+
+type HistoryEntry = {
+  date: string; // ET date "YYYY-MM-DD"
+  ticker: string;
+  name: string;
+  rvol: number;
+  priceAtDetection: number;
+  priceChangePctAtDetection: number;
+  mcap: number;
+  capturedAt: string; // ISO timestamp of first detection
+};
+
+type HistoryFile = {
+  lastUpdated: string;
+  signals: HistoryEntry[];
+};
+
+function getETDateKey(d: Date): string {
+  const fmt = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/New_York",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
+  return fmt.format(d); // en-CA gives YYYY-MM-DD
+}
+
+async function appendToHistory(
+  signals: Array<{
+    ticker: string;
+    name: string;
+    price: number;
+    priceChangePct: number;
+    rvol: number;
+    mcap: number;
+  }>,
+): Promise<void> {
+  const today = getETDateKey(new Date());
+  const cutoff = (() => {
+    const d = new Date();
+    d.setUTCDate(d.getUTCDate() - HISTORY_KEEP_DAYS);
+    return getETDateKey(d);
+  })();
+
+  let history: HistoryFile = { lastUpdated: "", signals: [] };
+  try {
+    const raw = await readFile(HISTORY_PATH, "utf-8");
+    history = JSON.parse(raw) as HistoryFile;
+  } catch {
+    // First-time creation
+  }
+
+  const existingKeys = new Set(
+    history.signals.map((s) => `${s.date}|${s.ticker}`),
+  );
+
+  let added = 0;
+  for (const s of signals) {
+    const key = `${today}|${s.ticker}`;
+    if (existingKeys.has(key)) continue;
+    history.signals.push({
+      date: today,
+      ticker: s.ticker,
+      name: s.name,
+      rvol: s.rvol,
+      priceAtDetection: s.price,
+      priceChangePctAtDetection: s.priceChangePct,
+      mcap: s.mcap,
+      capturedAt: new Date().toISOString(),
+    });
+    existingKeys.add(key);
+    added++;
+  }
+
+  // Drop entries older than cutoff to keep file size bounded
+  const before = history.signals.length;
+  history.signals = history.signals.filter((s) => s.date >= cutoff);
+  const dropped = before - history.signals.length;
+
+  history.lastUpdated = new Date().toISOString();
+  await writeFile(HISTORY_PATH, JSON.stringify(history) + "\n", "utf8");
+  console.log(
+    `[unusual-volume] history: +${added} new, -${dropped} pruned, ${history.signals.length} total`,
   );
 }
 

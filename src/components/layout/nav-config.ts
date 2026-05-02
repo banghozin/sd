@@ -1,4 +1,4 @@
-import { Activity, LayoutGrid, Layers, Radar, Radio, Flame, Star, type LucideIcon } from "lucide-react";
+import { Activity, LayoutGrid, Layers, LineChart, Radar, Radio, Flame, Star, type LucideIcon } from "lucide-react";
 
 export type NavItem = {
   href: string;
@@ -64,6 +64,13 @@ export const NAV_ITEMS: NavItem[] = [
     description: "별표한 종목 모음",
     icon: Star,
     primary: true,
+  },
+  {
+    href: "/backtest",
+    label: "백테스트",
+    shortLabel: "검증",
+    description: "시그널 이후 수익률 통계",
+    icon: LineChart,
   },
 ];
 
