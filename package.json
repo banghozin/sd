@@ -11,6 +11,8 @@
     "fetch:13f": "tsx scripts/fetch-13f.ts",
     "fetch:dart": "tsx scripts/fetch-dart.ts",
     "fetch:sectors": "tsx scripts/fetch-sectors.ts",
+    "fetch:universe": "tsx scripts/fetch-universe.ts",
+    "fetch:unusual-volume": "tsx scripts/fetch-unusual-volume.ts",
     "fetch:all": "npm run fetch:fx && npm run fetch:sectors && npm run fetch:dart && npm run fetch:13f"
   },
   "dependencies": {

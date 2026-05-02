@@ -1,0 +1,62 @@
+name: Update universe (small-cap pool)
+
+# Builds the universe of US small/micro/nano-cap stocks (mcap $5M~$1.3B,
+# avg volume ≥ 50k) used by the unusual volume scanner.
+# Triggered once per day by cron-job.org after US market close.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-universe
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Heartbeat
+        run: |
+          echo "── trigger: ${{ github.event_name }}"
+          echo "── time:    $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build universe
+        run: npm run fetch:universe
+        continue-on-error: true
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/universe.json
+          if git diff --staged --quiet; then
+            echo "No universe changes to commit"
+            exit 0
+          fi
+          git commit -m "chore(data): rebuild small-cap universe [skip ci]"
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              echo "Push succeeded on attempt $attempt"
+              exit 0
+            fi
+            echo "Push failed on attempt $attempt — pulling and retrying..."
+            git pull --rebase origin main || exit 1
+          done
+          echo "Push failed after 5 attempts"
+          exit 1

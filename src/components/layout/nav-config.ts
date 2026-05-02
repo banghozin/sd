@@ -1,4 +1,4 @@
-import { LayoutGrid, Layers, Radar, Flame, type LucideIcon } from "lucide-react";
+import { Activity, LayoutGrid, Layers, Radar, Flame, type LucideIcon } from "lucide-react";
 
 export type NavItem = {
   href: string;
@@ -29,6 +29,13 @@ export const NAV_ITEMS: NavItem[] = [
     shortLabel: "추적",
     description: "기관·외국인 자금 흐름",
     icon: Radar,
+  },
+  {
+    href: "/unusual-volume",
+    label: "조용한 매집",
+    shortLabel: "매집",
+    description: "거래량 폭증 + 가격 정체 감지",
+    icon: Activity,
   },
   {
     href: "/fire",

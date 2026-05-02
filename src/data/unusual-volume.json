@@ -1,0 +1,12 @@
+{
+  "generatedAt": "1970-01-01T00:00:00.000Z",
+  "marketStatus": "no-data",
+  "criteria": {
+    "rvolThreshold": 3,
+    "priceChangeLimit": 0.02,
+    "avgVolumeWindow": "5d",
+    "minElapsedMin": 30
+  },
+  "count": 0,
+  "signals": []
+}

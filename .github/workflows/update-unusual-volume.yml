@@ -1,0 +1,62 @@
+name: Update unusual volume signals
+
+# Scans the small-cap universe for stealth-accumulation signals
+# (rate-projected daily volume ≥ 3x of 5-day average AND |price change| < 2%).
+# Triggered every 30 minutes during US market hours by cron-job.org.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-unusual-volume
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Heartbeat
+        run: |
+          echo "── trigger: ${{ github.event_name }}"
+          echo "── time:    $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Scan unusual volume
+        run: npm run fetch:unusual-volume
+        continue-on-error: true
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/unusual-volume.json
+          if git diff --staged --quiet; then
+            echo "No signal changes to commit"
+            exit 0
+          fi
+          git commit -m "chore(data): scan unusual volume [skip ci]"
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              echo "Push succeeded on attempt $attempt"
+              exit 0
+            fi
+            echo "Push failed on attempt $attempt — pulling and retrying..."
+            git pull --rebase origin main || exit 1
+          done
+          echo "Push failed after 5 attempts"
+          exit 1
