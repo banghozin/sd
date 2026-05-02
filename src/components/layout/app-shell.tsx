@@ -4,6 +4,7 @@ import { Sidebar } from "./sidebar";
 import { BottomNav } from "./bottom-nav";
 import { AppHeader } from "./app-header";
 import { AdBanner } from "@/components/ads/ad-banner";
+import { ChartModal } from "@/components/charts/chart-modal";
 
 export function AppShell({ children }: { children: ReactNode }) {
   return (
@@ -40,6 +41,7 @@ export function AppShell({ children }: { children: ReactNode }) {
         </div>
       </div>
       <BottomNav />
+      <ChartModal />
     </div>
   );
 }

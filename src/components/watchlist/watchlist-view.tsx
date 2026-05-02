@@ -7,6 +7,7 @@ import {
   useWatchlistStore,
   type WatchlistItem,
 } from "@/lib/store/watchlist-store";
+import { useChartModalStore } from "@/lib/store/chart-modal-store";
 import { cn } from "@/lib/utils";
 
 type Quote = {
@@ -37,6 +38,7 @@ export function WatchlistView() {
   const items = useWatchlistStore((s) => s.items);
   const hydrated = useWatchlistStore((s) => s.hasHydrated);
   const remove = useWatchlistStore((s) => s.remove);
+  const openChart = useChartModalStore((s) => s.open);
 
   const liveTickers = useMemo(
     () =>
@@ -130,12 +132,21 @@ export function WatchlistView() {
           const live = isLivePriced(it.kind)
             ? quotes[it.ticker.toUpperCase()]
             : null;
+          const livePriced = isLivePriced(it.kind);
           return (
             <li
               key={it.id}
               className="flex flex-col gap-2 rounded-2xl border border-border bg-card p-4 md:flex-row md:items-center md:justify-between md:p-5"
             >
-              <div className="flex min-w-0 flex-1 items-center gap-3">
+              <button
+                type="button"
+                disabled={!livePriced}
+                onClick={() => livePriced && openChart(it.ticker, it.name)}
+                className={cn(
+                  "flex min-w-0 flex-1 items-center gap-3 rounded-lg p-1 -m-1 text-left",
+                  livePriced && "transition-colors hover:bg-muted/40",
+                )}
+              >
                 <Star className="h-4 w-4 shrink-0 fill-amber-500 text-amber-500" />
                 <div className="min-w-0">
                   <div className="flex items-center gap-2">
@@ -152,7 +163,7 @@ export function WatchlistView() {
                     </p>
                   )}
                 </div>
-              </div>
+              </button>
 
               <div className="flex items-center gap-4">
                 {live && live.price !== null ? (

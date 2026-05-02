@@ -1,5 +1,8 @@
+"use client";
+
 import { Flame } from "lucide-react";
 import { StarButton } from "@/components/watchlist/star-button";
+import { useChartModalStore } from "@/lib/store/chart-modal-store";
 
 type Signal = {
   ticker: string;
@@ -39,14 +42,18 @@ function rvolFlames(rvol: number): number {
 }
 
 export function SignalTable({ signals }: { signals: Signal[] }) {
+  const openChart = useChartModalStore((s) => s.open);
+
   return (
     <>
       {/* Mobile: card list */}
       <div className="flex flex-col gap-2 md:hidden">
         {signals.map((s) => (
-          <div
+          <button
             key={s.ticker}
-            className="flex flex-col gap-2 rounded-xl border border-border bg-card p-4"
+            type="button"
+            onClick={() => openChart(s.ticker, s.name)}
+            className="flex flex-col gap-2 rounded-xl border border-border bg-card p-4 text-left transition-colors hover:border-primary/40 hover:bg-muted/30"
           >
             <div className="flex items-start justify-between gap-2">
               <div className="flex min-w-0 flex-1 items-start gap-2">
@@ -104,7 +111,7 @@ export function SignalTable({ signals }: { signals: Signal[] }) {
                 <div className="font-mono">{formatMarketCap(s.mcap)}</div>
               </div>
             </div>
-          </div>
+          </button>
         ))}
       </div>
 
@@ -128,7 +135,8 @@ export function SignalTable({ signals }: { signals: Signal[] }) {
             {signals.map((s) => (
               <tr
                 key={s.ticker}
-                className="border-b border-border/40 last:border-0 hover:bg-muted/20"
+                onClick={() => openChart(s.ticker, s.name)}
+                className="cursor-pointer border-b border-border/40 last:border-0 hover:bg-muted/30"
               >
                 <td className="px-2 py-3 text-center">
                   <StarButton kind="us-stock" ticker={s.ticker} name={s.name} />
