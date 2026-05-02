@@ -31,17 +31,17 @@ export const NAV_ITEMS: NavItem[] = [
     icon: Radar,
   },
   {
-    href: "/unusual-volume",
-    label: "조용한 매집",
-    shortLabel: "매집",
-    description: "거래량 폭증 + 가격 정체 감지",
-    icon: Activity,
-  },
-  {
     href: "/fire",
     label: "FIRE 시뮬",
     shortLabel: "FIRE",
     description: "배당 스노우볼 시뮬레이터",
     icon: Flame,
+  },
+  {
+    href: "/unusual-volume",
+    label: "조용한 매집",
+    shortLabel: "매집",
+    description: "거래량 폭증 + 가격 정체 감지",
+    icon: Activity,
   },
 ];
