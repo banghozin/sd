@@ -17,6 +17,7 @@ import live13F from "@/data/us-13f.json";
 import { cn } from "@/lib/utils";
 import { ActionBadge } from "./action-badge";
 import { SortableHeader, type SortDir } from "./sortable-header";
+import { StarButton } from "@/components/watchlist/star-button";
 
 // Use real SEC EDGAR data when available; fall back to mock if the GitHub
 // Actions workflow hasn't seeded data yet.
@@ -123,20 +124,29 @@ export function Us13F() {
             className="rounded-2xl border border-border bg-card p-4 shadow-sm"
           >
             <div className="flex items-start justify-between gap-3">
-              <div className="min-w-0">
-                <div className="flex items-baseline gap-2">
-                  <p className="text-base font-semibold">
-                    {h.ticker || h.stockName}
-                  </p>
-                  {h.ticker && (
-                    <p className="truncate text-xs text-muted-foreground">
-                      {h.stockName}
+              <div className="flex min-w-0 items-start gap-2">
+                {h.ticker && (
+                  <StarButton
+                    kind="us-stock"
+                    ticker={h.ticker}
+                    name={h.stockName}
+                  />
+                )}
+                <div className="min-w-0">
+                  <div className="flex items-baseline gap-2">
+                    <p className="text-base font-semibold">
+                      {h.ticker || h.stockName}
                     </p>
-                  )}
+                    {h.ticker && (
+                      <p className="truncate text-xs text-muted-foreground">
+                        {h.stockName}
+                      </p>
+                    )}
+                  </div>
+                  <p className="mt-1 truncate text-xs text-muted-foreground">
+                    {h.fund} · {h.manager}
+                  </p>
                 </div>
-                <p className="mt-1 truncate text-xs text-muted-foreground">
-                  {h.fund} · {h.manager}
-                </p>
               </div>
               <ActionBadge action={h.action} />
             </div>
@@ -239,14 +249,25 @@ export function Us13F() {
                   </div>
                 </TableCell>
                 <TableCell>
-                  <div className="font-semibold">
-                    {h.ticker || h.stockName}
-                  </div>
-                  {h.ticker && (
-                    <div className="text-xs text-muted-foreground">
-                      {h.stockName}
+                  <div className="flex items-center gap-2">
+                    {h.ticker && (
+                      <StarButton
+                        kind="us-stock"
+                        ticker={h.ticker}
+                        name={h.stockName}
+                      />
+                    )}
+                    <div>
+                      <div className="font-semibold">
+                        {h.ticker || h.stockName}
+                      </div>
+                      {h.ticker && (
+                        <div className="text-xs text-muted-foreground">
+                          {h.stockName}
+                        </div>
+                      )}
                     </div>
-                  )}
+                  </div>
                 </TableCell>
                 <TableCell
                   className={cn(

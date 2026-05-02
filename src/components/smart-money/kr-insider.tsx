@@ -17,6 +17,7 @@ import liveDart from "@/data/kr-insiders.json";
 import { formatKRW } from "@/lib/portfolio-analysis";
 import { ActionBadge } from "./action-badge";
 import { SortableHeader, type SortDir } from "./sortable-header";
+import { StarButton } from "@/components/watchlist/star-button";
 
 type LiveTrade = {
   id: string;
@@ -112,11 +113,14 @@ export function KrInsider() {
             className="rounded-2xl border border-border bg-card p-4 shadow-sm"
           >
             <div className="flex items-start justify-between gap-3">
-              <div className="min-w-0">
-                <p className="truncate text-base font-semibold">{t.stock}</p>
-                <p className="mt-0.5 truncate text-xs text-muted-foreground">
-                  {t.name} · {t.position}
-                </p>
+              <div className="flex min-w-0 items-start gap-2">
+                <StarButton kind="kr-stock" ticker={t.stock} name={t.stock} />
+                <div className="min-w-0">
+                  <p className="truncate text-base font-semibold">{t.stock}</p>
+                  <p className="mt-0.5 truncate text-xs text-muted-foreground">
+                    {t.name} · {t.position}
+                  </p>
+                </div>
               </div>
               <ActionBadge action={t.action} />
             </div>
@@ -201,7 +205,16 @@ export function KrInsider() {
                     {t.position}
                   </div>
                 </TableCell>
-                <TableCell className="font-medium">{t.stock}</TableCell>
+                <TableCell>
+                  <div className="flex items-center gap-2 font-medium">
+                    <StarButton
+                      kind="kr-stock"
+                      ticker={t.stock}
+                      name={t.stock}
+                    />
+                    {t.stock}
+                  </div>
+                </TableCell>
                 <TableCell className="text-right font-semibold tabular-nums">
                   {t.amountKRW > 0
                     ? `${formatKRW(t.amountKRW)}원`

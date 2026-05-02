@@ -1,4 +1,5 @@
 import { Flame } from "lucide-react";
+import { StarButton } from "@/components/watchlist/star-button";
 
 type Signal = {
   ticker: string;
@@ -48,10 +49,13 @@ export function SignalTable({ signals }: { signals: Signal[] }) {
             className="flex flex-col gap-2 rounded-xl border border-border bg-card p-4"
           >
             <div className="flex items-start justify-between gap-2">
-              <div className="min-w-0 flex-1">
-                <div className="font-mono text-base font-bold">{s.ticker}</div>
-                <div className="truncate text-xs text-muted-foreground">
-                  {s.name}
+              <div className="flex min-w-0 flex-1 items-start gap-2">
+                <StarButton kind="us-stock" ticker={s.ticker} name={s.name} />
+                <div className="min-w-0 flex-1">
+                  <div className="font-mono text-base font-bold">{s.ticker}</div>
+                  <div className="truncate text-xs text-muted-foreground">
+                    {s.name}
+                  </div>
                 </div>
               </div>
               <div className="text-right">
@@ -109,6 +113,7 @@ export function SignalTable({ signals }: { signals: Signal[] }) {
         <table className="w-full text-sm">
           <thead className="border-b border-border bg-muted/40 text-xs uppercase tracking-wider text-muted-foreground">
             <tr>
+              <th className="w-10 px-2 py-3" aria-label="워치리스트" />
               <th className="px-4 py-3 text-left">티커</th>
               <th className="px-4 py-3 text-left">종목명</th>
               <th className="px-4 py-3 text-right">가격</th>
@@ -125,6 +130,9 @@ export function SignalTable({ signals }: { signals: Signal[] }) {
                 key={s.ticker}
                 className="border-b border-border/40 last:border-0 hover:bg-muted/20"
               >
+                <td className="px-2 py-3 text-center">
+                  <StarButton kind="us-stock" ticker={s.ticker} name={s.name} />
+                </td>
                 <td className="px-4 py-3 font-mono font-bold">{s.ticker}</td>
                 <td className="max-w-[260px] truncate px-4 py-3 text-muted-foreground">
                   {s.name}
