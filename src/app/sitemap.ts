@@ -36,6 +36,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${SITE}/news`,
+      lastModified: now,
+      changeFrequency: "always",
+      priority: 0.8,
+    },
+    {
       url: `${SITE}/fire`,
       lastModified: now,
       changeFrequency: "weekly",
