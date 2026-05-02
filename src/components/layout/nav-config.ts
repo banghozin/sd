@@ -6,6 +6,9 @@ export type NavItem = {
   shortLabel: string;
   description: string;
   icon: LucideIcon;
+  // Items flagged primary appear in the mobile bottom nav (max 4 for layout).
+  // Everything else is reachable from the "더보기" drawer + the desktop sidebar.
+  primary?: boolean;
 };
 
 export const NAV_ITEMS: NavItem[] = [
@@ -15,6 +18,7 @@ export const NAV_ITEMS: NavItem[] = [
     shortLabel: "섹터",
     description: "한·미 산업 섹터 히트맵",
     icon: LayoutGrid,
+    primary: true,
   },
   {
     href: "/overlap",
@@ -43,6 +47,7 @@ export const NAV_ITEMS: NavItem[] = [
     shortLabel: "매집",
     description: "거래량 폭증 + 가격 정체 감지",
     icon: Activity,
+    primary: true,
   },
   {
     href: "/news",
@@ -50,6 +55,7 @@ export const NAV_ITEMS: NavItem[] = [
     shortLabel: "뉴스",
     description: "미국 정치·경제·암호 헤드라인",
     icon: Radio,
+    primary: true,
   },
   {
     href: "/watchlist",
@@ -57,5 +63,9 @@ export const NAV_ITEMS: NavItem[] = [
     shortLabel: "관심",
     description: "별표한 종목 모음",
     icon: Star,
+    primary: true,
   },
 ];
+
+export const PRIMARY_NAV_ITEMS = NAV_ITEMS.filter((it) => it.primary);
+export const SECONDARY_NAV_ITEMS = NAV_ITEMS.filter((it) => !it.primary);

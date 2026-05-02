@@ -1,6 +1,7 @@
 import { Radar, ShieldCheck } from "lucide-react";
 import { SmartMoney } from "@/components/smart-money/smart-money";
 import { GuideSection } from "@/components/layout/guide-section";
+import { NextUpdate } from "@/components/layout/next-update";
 
 export default function SmartMoneyPage() {
   return (
@@ -17,6 +18,16 @@ export default function SmartMoneyPage() {
             한국 내부자(임원) 자사주 매수와 미국 13F 헤지펀드 보유 변동을 한
             화면에서 추적하세요.
           </p>
+          <div className="mt-1.5 flex flex-wrap gap-x-4 gap-y-1">
+            <NextUpdate
+              schedule={{ kind: "every-6-hours-at-minute", minute: 15 }}
+              label="DART 다음"
+            />
+            <NextUpdate
+              schedule={{ kind: "daily-at-utc", hour: 23, minute: 0 }}
+              label="13F 다음"
+            />
+          </div>
         </div>
       </header>
 

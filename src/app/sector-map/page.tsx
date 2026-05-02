@@ -1,6 +1,7 @@
 import { LayoutGrid } from "lucide-react";
 import { HeatmapSection } from "@/components/heatmap/heatmap-section";
 import { GuideSection } from "@/components/layout/guide-section";
+import { NextUpdate } from "@/components/layout/next-update";
 
 export default function SectorMapPage() {
   // Manual KST formatting (no Intl) to keep server/client output identical
@@ -22,6 +23,9 @@ export default function SectorMapPage() {
           <p className="mt-0.5 text-sm text-muted-foreground md:text-base">
             {today} 기준 · 한국 11개, 미국 11개 섹터의 오늘 등락률을 한눈에
           </p>
+          <div className="mt-1.5">
+            <NextUpdate schedule={{ kind: "hourly-at-minute", minute: 7 }} />
+          </div>
         </div>
       </header>
 

@@ -3,6 +3,7 @@ import { Activity, AlertTriangle, TrendingUp } from "lucide-react";
 import unusualVolumeData from "@/data/unusual-volume.json";
 import { SignalTable } from "@/components/unusual-volume/signal-table";
 import { LastUpdated } from "@/components/unusual-volume/last-updated";
+import { NextUpdate } from "@/components/layout/next-update";
 
 export const metadata: Metadata = {
   title: "조용한 매집 감지 | StocksNet",
@@ -70,6 +71,10 @@ export default function UnusualVolumePage() {
           ) : (
             <span className="text-base font-semibold">아직 데이터 없음</span>
           )}
+          <NextUpdate
+            schedule={{ kind: "every-30-min-during-us-market" }}
+            label="다음"
+          />
         </div>
         <div className="flex flex-col gap-1">
           <span className="text-xs uppercase tracking-wider text-muted-foreground">
