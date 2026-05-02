@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: update-universe
@@ -59,3 +60,23 @@ jobs:
           done
           echo "Push failed after 5 attempts"
           exit 1
+
+      - name: Notify on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          title="❌ ${{ github.workflow }} failure"
+          run_url="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          open=$(gh issue list --search "$title in:title state:open" --json number --jq '.[0].number // empty')
+          if [ -n "$open" ]; then
+            gh issue comment "$open" --body "Another failure on $(date -u +'%Y-%m-%d %H:%M UTC') — see $run_url"
+          else
+            gh issue create \
+              --title "$title" \
+              --body "Workflow: ${{ github.workflow }}
+          Run: $run_url
+          First failure: $(date -u +'%Y-%m-%d %H:%M UTC')
+
+          Close this issue when the workflow is healthy again — it will be reopened automatically on the next failure."
+          fi
