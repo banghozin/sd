@@ -3,9 +3,10 @@ import { Star } from "lucide-react";
 import { WatchlistView } from "@/components/watchlist/watchlist-view";
 
 export const metadata: Metadata = {
-  title: "워치리스트 | StocksNet",
+  title: "워치리스트 — 별표한 관심 종목 모음",
   description:
-    "관심 종목을 별표로 모아 한눈에 봅니다. 미국 종목은 60초마다 자동 갱신되는 실시간 가격이 표시됩니다.",
+    "각 페이지에서 ⭐ 별표한 종목을 한 곳에 모아 미국 종목 가격을 60초마다 자동 갱신. 클릭 시 인트라데이 캔들 차트도 즉시 확인 가능.",
+  alternates: { canonical: "/watchlist" },
 };
 
 export default function WatchlistPage() {

@@ -1,9 +1,17 @@
+import type { Metadata } from "next";
 import { Flame } from "lucide-react";
 import { FireSimulator } from "@/components/fire/fire-simulator";
 import { GuideSection } from "@/components/layout/guide-section";
 import { FxBadge } from "@/components/layout/fx-badge";
 import { DataDisclaimer } from "@/components/layout/data-disclaimer";
 import fxData from "@/data/fx.json";
+
+export const metadata: Metadata = {
+  title: "FIRE 시뮬레이터 — 배당 DRIP 복리 계산기",
+  description:
+    "월 투자금·배당성장률·세후 환율을 슬라이더로 조정하며 조기은퇴까지 필요한 자산을 시뮬레이션. 한국 15.4% · 미국 15% 세율 자동 반영, 환율 1시간 갱신.",
+  alternates: { canonical: "/fire" },
+};
 
 export default function FirePage() {
   return (

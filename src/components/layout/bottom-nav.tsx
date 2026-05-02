@@ -7,6 +7,7 @@ import { MoreHorizontal, X } from "lucide-react";
 import {
   PRIMARY_NAV_ITEMS,
   SECONDARY_NAV_ITEMS,
+  UTILITY_NAV_ITEMS,
 } from "./nav-config";
 import { cn } from "@/lib/utils";
 
@@ -29,7 +30,8 @@ export function BottomNav() {
     return () => window.removeEventListener("keydown", onKey);
   }, [drawerOpen]);
 
-  const moreActive = SECONDARY_NAV_ITEMS.some(
+  const drawerItems = [...SECONDARY_NAV_ITEMS, ...UTILITY_NAV_ITEMS];
+  const moreActive = drawerItems.some(
     (it) => pathname === it.href || pathname?.startsWith(`${it.href}/`),
   );
 
@@ -156,6 +158,52 @@ export function BottomNav() {
                   </li>
                 );
               })}
+              {UTILITY_NAV_ITEMS.length > 0 && (
+                <>
+                  <li
+                    aria-hidden
+                    className="my-1 border-t border-border/60"
+                  />
+                  {UTILITY_NAV_ITEMS.map((item) => {
+                    const Icon = item.icon;
+                    const active =
+                      pathname === item.href ||
+                      pathname?.startsWith(`${item.href}/`);
+                    return (
+                      <li key={item.href}>
+                        <Link
+                          href={item.href}
+                          className={cn(
+                            "flex items-center gap-4 px-5 py-3 transition-colors",
+                            active
+                              ? "bg-primary/5 text-primary"
+                              : "hover:bg-muted",
+                          )}
+                        >
+                          <div
+                            className={cn(
+                              "flex h-9 w-9 shrink-0 items-center justify-center rounded-xl",
+                              active
+                                ? "bg-primary/10 text-primary"
+                                : "bg-muted/60 text-foreground/60",
+                            )}
+                          >
+                            <Icon className="h-4 w-4" />
+                          </div>
+                          <div className="min-w-0 flex-1">
+                            <p className="text-sm font-medium">
+                              {item.label}
+                            </p>
+                            <p className="truncate text-xs text-muted-foreground">
+                              {item.description}
+                            </p>
+                          </div>
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </>
+              )}
             </ul>
           </div>
         </div>

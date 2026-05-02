@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import { Radar, ShieldCheck } from "lucide-react";
 import { SmartMoney } from "@/components/smart-money/smart-money";
 import { GuideSection } from "@/components/layout/guide-section";
 import { NextUpdate } from "@/components/layout/next-update";
+
+export const metadata: Metadata = {
+  title: "스마트 머니 추적 — 13F 헤지펀드 + DART 임원 매수",
+  description:
+    "워렌 버핏·마이클 버리 등 미국 13F 헤지펀드의 분기별 보유 변동과 한국 임원의 자사주 매수 공시(DART)를 한 화면에서 자동 추적. 6시간마다 갱신.",
+  alternates: { canonical: "/smart-money" },
+};
 
 export default function SmartMoneyPage() {
   return (

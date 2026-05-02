@@ -3,9 +3,10 @@ import Link from "next/link";
 import { Coffee, Heart, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "후원하기 | StocksNet",
+  title: "개발자에게 커피 한 잔 — StocksNet 후원하기",
   description:
-    "StocksNet 운영을 도와주세요. 여러분의 작은 후원이 사이트를 유지하고 더 나은 기능을 만드는 데 큰 힘이 됩니다.",
+    "여러분의 작은 후원이 사이트 운영비와 신규 기능 개발에 큰 힘이 됩니다. 한국 사용자에게 친숙한 투네이션으로 카카오페이·카드·계좌이체 익명 후원.",
+  alternates: { canonical: "/support" },
 };
 
 const TOONATION_URL = "https://toon.at/donate/stocksnet";

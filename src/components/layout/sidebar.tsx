@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Coffee, Shield, TrendingUp } from "lucide-react";
-import { NAV_ITEMS } from "./nav-config";
+import { SIDEBAR_MAIN_ITEMS } from "./nav-config";
 import { cn } from "@/lib/utils";
 
 export function Sidebar() {
@@ -31,7 +31,7 @@ export function Sidebar() {
       </div>
 
       <nav className="flex-1 space-y-1 px-3 py-4 lg:px-4">
-        {NAV_ITEMS.map((item) => {
+        {SIDEBAR_MAIN_ITEMS.map((item) => {
           const Icon = item.icon;
           const active =
             pathname === item.href || pathname?.startsWith(`${item.href}/`);

@@ -3,9 +3,10 @@ import { Radio } from "lucide-react";
 import { NewsFeed } from "@/components/news/news-feed";
 
 export const metadata: Metadata = {
-  title: "실시간 뉴스 채집기 | StocksNet",
+  title: "실시간 뉴스 채집기 — 미국 정치·경제·암호 헤드라인",
   description:
-    "미국 정치·경제·암호화폐 헤드라인을 60초마다 자동으로 수집해 보여드립니다. CNN · Politico · Fox · Guardian · MarketWatch · CNBC · CoinDesk · Cointelegraph · Decrypt 외.",
+    "CNN · Politico · MarketWatch · CNBC · CoinDesk 등 주요 미국 매체의 최신 헤드라인을 60초마다 자동 갱신. 미국 동부 시간(ET) 기준 오늘의 기사만 표시.",
+  alternates: { canonical: "/news" },
 };
 
 export default function NewsPage() {

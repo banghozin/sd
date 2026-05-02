@@ -7,9 +7,10 @@ import { NextUpdate } from "@/components/layout/next-update";
 import { NotificationToggle } from "@/components/notifications/notification-toggle";
 
 export const metadata: Metadata = {
-  title: "조용한 매집 감지 | StocksNet",
+  title: "조용한 매집 감지 — 거래량 폭증 + 가격 정체 시그널",
   description:
-    "거래량은 평소의 3배 이상으로 터졌는데 가격은 ±2% 이내로 잠잠한 미국 소형주를 준실시간으로 감지합니다. 시총 $5M~$1.3B + 일평균 거래량 50k 이상 종목 대상.",
+    "시총 $5M~$1.3B 미국 소형주 중 5일 평균 대비 거래량이 3배 이상 터졌는데 가격은 ±2% 이내인 종목을 30분마다 자동 감지. 기관 매집 신호로 알려진 RVol 패턴.",
+  alternates: { canonical: "/unusual-volume" },
 };
 
 type Signal = {

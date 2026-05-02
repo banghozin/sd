@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import { LayoutGrid } from "lucide-react";
 import { HeatmapSection } from "@/components/heatmap/heatmap-section";
 import { GuideSection } from "@/components/layout/guide-section";
 import { NextUpdate } from "@/components/layout/next-update";
+
+export const metadata: Metadata = {
+  title: "섹터 맵 — 한·미 주식 산업별 등락률 히트맵",
+  description:
+    "한국 11개(KOSPI·KOSDAQ) + 미국 11개(S&P·나스닥) 산업 섹터 ETF의 오늘 등락률을 한눈에 보여주는 히트맵. 매시간 자동 갱신되는 무료 시각화 도구.",
+  alternates: { canonical: "/sector-map" },
+};
 
 export default function SectorMapPage() {
   // Manual KST formatting (no Intl) to keep server/client output identical

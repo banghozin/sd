@@ -1,4 +1,4 @@
-import { Activity, LayoutGrid, Layers, LineChart, Radar, Radio, Flame, Star, type LucideIcon } from "lucide-react";
+import { Activity, Coffee, LayoutGrid, Layers, LineChart, Radar, Radio, Flame, Shield, Star, type LucideIcon } from "lucide-react";
 
 export type NavItem = {
   href: string;
@@ -9,6 +9,9 @@ export type NavItem = {
   // Items flagged primary appear in the mobile bottom nav (max 4 for layout).
   // Everything else is reachable from the "더보기" drawer + the desktop sidebar.
   primary?: boolean;
+  // Utility items are shown only in the mobile drawer footer and the
+  // desktop sidebar bottom — never in the main nav list.
+  utility?: boolean;
 };
 
 export const NAV_ITEMS: NavItem[] = [
@@ -72,7 +75,27 @@ export const NAV_ITEMS: NavItem[] = [
     description: "시그널 이후 수익률 통계",
     icon: LineChart,
   },
+  {
+    href: "/support",
+    label: "개발자에게 커피 한 잔",
+    shortLabel: "후원",
+    description: "사이트 운영 후원하기",
+    icon: Coffee,
+    utility: true,
+  },
+  {
+    href: "/privacy",
+    label: "개인정보처리방침",
+    shortLabel: "정책",
+    description: "수집하는 정보와 광고 안내",
+    icon: Shield,
+    utility: true,
+  },
 ];
 
 export const PRIMARY_NAV_ITEMS = NAV_ITEMS.filter((it) => it.primary);
-export const SECONDARY_NAV_ITEMS = NAV_ITEMS.filter((it) => !it.primary);
+export const SECONDARY_NAV_ITEMS = NAV_ITEMS.filter(
+  (it) => !it.primary && !it.utility,
+);
+export const UTILITY_NAV_ITEMS = NAV_ITEMS.filter((it) => it.utility);
+export const SIDEBAR_MAIN_ITEMS = NAV_ITEMS.filter((it) => !it.utility);

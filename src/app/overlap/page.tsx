@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import { Layers } from "lucide-react";
 import { OverlapAnalyzer } from "@/components/overlap/overlap-analyzer";
 import { GuideSection } from "@/components/layout/guide-section";
 import { DataDisclaimer } from "@/components/layout/data-disclaimer";
+
+export const metadata: Metadata = {
+  title: "포트폴리오 중복 분석 — ETF 섹터 쏠림 진단",
+  description:
+    "보유 ETF·종목의 섹터 비중을 합산해 도넛 차트로 시각화. 50% 쏠림 위험 자동 경고. 입력 데이터는 브라우저에만 저장되어 무료·무회원으로 사용 가능.",
+  alternates: { canonical: "/overlap" },
+};
 
 export default function OverlapPage() {
   return (

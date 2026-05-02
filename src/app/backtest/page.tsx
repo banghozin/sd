@@ -3,9 +3,10 @@ import { LineChart } from "lucide-react";
 import { BacktestView } from "@/components/backtest/backtest-view";
 
 export const metadata: Metadata = {
-  title: "백테스트 | StocksNet",
+  title: "시그널 백테스트 — 조용한 매집 수익률 검증",
   description:
-    "조용한 매집 시그널이 잡힌 종목들의 이후 수익률을 통계적으로 검증합니다. 매일 자동으로 시그널이 누적되며 30일 이상 데이터가 모이면 의미 있는 통계가 표시됩니다.",
+    "감지된 시그널의 +1일 / +1주 / +1개월 후 수익률을 자동 계산. RVol 강도별 · 감지 시간대별 통계로 시그널의 통계적 신뢰도를 자동 검증합니다.",
+  alternates: { canonical: "/backtest" },
 };
 
 export default function BacktestPage() {

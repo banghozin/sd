@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "개인정보처리방침 | StocksNet",
+  title: "개인정보처리방침",
   description:
-    "StocksNet의 개인정보처리방침 — 수집하는 정보, 쿠키, 광고, 외부 데이터 출처 안내.",
+    "StocksNet은 사용자의 개인정보를 서버에 저장하지 않습니다. 수집하는 정보, 쿠키, AdSense 광고, 외부 데이터 출처에 대한 자세한 안내.",
+  alternates: { canonical: "/privacy" },
 };
 
 const UPDATED_AT = "2026-05-01";
