@@ -4,7 +4,7 @@
       "id": "us-tech",
       "name": "기술·반도체",
       "market": "US",
-      "changePct": 0.9,
+      "changePct": 0.92,
       "marketCapBillion": 0,
       "topTickers": [
         "AAPL",
@@ -82,7 +82,7 @@
       "id": "us-energy",
       "name": "에너지",
       "market": "US",
-      "changePct": 4.65,
+      "changePct": 4.62,
       "marketCapBillion": 0,
       "topTickers": [
         "XOM",
@@ -268,7 +268,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-05-04T20:25:28.707Z",
+  "fetchedAt": "2026-05-04T21:07:41.745Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
