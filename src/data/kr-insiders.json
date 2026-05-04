@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20260504000344",
+      "name": "김성현",
+      "position": "부문장",
+      "stock": "KB금융",
+      "amountKRW": 0,
+      "shareDelta": 3000,
+      "action": "BUY",
+      "filedAt": "2026-05-04",
+      "rceptNo": "20260504000344"
+    },
+    {
       "id": "dart-20260504000133",
       "name": "이준희",
       "position": "사장",
@@ -153,21 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-04-29",
       "rceptNo": "20260429000763"
-    },
-    {
-      "id": "dart-20260428000487",
-      "name": "김준엽",
-      "position": "상무",
-      "stock": "현대자동차",
-      "amountKRW": 0,
-      "shareDelta": 195,
-      "action": "BUY",
-      "filedAt": "2026-04-28",
-      "rceptNo": "20260428000487"
     }
   ],
-  "fetchedAt": "2026-05-04T06:15:56.594Z",
-  "inspected": 4447,
-  "matched": 4431,
+  "fetchedAt": "2026-05-04T12:15:59.554Z",
+  "inspected": 4448,
+  "matched": 4432,
   "source": "DART OpenAPI elestock.json"
 }
