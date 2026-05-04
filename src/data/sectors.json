@@ -143,7 +143,7 @@
       "id": "kr-semi",
       "name": "반도체",
       "market": "KR",
-      "changePct": 5.36,
+      "changePct": 3.56,
       "marketCapBillion": 0,
       "topTickers": [
         "삼성전자",
@@ -155,7 +155,7 @@
       "id": "kr-it",
       "name": "IT·소프트웨어",
       "market": "KR",
-      "changePct": 14.59,
+      "changePct": 14.43,
       "marketCapBillion": 0,
       "topTickers": [
         "네이버",
@@ -167,7 +167,7 @@
       "id": "kr-auto",
       "name": "자동차",
       "market": "KR",
-      "changePct": -2.91,
+      "changePct": -0.36,
       "marketCapBillion": 0,
       "topTickers": [
         "현대차",
@@ -179,7 +179,7 @@
       "id": "kr-bank",
       "name": "금융·은행",
       "market": "KR",
-      "changePct": 0.22,
+      "changePct": -0.88,
       "marketCapBillion": 0,
       "topTickers": [
         "KB금융",
@@ -191,7 +191,7 @@
       "id": "kr-bio",
       "name": "바이오·제약",
       "market": "KR",
-      "changePct": -1.54,
+      "changePct": -3.27,
       "marketCapBillion": 0,
       "topTickers": [
         "삼성바이오로직스",
@@ -203,7 +203,7 @@
       "id": "kr-battery",
       "name": "2차전지",
       "market": "KR",
-      "changePct": 4.44,
+      "changePct": 2.65,
       "marketCapBillion": 0,
       "topTickers": [
         "LG에너지솔루션",
@@ -215,7 +215,7 @@
       "id": "kr-steel",
       "name": "철강·금속",
       "market": "KR",
-      "changePct": 3.48,
+      "changePct": 2.81,
       "marketCapBillion": 0,
       "topTickers": [
         "POSCO홀딩스"
@@ -226,7 +226,7 @@
       "id": "kr-game",
       "name": "게임·엔터",
       "market": "KR",
-      "changePct": 0.22,
+      "changePct": -1.23,
       "marketCapBillion": 0,
       "topTickers": [
         "크래프톤",
@@ -238,7 +238,7 @@
       "id": "kr-chem",
       "name": "화학·소재",
       "market": "KR",
-      "changePct": 6.25,
+      "changePct": 4.36,
       "marketCapBillion": 0,
       "topTickers": [
         "LG화학"
@@ -249,7 +249,7 @@
       "id": "kr-shipbuild",
       "name": "조선·기계",
       "market": "KR",
-      "changePct": -1.98,
+      "changePct": -2.36,
       "marketCapBillion": 0,
       "topTickers": [
         "HD현대중공업"
@@ -260,7 +260,7 @@
       "id": "kr-cosmetic",
       "name": "음식료·화장품",
       "market": "KR",
-      "changePct": 0.2,
+      "changePct": 0.45,
       "marketCapBillion": 0,
       "topTickers": [
         "아모레퍼시픽"
@@ -268,7 +268,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-05-03T23:59:35.749Z",
+  "fetchedAt": "2026-05-04T00:07:35.472Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
