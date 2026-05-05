@@ -1,13 +1,30 @@
 export type Market = "KR" | "US";
 
+export type SectorHorizon = "1d" | "1w" | "1m";
+
 export type Sector = {
   id: string;
   name: string;
   market: Market;
-  changePct: number;
+  changePct: number; // primary horizon = 1-day (kept for backward compat)
+  changePct1d?: number;
+  changePct1w?: number;
+  changePct1m?: number;
   marketCapBillion: number;
   topTickers: string[];
 };
+
+export function getSectorChange(s: Sector, horizon: SectorHorizon): number {
+  switch (horizon) {
+    case "1w":
+      return s.changePct1w ?? s.changePct;
+    case "1m":
+      return s.changePct1m ?? s.changePct;
+    case "1d":
+    default:
+      return s.changePct1d ?? s.changePct;
+  }
+}
 
 export const KR_SECTORS: Sector[] = [
   {

@@ -1,17 +1,34 @@
 import { TrendingDown, TrendingUp } from "lucide-react";
-import type { Sector } from "@/lib/mock-data/sectors";
+import {
+  getSectorChange,
+  type Sector,
+  type SectorHorizon,
+} from "@/lib/mock-data/sectors";
 import { formatChange, getMarketLabel } from "@/lib/heatmap-color";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
 type Props = {
   sectors: Sector[];
+  horizon: SectorHorizon;
 };
 
-function pickTop(sectors: Sector[], direction: "up" | "down"): Sector[] {
-  const sorted = [...sectors].sort((a, b) =>
-    direction === "up" ? b.changePct - a.changePct : a.changePct - b.changePct,
-  );
+const HORIZON_HEADING: Record<SectorHorizon, { up: string; down: string }> = {
+  "1d": { up: "오늘의 강세 TOP 3", down: "오늘의 약세 TOP 3" },
+  "1w": { up: "1주 강세 TOP 3", down: "1주 약세 TOP 3" },
+  "1m": { up: "1개월 강세 TOP 3", down: "1개월 약세 TOP 3" },
+};
+
+function pickTop(
+  sectors: Sector[],
+  direction: "up" | "down",
+  horizon: SectorHorizon,
+): Sector[] {
+  const sorted = [...sectors].sort((a, b) => {
+    const av = getSectorChange(a, horizon);
+    const bv = getSectorChange(b, horizon);
+    return direction === "up" ? bv - av : av - bv;
+  });
   return sorted.slice(0, 3);
 }
 
@@ -20,11 +37,13 @@ function MoverCard({
   icon: Icon,
   sectors,
   accent,
+  horizon,
 }: {
   title: string;
   icon: typeof TrendingUp;
   sectors: Sector[];
   accent: "up" | "down";
+  horizon: SectorHorizon;
 }) {
   return (
     <Card className="rounded-2xl border-0 shadow-sm">
@@ -64,7 +83,7 @@ function MoverCard({
                 accent === "up" ? "text-rose-600" : "text-blue-600",
               )}
             >
-              {formatChange(s.changePct)}
+              {formatChange(getSectorChange(s, horizon))}
             </span>
           </div>
         ))}
@@ -73,23 +92,26 @@ function MoverCard({
   );
 }
 
-export function HighlightStrip({ sectors }: Props) {
-  const gainers = pickTop(sectors, "up");
-  const losers = pickTop(sectors, "down");
+export function HighlightStrip({ sectors, horizon }: Props) {
+  const gainers = pickTop(sectors, "up", horizon);
+  const losers = pickTop(sectors, "down", horizon);
+  const headings = HORIZON_HEADING[horizon];
 
   return (
     <div className="grid gap-4 md:grid-cols-2">
       <MoverCard
-        title="오늘의 강세 TOP 3"
+        title={headings.up}
         icon={TrendingUp}
         sectors={gainers}
         accent="up"
+        horizon={horizon}
       />
       <MoverCard
-        title="오늘의 약세 TOP 3"
+        title={headings.down}
         icon={TrendingDown}
         sectors={losers}
         accent="down"
+        horizon={horizon}
       />
     </div>
   );

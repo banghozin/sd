@@ -5,11 +5,14 @@ import {
   ALL_SECTORS as MOCK_ALL,
   KR_SECTORS as MOCK_KR,
   US_SECTORS as MOCK_US,
+  getSectorChange,
   type Sector,
+  type SectorHorizon,
 } from "@/lib/mock-data/sectors";
 import liveSectors from "@/data/sectors.json";
 import { AdBanner } from "@/components/ads/ad-banner";
 import { MarketToggle, type MarketFilter } from "./market-toggle";
+import { HorizonToggle } from "./horizon-toggle";
 import { SectorCard } from "./sector-card";
 import { HighlightStrip } from "./highlight-strip";
 
@@ -33,9 +36,6 @@ const LEGEND = [
 
 function formatFetchedAt(iso: string | null): string {
   if (!iso) return "";
-  // Manual UTC → KST conversion to avoid relying on Intl locale data,
-  // which can differ between Vercel's Node.js runtime and the user's
-  // browser (root cause class for hydration mismatches).
   const ms = new Date(iso).getTime();
   if (Number.isNaN(ms)) return "";
   const kst = new Date(ms + 9 * 60 * 60 * 1000);
@@ -46,14 +46,24 @@ function formatFetchedAt(iso: string | null): string {
   return `${month}월 ${day}일 ${hh}:${mm}`;
 }
 
+// Detect whether the live data has multi-horizon fields. Old sectors.json
+// (pre-multi-horizon migration) only has changePct, so we surface a hint
+// until the next cron rebuild populates 1w/1m.
+const HAS_HORIZON_DATA = liveList.some(
+  (s) => typeof s.changePct1w === "number" || typeof s.changePct1m === "number",
+);
+
 export function HeatmapSection() {
-  const [filter, setFilter] = useState<MarketFilter>("ALL");
+  const [market, setMarket] = useState<MarketFilter>("ALL");
+  const [horizon, setHorizon] = useState<SectorHorizon>("1d");
 
   const sectors = useMemo(() => {
     const list =
-      filter === "KR" ? KR_SECTORS : filter === "US" ? US_SECTORS : ALL_SECTORS;
-    return [...list].sort((a, b) => b.changePct - a.changePct);
-  }, [filter]);
+      market === "KR" ? KR_SECTORS : market === "US" ? US_SECTORS : ALL_SECTORS;
+    return [...list].sort(
+      (a, b) => getSectorChange(b, horizon) - getSectorChange(a, horizon),
+    );
+  }, [market, horizon]);
 
   return (
     <div className="flex flex-col gap-6 md:gap-8">
@@ -75,8 +85,11 @@ export function HeatmapSection() {
         </span>
       </div>
 
-      <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-        <MarketToggle value={filter} onChange={setFilter} />
+      <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+          <MarketToggle value={market} onChange={setMarket} />
+          <HorizonToggle value={horizon} onChange={setHorizon} />
+        </div>
         <ul className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-muted-foreground md:text-xs">
           {LEGEND.map((l) => (
             <li key={l.label} className="flex items-center gap-1.5">
@@ -87,9 +100,15 @@ export function HeatmapSection() {
             </li>
           ))}
         </ul>
+        {IS_LIVE && !HAS_HORIZON_DATA && horizon !== "1d" && (
+          <p className="rounded-xl border border-amber-500/30 bg-amber-500/5 px-3 py-2 text-xs text-amber-700 dark:text-amber-400 md:text-sm">
+            1주·1개월 데이터는 다음 cron 실행 후 채워져요. 지금은 1일 등락률을
+            그대로 보여드리고 있어요.
+          </p>
+        )}
       </div>
 
-      <HighlightStrip sectors={sectors} />
+      <HighlightStrip sectors={sectors} horizon={horizon} />
 
       <AdBanner variant="inline" slot="sector-map-infeed" />
 
@@ -104,7 +123,7 @@ export function HeatmapSection() {
         </header>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 md:grid-cols-3 md:gap-4 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
           {sectors.map((s) => (
-            <SectorCard key={s.id} sector={s} />
+            <SectorCard key={s.id} sector={s} horizon={horizon} />
           ))}
         </div>
       </section>

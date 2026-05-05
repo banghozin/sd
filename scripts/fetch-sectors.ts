@@ -53,15 +53,24 @@ type YahooChartResponse = {
         marketCap?: number;
         regularMarketTime?: number;
       };
+      indicators?: {
+        quote?: Array<{ close?: (number | null)[] }>;
+      };
+      timestamp?: number[];
     }>;
     error: { code?: string; description?: string } | null;
   };
 };
 
-async function fetchYahoo(
-  ticker: string,
-): Promise<{ changePct: number; marketCapBillion: number; asOf: number } | null> {
-  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}?interval=1d&range=5d`;
+async function fetchYahoo(ticker: string): Promise<{
+  changePct: number;
+  changePct1d: number;
+  changePct1w: number | null;
+  changePct1m: number | null;
+  marketCapBillion: number;
+  asOf: number;
+} | null> {
+  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}?interval=1d&range=3mo`;
   const r = await fetch(url, {
     headers: {
       "User-Agent":
@@ -80,15 +89,44 @@ async function fetchYahoo(
     );
     return null;
   }
-  const meta = data.chart.result[0].meta;
+  const result = data.chart.result[0];
+  const meta = result.meta;
   const price = meta.regularMarketPrice ?? 0;
   const prev = meta.chartPreviousClose ?? meta.previousClose ?? 0;
   if (!price || !prev) {
     console.warn(`[sectors] ${ticker} → missing price/prev`);
     return null;
   }
+
+  // Use trading-day offsets for 1w (5 trading days) and 1m (~21 trading days).
+  // We anchor to chartPreviousClose's position so that today's partial candle
+  // (if present) doesn't skew the offset.
+  const closes = (result.indicators?.quote?.[0]?.close ?? []).filter(
+    (c): c is number => typeof c === "number",
+  );
+
+  const changeAt = (offsetDaysBack: number): number | null => {
+    // closes[length - 1 - offsetDaysBack] is the close `offsetDaysBack` trading
+    // days before the latest candle. We add 1 to the offset because the latest
+    // candle may be today's partial bar — but `prev` already represents
+    // yesterday's close, so anchoring against `closes[length - 1 - n]` directly
+    // approximates "n trading days ago" close.
+    const idx = closes.length - 1 - offsetDaysBack;
+    if (idx < 0) return null;
+    const past = closes[idx];
+    if (!past) return null;
+    return ((price - past) / past) * 100;
+  };
+
+  const changePct1d = ((price - prev) / prev) * 100;
+  const changePct1w = changeAt(5);
+  const changePct1m = changeAt(21);
+
   return {
-    changePct: ((price - prev) / prev) * 100,
+    changePct: changePct1d, // legacy alias
+    changePct1d,
+    changePct1w,
+    changePct1m,
     marketCapBillion: (meta.marketCap ?? 0) / 1_000_000_000,
     asOf: meta.regularMarketTime ?? 0,
   };
@@ -104,6 +142,9 @@ async function main() {
     name: string;
     market: Market;
     changePct: number;
+    changePct1d: number;
+    changePct1w: number | null;
+    changePct1m: number | null;
     marketCapBillion: number;
     topTickers: string[];
     ticker: string;
@@ -113,11 +154,16 @@ async function main() {
     try {
       const result = await fetchYahoo(spec.ticker);
       if (!result) continue;
+      const round = (v: number | null): number | null =>
+        v === null ? null : Number(v.toFixed(2));
       sectors.push({
         id: spec.id,
         name: spec.name,
         market: spec.market,
         changePct: Number(result.changePct.toFixed(2)),
+        changePct1d: Number(result.changePct1d.toFixed(2)),
+        changePct1w: round(result.changePct1w),
+        changePct1m: round(result.changePct1m),
         marketCapBillion: Math.round(result.marketCapBillion),
         topTickers: spec.topTickers,
         ticker: spec.ticker,
