@@ -49,11 +49,21 @@ export function SignalTable({ signals }: { signals: Signal[] }) {
       {/* Mobile: card list */}
       <div className="flex flex-col gap-2 md:hidden">
         {signals.map((s) => (
-          <button
+          // Use a role=button div instead of <button> so the nested
+          // StarButton inside doesn't violate HTML's no-interactive-
+          // inside-interactive rule. Enter/Space replicate button keys.
+          <div
             key={s.ticker}
-            type="button"
+            role="button"
+            tabIndex={0}
             onClick={() => openChart(s.ticker, s.name)}
-            className="flex flex-col gap-2 rounded-xl border border-border bg-card p-4 text-left transition-colors hover:border-primary/40 hover:bg-muted/30"
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                openChart(s.ticker, s.name);
+              }
+            }}
+            className="flex flex-col gap-2 rounded-xl border border-border bg-card p-4 text-left transition-colors hover:border-primary/40 hover:bg-muted/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 cursor-pointer"
           >
             <div className="flex items-start justify-between gap-2">
               <div className="flex min-w-0 flex-1 items-start gap-2">
@@ -111,7 +121,7 @@ export function SignalTable({ signals }: { signals: Signal[] }) {
                 <div className="font-mono">{formatMarketCap(s.mcap)}</div>
               </div>
             </div>
-          </button>
+          </div>
         ))}
       </div>
 
