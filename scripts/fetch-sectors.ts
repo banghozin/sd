@@ -65,7 +65,7 @@ type YahooChartResponse = {
 
 async function fetchYahoo(ticker: string): Promise<{
   changePct: number;
-  changePct1d: number;
+  changePct1d: number | null;
   changePct1w: number | null;
   changePct1m: number | null;
   marketCapBillion: number;
@@ -99,12 +99,13 @@ async function fetchYahoo(ticker: string): Promise<{
     return null;
   }
 
-  // Use SPLIT-ADJUSTED close prices for 1w/1m comparisons. Korean sector
-  // ETFs (TIGER, KODEX) periodically do share splits or reverse splits;
-  // raw `close` values from before such an event are on a different
-  // scale and would yield obviously-wrong moves like +400%. Yahoo's
-  // `adjclose` array rescales every historical close to today's share
-  // basis so direct subtraction stays meaningful.
+  // Use SPLIT-ADJUSTED close prices for ALL horizon comparisons. Korean
+  // sector ETFs (TIGER, KODEX) periodically do share splits or reverse
+  // splits, and Yahoo's `meta.chartPreviousClose` is sometimes the raw
+  // unadjusted value on the day of the event — which made 1d returns
+  // blow up to +400% even before the 1w/1m calculations. The `adjclose`
+  // series rescales every historical close to today's share basis, so
+  // anchoring there keeps every horizon honest.
   const adjcloses = (
     result.indicators?.adjclose?.[0]?.adjclose ?? []
   ).filter((c): c is number => typeof c === "number");
@@ -115,11 +116,12 @@ async function fetchYahoo(ticker: string): Promise<{
     const past = adjcloses[idx];
     if (!past) return null;
     const pct = ((price - past) / past) * 100;
-    // Sector ETFs realistically don't move more than ~50% in a week or
-    // ~100% in a month. Anything beyond that is almost certainly a data
-    // glitch (split mis-attribution, missing adjclose, wrong index) so
-    // refuse to publish it rather than mislead the user.
-    const guard = offsetDaysBack <= 5 ? 50 : 100;
+    // Sector ETFs realistically don't move more than ~15% in a single
+    // session, ~50% in a week, or ~100% in a month. Anything past those
+    // limits is almost certainly a data glitch (split mis-attribution,
+    // missing adjclose, wrong index) so we refuse to publish it.
+    const guard =
+      offsetDaysBack <= 1 ? 15 : offsetDaysBack <= 5 ? 50 : 100;
     if (Math.abs(pct) > guard) {
       console.warn(
         `[sectors] guarded out-of-range ${offsetDaysBack}d return: ${pct.toFixed(1)}%`,
@@ -129,12 +131,18 @@ async function fetchYahoo(ticker: string): Promise<{
     return pct;
   };
 
-  const changePct1d = ((price - prev) / prev) * 100;
+  // Compute 1d via adjclose. Fall back to chartPreviousClose only if
+  // the adjclose lookup fails AND the raw delta is within the guard.
+  let changePct1d = changeAt(1);
+  if (changePct1d === null) {
+    const rawPct = ((price - prev) / prev) * 100;
+    if (Math.abs(rawPct) <= 15) changePct1d = rawPct;
+  }
   const changePct1w = changeAt(5);
   const changePct1m = changeAt(21);
 
   return {
-    changePct: changePct1d, // legacy alias
+    changePct: changePct1d ?? 0, // legacy alias — never null at this layer
     changePct1d,
     changePct1w,
     changePct1m,
@@ -153,7 +161,7 @@ async function main() {
     name: string;
     market: Market;
     changePct: number;
-    changePct1d: number;
+    changePct1d: number | null;
     changePct1w: number | null;
     changePct1m: number | null;
     marketCapBillion: number;
@@ -172,7 +180,7 @@ async function main() {
         name: spec.name,
         market: spec.market,
         changePct: Number(result.changePct.toFixed(2)),
-        changePct1d: Number(result.changePct1d.toFixed(2)),
+        changePct1d: round(result.changePct1d),
         changePct1w: round(result.changePct1w),
         changePct1m: round(result.changePct1m),
         marketCapBillion: Math.round(result.marketCapBillion),
