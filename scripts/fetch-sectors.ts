@@ -55,6 +55,7 @@ type YahooChartResponse = {
       };
       indicators?: {
         quote?: Array<{ close?: (number | null)[] }>;
+        adjclose?: Array<{ adjclose?: (number | null)[] }>;
       };
       timestamp?: number[];
     }>;
@@ -98,24 +99,34 @@ async function fetchYahoo(ticker: string): Promise<{
     return null;
   }
 
-  // Use trading-day offsets for 1w (5 trading days) and 1m (~21 trading days).
-  // We anchor to chartPreviousClose's position so that today's partial candle
-  // (if present) doesn't skew the offset.
-  const closes = (result.indicators?.quote?.[0]?.close ?? []).filter(
-    (c): c is number => typeof c === "number",
-  );
+  // Use SPLIT-ADJUSTED close prices for 1w/1m comparisons. Korean sector
+  // ETFs (TIGER, KODEX) periodically do share splits or reverse splits;
+  // raw `close` values from before such an event are on a different
+  // scale and would yield obviously-wrong moves like +400%. Yahoo's
+  // `adjclose` array rescales every historical close to today's share
+  // basis so direct subtraction stays meaningful.
+  const adjcloses = (
+    result.indicators?.adjclose?.[0]?.adjclose ?? []
+  ).filter((c): c is number => typeof c === "number");
 
   const changeAt = (offsetDaysBack: number): number | null => {
-    // closes[length - 1 - offsetDaysBack] is the close `offsetDaysBack` trading
-    // days before the latest candle. We add 1 to the offset because the latest
-    // candle may be today's partial bar — but `prev` already represents
-    // yesterday's close, so anchoring against `closes[length - 1 - n]` directly
-    // approximates "n trading days ago" close.
-    const idx = closes.length - 1 - offsetDaysBack;
+    const idx = adjcloses.length - 1 - offsetDaysBack;
     if (idx < 0) return null;
-    const past = closes[idx];
+    const past = adjcloses[idx];
     if (!past) return null;
-    return ((price - past) / past) * 100;
+    const pct = ((price - past) / past) * 100;
+    // Sector ETFs realistically don't move more than ~50% in a week or
+    // ~100% in a month. Anything beyond that is almost certainly a data
+    // glitch (split mis-attribution, missing adjclose, wrong index) so
+    // refuse to publish it rather than mislead the user.
+    const guard = offsetDaysBack <= 5 ? 50 : 100;
+    if (Math.abs(pct) > guard) {
+      console.warn(
+        `[sectors] guarded out-of-range ${offsetDaysBack}d return: ${pct.toFixed(1)}%`,
+      );
+      return null;
+    }
+    return pct;
   };
 
   const changePct1d = ((price - prev) / prev) * 100;
