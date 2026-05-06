@@ -59,6 +59,9 @@ export function WatchlistView() {
     }
     let cancelled = false;
     const load = async () => {
+      // Skip when the user is on a different tab — no point spending a
+      // function invocation if they aren't looking.
+      if (document.visibilityState !== "visible") return;
       try {
         setLoadingQuotes(true);
         const r = await fetch(
@@ -75,13 +78,17 @@ export function WatchlistView() {
       }
     };
     load();
-    const id = setInterval(() => {
+    const id = setInterval(load, 60_000);
+    const onVisibility = () => {
       if (document.visibilityState === "visible") load();
-    }, 60_000);
+    };
+    document.addEventListener("visibilitychange", onVisibility);
     return () => {
       cancelled = true;
       clearInterval(id);
+      document.removeEventListener("visibilitychange", onVisibility);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [liveTickers.join(","), hydrated]);
 
   if (!hydrated) {

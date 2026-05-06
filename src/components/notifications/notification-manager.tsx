@@ -20,7 +20,11 @@ type UnusualVolumeResponse = {
   signals: Signal[];
 };
 
-const ET_DAY = new Intl.DateTimeFormat("en-US", {
+// en-CA gives an ISO-like "YYYY-MM-DD" so string comparison sorts
+// correctly across year boundaries. The previous "MM-DD-YYYY" form
+// caused pruneOlderThan to keep last December's entries through the
+// following January because '12' > '01' lexicographically.
+const ET_DAY = new Intl.DateTimeFormat("en-CA", {
   timeZone: "America/New_York",
   year: "numeric",
   month: "2-digit",
@@ -28,7 +32,7 @@ const ET_DAY = new Intl.DateTimeFormat("en-US", {
 });
 
 function getETDayKey(): string {
-  return ET_DAY.format(new Date()).replace(/\//g, "-"); // "MM-DD-YYYY"
+  return ET_DAY.format(new Date()); // "YYYY-MM-DD"
 }
 
 export function NotificationManager() {

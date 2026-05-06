@@ -80,12 +80,40 @@ export function CandleChart({ candles, height = 360 }: Props) {
     });
     volumeSeriesRef.current = volumeSeries;
 
+    // Seed the chart with whatever candles are currently in scope. Without
+    // this, toggling the theme while the modal is open recreates the chart
+    // and the dedicated [candles] effect doesn't re-run (deps unchanged),
+    // leaving a blank chart until the user changes range.
+    if (candles.length > 0) {
+      candleSeries.setData(
+        candles.map((c) => ({
+          time: c.time as Time,
+          open: c.open,
+          high: c.high,
+          low: c.low,
+          close: c.close,
+        })),
+      );
+      volumeSeries.setData(
+        candles.map((c) => ({
+          time: c.time as Time,
+          value: c.volume,
+          color:
+            c.close >= c.open
+              ? "rgba(16, 185, 129, 0.4)"
+              : "rgba(239, 68, 68, 0.4)",
+        })),
+      );
+      chart.timeScale().fitContent();
+    }
+
     return () => {
       chart.remove();
       chartRef.current = null;
       candleSeriesRef.current = null;
       volumeSeriesRef.current = null;
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isDark]);
 
   useEffect(() => {
