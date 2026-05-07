@@ -6,7 +6,7 @@
       "market": "US",
       "changePct": -0.2,
       "changePct1d": -0.2,
-      "changePct1w": 6.38,
+      "changePct1w": 6.39,
       "changePct1m": 19.76,
       "marketCapBillion": 0,
       "topTickers": [
@@ -84,10 +84,10 @@
       "id": "us-finance",
       "name": "금융",
       "market": "US",
-      "changePct": -0.58,
-      "changePct1d": -0.58,
-      "changePct1w": -1.13,
-      "changePct1m": 0.66,
+      "changePct": -0.56,
+      "changePct1d": -0.56,
+      "changePct1w": -1.11,
+      "changePct1m": 0.68,
       "marketCapBillion": 0,
       "topTickers": [
         "JPM",
@@ -100,10 +100,10 @@
       "id": "us-energy",
       "name": "에너지",
       "market": "US",
-      "changePct": -1.81,
-      "changePct1d": -1.81,
-      "changePct1w": -6.17,
-      "changePct1m": -3.58,
+      "changePct": -1.84,
+      "changePct1d": -1.84,
+      "changePct1w": -6.2,
+      "changePct1m": -3.62,
       "marketCapBillion": 0,
       "topTickers": [
         "XOM",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-05-07T20:23:50.741Z",
+  "fetchedAt": "2026-05-07T21:07:39.652Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
