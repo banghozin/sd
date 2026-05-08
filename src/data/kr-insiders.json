@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20260508000446",
+      "name": "엄태성",
+      "position": "상무",
+      "stock": "하나금융지주",
+      "amountKRW": 0,
+      "shareDelta": 150,
+      "action": "BUY",
+      "filedAt": "2026-05-08",
+      "rceptNo": "20260508000446"
+    },
+    {
       "id": "dart-20260506000426",
       "name": "곽노정",
       "position": "사장",
@@ -153,21 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-04-30",
       "rceptNo": "20260430000968"
-    },
-    {
-      "id": "dart-20260429000040",
-      "name": "김창보",
-      "position": "사외이사",
-      "stock": "SK텔레콤",
-      "amountKRW": 0,
-      "shareDelta": 800,
-      "action": "BUY",
-      "filedAt": "2026-04-29",
-      "rceptNo": "20260429000040"
     }
   ],
-  "fetchedAt": "2026-05-08T00:15:54.774Z",
-  "inspected": 4457,
-  "matched": 4441,
+  "fetchedAt": "2026-05-08T06:17:21.075Z",
+  "inspected": 4458,
+  "matched": 4442,
   "source": "DART OpenAPI elestock.json"
 }
