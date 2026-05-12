@@ -12,6 +12,17 @@
       "rceptNo": "20260512000419"
     },
     {
+      "id": "dart-20260512000567",
+      "name": "송성주",
+      "position": "사외이사",
+      "stock": "신한지주",
+      "amountKRW": 0,
+      "shareDelta": 516,
+      "action": "BUY",
+      "filedAt": "2026-05-12",
+      "rceptNo": "20260512000567"
+    },
+    {
       "id": "dart-20260511000484",
       "name": "김영훈",
       "position": "상무",
@@ -153,21 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-05-08",
       "rceptNo": "20260508000719"
-    },
-    {
-      "id": "dart-20260508000879",
-      "name": "현동수",
-      "position": "내부감사 성과리더",
-      "stock": "카카오",
-      "amountKRW": 0,
-      "shareDelta": 135,
-      "action": "BUY",
-      "filedAt": "2026-05-08",
-      "rceptNo": "20260508000879"
     }
   ],
-  "fetchedAt": "2026-05-12T06:17:32.786Z",
-  "inspected": 4473,
-  "matched": 4456,
+  "fetchedAt": "2026-05-12T12:16:03.720Z",
+  "inspected": 4474,
+  "matched": 4457,
   "source": "DART OpenAPI elestock.json"
 }
