@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20260512000419",
+      "name": "남궁홍",
+      "position": "대표이사 사장",
+      "stock": "삼성E&A",
+      "amountKRW": 0,
+      "shareDelta": 862,
+      "action": "BUY",
+      "filedAt": "2026-05-12",
+      "rceptNo": "20260512000419"
+    },
+    {
       "id": "dart-20260511000484",
       "name": "김영훈",
       "position": "상무",
@@ -153,21 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-05-08",
       "rceptNo": "20260508000879"
-    },
-    {
-      "id": "dart-20260508000665",
-      "name": "김춘호",
-      "position": "프로덕트테크보드\n 성과리더",
-      "stock": "카카오",
-      "amountKRW": 0,
-      "shareDelta": 135,
-      "action": "BUY",
-      "filedAt": "2026-05-08",
-      "rceptNo": "20260508000665"
     }
   ],
-  "fetchedAt": "2026-05-12T00:17:21.083Z",
-  "inspected": 4472,
-  "matched": 4455,
+  "fetchedAt": "2026-05-12T06:17:32.786Z",
+  "inspected": 4473,
+  "matched": 4456,
   "source": "DART OpenAPI elestock.json"
 }
