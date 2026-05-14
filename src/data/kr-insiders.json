@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20260514000485",
+      "name": "김동춘",
+      "position": "대표이사 사장",
+      "stock": "LG화학",
+      "amountKRW": 0,
+      "shareDelta": 237,
+      "action": "BUY",
+      "filedAt": "2026-05-14",
+      "rceptNo": "20260514000485"
+    },
+    {
       "id": "dart-20260513000081",
       "name": "신승철",
       "position": "부사장",
@@ -153,21 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-05-08",
       "rceptNo": "20260508000800"
-    },
-    {
-      "id": "dart-20260508000845",
-      "name": "최동진",
-      "position": "Applied AI Model 성과리더",
-      "stock": "카카오",
-      "amountKRW": 0,
-      "shareDelta": 135,
-      "action": "BUY",
-      "filedAt": "2026-05-08",
-      "rceptNo": "20260508000845"
     }
   ],
-  "fetchedAt": "2026-05-14T00:17:31.347Z",
-  "inspected": 4475,
-  "matched": 4458,
+  "fetchedAt": "2026-05-14T06:16:07.324Z",
+  "inspected": 4476,
+  "matched": 4459,
   "source": "DART OpenAPI elestock.json"
 }
