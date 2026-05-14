@@ -1,6 +1,28 @@
 {
   "trades": [
     {
+      "id": "dart-20260514000862",
+      "name": "최지훈",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": -1500,
+      "action": "SELL",
+      "filedAt": "2026-05-14",
+      "rceptNo": "20260514000862"
+    },
+    {
+      "id": "dart-20260514000881",
+      "name": "오성권",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": -431,
+      "action": "SELL",
+      "filedAt": "2026-05-14",
+      "rceptNo": "20260514000881"
+    },
+    {
       "id": "dart-20260514000485",
       "name": "김동춘",
       "position": "대표이사 사장",
@@ -10,6 +32,17 @@
       "action": "BUY",
       "filedAt": "2026-05-14",
       "rceptNo": "20260514000485"
+    },
+    {
+      "id": "dart-20260514000778",
+      "name": "문승욱",
+      "position": "사외이사",
+      "stock": "삼성E&A",
+      "amountKRW": 0,
+      "shareDelta": -46,
+      "action": "SELL",
+      "filedAt": "2026-05-14",
+      "rceptNo": "20260514000778"
     },
     {
       "id": "dart-20260513000081",
@@ -131,43 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-05-08",
       "rceptNo": "20260508000748"
-    },
-    {
-      "id": "dart-20260508000767",
-      "name": "장정환",
-      "position": "프로덕트테크보드\n성과리더",
-      "stock": "카카오",
-      "amountKRW": 0,
-      "shareDelta": 135,
-      "action": "BUY",
-      "filedAt": "2026-05-08",
-      "rceptNo": "20260508000767"
-    },
-    {
-      "id": "dart-20260508000785",
-      "name": "정혜윤",
-      "position": "임원인사 성과리더",
-      "stock": "카카오",
-      "amountKRW": 0,
-      "shareDelta": 135,
-      "action": "BUY",
-      "filedAt": "2026-05-08",
-      "rceptNo": "20260508000785"
-    },
-    {
-      "id": "dart-20260508000800",
-      "name": "조수란",
-      "position": "데이터서비스 성과리더",
-      "stock": "카카오",
-      "amountKRW": 0,
-      "shareDelta": 135,
-      "action": "BUY",
-      "filedAt": "2026-05-08",
-      "rceptNo": "20260508000800"
     }
   ],
-  "fetchedAt": "2026-05-14T06:16:07.324Z",
-  "inspected": 4476,
-  "matched": 4459,
+  "fetchedAt": "2026-05-14T12:17:22.527Z",
+  "inspected": 4479,
+  "matched": 4462,
   "source": "DART OpenAPI elestock.json"
 }
