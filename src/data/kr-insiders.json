@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20260515002407",
+      "name": "이동근",
+      "position": "연구위원",
+      "stock": "SK하이닉스",
+      "amountKRW": 0,
+      "shareDelta": 260,
+      "action": "BUY",
+      "filedAt": "2026-05-15",
+      "rceptNo": "20260515002407"
+    },
+    {
       "id": "dart-20260514000862",
       "name": "최지훈",
       "position": "리더",
@@ -153,21 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-05-08",
       "rceptNo": "20260508000446"
-    },
-    {
-      "id": "dart-20260508000748",
-      "name": "장영신",
-      "position": "컴플라이언스운영\n성과리더",
-      "stock": "카카오",
-      "amountKRW": 0,
-      "shareDelta": 135,
-      "action": "BUY",
-      "filedAt": "2026-05-08",
-      "rceptNo": "20260508000748"
     }
   ],
-  "fetchedAt": "2026-05-15T12:17:24.821Z",
-  "inspected": 4479,
-  "matched": 4462,
+  "fetchedAt": "2026-05-15T18:17:06.283Z",
+  "inspected": 4480,
+  "matched": 4463,
   "source": "DART OpenAPI elestock.json"
 }
