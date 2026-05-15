@@ -4,10 +4,10 @@
       "id": "us-tech",
       "name": "기술·반도체",
       "market": "US",
-      "changePct": -1.77,
-      "changePct1d": -1.77,
-      "changePct1w": 0.46,
-      "changePct1m": 15.99,
+      "changePct": -1.81,
+      "changePct1d": -1.81,
+      "changePct1w": 0.42,
+      "changePct1m": 15.95,
       "marketCapBillion": 0,
       "topTickers": [
         "AAPL",
@@ -84,10 +84,10 @@
       "id": "us-finance",
       "name": "금융",
       "market": "US",
-      "changePct": -0.29,
-      "changePct1d": -0.29,
-      "changePct1w": -0.2,
-      "changePct1m": -1.71,
+      "changePct": -0.37,
+      "changePct1d": -0.37,
+      "changePct1w": -0.27,
+      "changePct1m": -1.79,
       "marketCapBillion": 0,
       "topTickers": [
         "JPM",
@@ -146,10 +146,10 @@
       "id": "us-utility",
       "name": "유틸리티",
       "market": "US",
-      "changePct": -2.27,
-      "changePct1d": -2.27,
-      "changePct1w": -1.88,
-      "changePct1m": -5.33,
+      "changePct": -2.29,
+      "changePct1d": -2.29,
+      "changePct1w": -1.9,
+      "changePct1m": -5.35,
       "marketCapBillion": 0,
       "topTickers": [
         "NEE",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-05-15T20:21:47.760Z",
+  "fetchedAt": "2026-05-15T21:07:44.875Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
