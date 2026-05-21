@@ -1,6 +1,39 @@
 {
   "trades": [
     {
+      "id": "dart-20260521000391",
+      "name": "천세진",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": 2000,
+      "action": "BUY",
+      "filedAt": "2026-05-21",
+      "rceptNo": "20260521000391"
+    },
+    {
+      "id": "dart-20260521000428",
+      "name": "이은혜",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": 1000,
+      "action": "BUY",
+      "filedAt": "2026-05-21",
+      "rceptNo": "20260521000428"
+    },
+    {
+      "id": "dart-20260521000437",
+      "name": "구동현",
+      "position": "리더/부문장",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": 1000,
+      "action": "BUY",
+      "filedAt": "2026-05-21",
+      "rceptNo": "20260521000437"
+    },
+    {
       "id": "dart-20260519000210",
       "name": "권대열",
       "position": "CA협의체 그룹ESG담당",
@@ -131,43 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-05-19",
       "rceptNo": "20260519000218"
-    },
-    {
-      "id": "dart-20260519000180",
-      "name": "윤종현",
-      "position": "톡클라이언트플랫폼트라이브\n성과리더",
-      "stock": "카카오",
-      "amountKRW": 0,
-      "shareDelta": 265,
-      "action": "BUY",
-      "filedAt": "2026-05-19",
-      "rceptNo": "20260519000180"
-    },
-    {
-      "id": "dart-20260519000228",
-      "name": "서영훈",
-      "position": "GR 성과리더",
-      "stock": "카카오",
-      "amountKRW": 0,
-      "shareDelta": 250,
-      "action": "BUY",
-      "filedAt": "2026-05-19",
-      "rceptNo": "20260519000228"
-    },
-    {
-      "id": "dart-20260519000276",
-      "name": "강지훈",
-      "position": "Kanana Re:boot 성과리더",
-      "stock": "카카오",
-      "amountKRW": 0,
-      "shareDelta": 250,
-      "action": "BUY",
-      "filedAt": "2026-05-19",
-      "rceptNo": "20260519000276"
     }
   ],
-  "fetchedAt": "2026-05-21T06:18:01.885Z",
-  "inspected": 4559,
-  "matched": 4542,
+  "fetchedAt": "2026-05-21T12:17:08.753Z",
+  "inspected": 4562,
+  "matched": 4545,
   "source": "DART OpenAPI elestock.json"
 }
