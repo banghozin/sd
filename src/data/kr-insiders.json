@@ -1,6 +1,28 @@
 {
   "trades": [
     {
+      "id": "dart-20260526000244",
+      "name": "조미선",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 120,
+      "action": "BUY",
+      "filedAt": "2026-05-26",
+      "rceptNo": "20260526000244"
+    },
+    {
+      "id": "dart-20260526000141",
+      "name": "신용우",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 50,
+      "action": "BUY",
+      "filedAt": "2026-05-26",
+      "rceptNo": "20260526000141"
+    },
+    {
       "id": "dart-20260522000036",
       "name": "얀손헨릭",
       "position": "상무",
@@ -142,32 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-05-19",
       "rceptNo": "20260519000256"
-    },
-    {
-      "id": "dart-20260519000287",
-      "name": "김대년",
-      "position": "AI서비스디자인 성과리더",
-      "stock": "카카오",
-      "amountKRW": 0,
-      "shareDelta": 675,
-      "action": "BUY",
-      "filedAt": "2026-05-19",
-      "rceptNo": "20260519000287"
-    },
-    {
-      "id": "dart-20260519000301",
-      "name": "이동규",
-      "position": "전략법무TF TF리더",
-      "stock": "카카오",
-      "amountKRW": 0,
-      "shareDelta": 500,
-      "action": "BUY",
-      "filedAt": "2026-05-19",
-      "rceptNo": "20260519000301"
     }
   ],
-  "fetchedAt": "2026-05-26T00:15:55.357Z",
-  "inspected": 4560,
-  "matched": 4543,
+  "fetchedAt": "2026-05-26T06:17:11.457Z",
+  "inspected": 4561,
+  "matched": 4544,
   "source": "DART OpenAPI elestock.json"
 }
