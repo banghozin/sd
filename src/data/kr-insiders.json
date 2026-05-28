@@ -12,6 +12,17 @@
       "rceptNo": "20260528000299"
     },
     {
+      "id": "dart-20260528000707",
+      "name": "윤영진",
+      "position": "브랜드\n성과리더",
+      "stock": "카카오",
+      "amountKRW": 0,
+      "shareDelta": 8,
+      "action": "BUY",
+      "filedAt": "2026-05-28",
+      "rceptNo": "20260528000707"
+    },
+    {
       "id": "dart-20260527000141",
       "name": "김민",
       "position": "상무",
@@ -153,20 +164,9 @@
       "action": "BUY",
       "filedAt": "2026-05-19",
       "rceptNo": "20260519000309"
-    },
-    {
-      "id": "dart-20260519000307",
-      "name": "이나리",
-      "position": "CA협의체 그룹PR담당",
-      "stock": "카카오",
-      "amountKRW": 0,
-      "shareDelta": 1100,
-      "action": "BUY",
-      "filedAt": "2026-05-19",
-      "rceptNo": "20260519000307"
     }
   ],
-  "fetchedAt": "2026-05-28T06:16:12.356Z",
+  "fetchedAt": "2026-05-28T12:17:31.863Z",
   "inspected": 4562,
   "matched": 4545,
   "source": "DART OpenAPI elestock.json"
