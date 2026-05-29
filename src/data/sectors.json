@@ -4,10 +4,10 @@
       "id": "us-tech",
       "name": "기술·반도체",
       "market": "US",
-      "changePct": 1.86,
-      "changePct1d": 1.86,
-      "changePct1w": 6.56,
-      "changePct1m": 19.62,
+      "changePct": 2,
+      "changePct1d": 2,
+      "changePct1w": 6.71,
+      "changePct1m": 19.78,
       "marketCapBillion": 0,
       "topTickers": [
         "AAPL",
@@ -20,10 +20,10 @@
       "id": "us-comm",
       "name": "통신·미디어",
       "market": "US",
-      "changePct": -0.63,
-      "changePct1d": -0.63,
-      "changePct1w": -0.15,
-      "changePct1m": 0.56,
+      "changePct": -0.75,
+      "changePct1d": -0.75,
+      "changePct1w": -0.26,
+      "changePct1m": 0.44,
       "marketCapBillion": 0,
       "topTickers": [
         "GOOGL",
@@ -36,10 +36,10 @@
       "id": "us-disc",
       "name": "소비재 (임의)",
       "market": "US",
-      "changePct": -0.57,
-      "changePct1d": -0.57,
-      "changePct1w": 2.25,
-      "changePct1m": 3.88,
+      "changePct": -0.61,
+      "changePct1d": -0.61,
+      "changePct1w": 2.2,
+      "changePct1m": 3.83,
       "marketCapBillion": 0,
       "topTickers": [
         "AMZN",
@@ -54,8 +54,8 @@
       "market": "US",
       "changePct": -1.55,
       "changePct1d": -1.55,
-      "changePct1w": -1.82,
-      "changePct1m": 0.24,
+      "changePct1w": -1.81,
+      "changePct1m": 0.25,
       "marketCapBillion": 0,
       "topTickers": [
         "WMT",
@@ -63,6 +63,22 @@
         "PG"
       ],
       "ticker": "XLP"
+    },
+    {
+      "id": "us-health",
+      "name": "헬스케어",
+      "market": "US",
+      "changePct": -0.96,
+      "changePct1d": -0.96,
+      "changePct1w": 0.86,
+      "changePct1m": 4.61,
+      "marketCapBillion": 0,
+      "topTickers": [
+        "LLY",
+        "UNH",
+        "JNJ"
+      ],
+      "ticker": "XLV"
     },
     {
       "id": "us-finance",
@@ -84,10 +100,10 @@
       "id": "us-energy",
       "name": "에너지",
       "market": "US",
-      "changePct": -0.98,
-      "changePct1d": -0.98,
-      "changePct1w": -4.63,
-      "changePct1m": -4.47,
+      "changePct": -1.12,
+      "changePct1d": -1.12,
+      "changePct1w": -4.77,
+      "changePct1m": -4.61,
       "marketCapBillion": 0,
       "topTickers": [
         "XOM",
@@ -99,10 +115,10 @@
       "id": "us-ind",
       "name": "산업·방산",
       "market": "US",
-      "changePct": -0.14,
-      "changePct1d": -0.14,
-      "changePct1w": 1.77,
-      "changePct1m": 2.13,
+      "changePct": -0.12,
+      "changePct1d": -0.12,
+      "changePct1w": 1.79,
+      "changePct1m": 2.15,
       "marketCapBillion": 0,
       "topTickers": [
         "GE",
@@ -115,10 +131,10 @@
       "id": "us-materials",
       "name": "소재",
       "market": "US",
-      "changePct": 0.03,
-      "changePct1d": 0.03,
-      "changePct1w": 2.71,
-      "changePct1m": 0.81,
+      "changePct": -0.02,
+      "changePct1d": -0.02,
+      "changePct1w": 2.66,
+      "changePct1m": 0.77,
       "marketCapBillion": 0,
       "topTickers": [
         "LIN",
@@ -130,10 +146,10 @@
       "id": "us-utility",
       "name": "유틸리티",
       "market": "US",
-      "changePct": -0.36,
-      "changePct1d": -0.36,
-      "changePct1w": -1.18,
-      "changePct1m": -2.65,
+      "changePct": -0.46,
+      "changePct1d": -0.46,
+      "changePct1w": -1.28,
+      "changePct1m": -2.75,
       "marketCapBillion": 0,
       "topTickers": [
         "NEE",
@@ -145,10 +161,10 @@
       "id": "us-realty",
       "name": "부동산",
       "market": "US",
-      "changePct": -0.73,
-      "changePct1d": -0.73,
-      "changePct1w": -0.93,
-      "changePct1m": 1.02,
+      "changePct": -0.72,
+      "changePct1d": -0.72,
+      "changePct1w": -0.92,
+      "changePct1m": 1.03,
       "marketCapBillion": 0,
       "topTickers": [
         "AMT",
@@ -232,21 +248,6 @@
       "ticker": "244580.KS"
     },
     {
-      "id": "kr-battery",
-      "name": "2차전지",
-      "market": "KR",
-      "changePct": 2.12,
-      "changePct1d": 2.12,
-      "changePct1w": 6,
-      "changePct1m": -2.56,
-      "marketCapBillion": 0,
-      "topTickers": [
-        "LG에너지솔루션",
-        "에코프로비엠"
-      ],
-      "ticker": "305540.KS"
-    },
-    {
       "id": "kr-steel",
       "name": "철강·금속",
       "market": "KR",
@@ -318,7 +319,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-05-29T16:07:41.642Z",
+  "fetchedAt": "2026-05-29T16:52:21.120Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
