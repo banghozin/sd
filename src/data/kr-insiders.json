@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20260529001627",
+      "name": "김경석",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 1,
+      "action": "BUY",
+      "filedAt": "2026-05-29",
+      "rceptNo": "20260529001627"
+    },
+    {
       "id": "dart-20260528000299",
       "name": "민대홍",
       "position": "상무",
@@ -153,20 +164,9 @@
       "action": "BUY",
       "filedAt": "2026-05-19",
       "rceptNo": "20260519000308"
-    },
-    {
-      "id": "dart-20260519000309",
-      "name": "안성환",
-      "position": "경영기획 성과리더",
-      "stock": "카카오",
-      "amountKRW": 0,
-      "shareDelta": 1108,
-      "action": "BUY",
-      "filedAt": "2026-05-19",
-      "rceptNo": "20260519000309"
     }
   ],
-  "fetchedAt": "2026-05-29T06:17:27.002Z",
+  "fetchedAt": "2026-05-29T12:16:02.829Z",
   "inspected": 4562,
   "matched": 4545,
   "source": "DART OpenAPI elestock.json"
