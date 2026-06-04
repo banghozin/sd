@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20260604000077",
+      "name": "이헌",
+      "position": "부사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 160,
+      "action": "BUY",
+      "filedAt": "2026-06-04",
+      "rceptNo": "20260604000077"
+    },
+    {
       "id": "dart-20260602000150",
       "name": "최인수",
       "position": "상무",
@@ -153,20 +164,9 @@
       "action": "BUY",
       "filedAt": "2026-05-21",
       "rceptNo": "20260521000391"
-    },
-    {
-      "id": "dart-20260521000428",
-      "name": "이은혜",
-      "position": "리더",
-      "stock": "NAVER",
-      "amountKRW": 0,
-      "shareDelta": 1000,
-      "action": "BUY",
-      "filedAt": "2026-05-21",
-      "rceptNo": "20260521000428"
     }
   ],
-  "fetchedAt": "2026-06-04T00:17:27.607Z",
+  "fetchedAt": "2026-06-04T06:16:03.958Z",
   "inspected": 4560,
   "matched": 4543,
   "source": "DART OpenAPI elestock.json"
