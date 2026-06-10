@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20260610000235",
+      "name": "오상원",
+      "position": "IT본부장",
+      "stock": "KB금융",
+      "amountKRW": 0,
+      "shareDelta": -316,
+      "action": "SELL",
+      "filedAt": "2026-06-10",
+      "rceptNo": "20260610000235"
+    },
+    {
       "id": "dart-20260609000459",
       "name": "최준기",
       "position": "담당",
@@ -153,21 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-06-02",
       "rceptNo": "20260602000421"
-    },
-    {
-      "id": "dart-20260601000584",
-      "name": "박선현",
-      "position": "담당",
-      "stock": "KB금융",
-      "amountKRW": 0,
-      "shareDelta": 300,
-      "action": "BUY",
-      "filedAt": "2026-06-01",
-      "rceptNo": "20260601000584"
     }
   ],
-  "fetchedAt": "2026-06-10T00:17:41.851Z",
-  "inspected": 4561,
-  "matched": 4544,
+  "fetchedAt": "2026-06-10T06:17:43.882Z",
+  "inspected": 4562,
+  "matched": 4545,
   "source": "DART OpenAPI elestock.json"
 }
