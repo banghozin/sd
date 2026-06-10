@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20260610000431",
+      "name": "김성호",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": -700,
+      "action": "SELL",
+      "filedAt": "2026-06-10",
+      "rceptNo": "20260610000431"
+    },
+    {
       "id": "dart-20260610000235",
       "name": "오상원",
       "position": "IT본부장",
@@ -10,6 +21,39 @@
       "action": "SELL",
       "filedAt": "2026-06-10",
       "rceptNo": "20260610000235"
+    },
+    {
+      "id": "dart-20260610000422",
+      "name": "오성권",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": -272,
+      "action": "SELL",
+      "filedAt": "2026-06-10",
+      "rceptNo": "20260610000422"
+    },
+    {
+      "id": "dart-20260610000413",
+      "name": "임주열",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": -50,
+      "action": "SELL",
+      "filedAt": "2026-06-10",
+      "rceptNo": "20260610000413"
+    },
+    {
+      "id": "dart-20260610000528",
+      "name": "강상원",
+      "position": "상무",
+      "stock": "현대모비스",
+      "amountKRW": 0,
+      "shareDelta": 7,
+      "action": "BUY",
+      "filedAt": "2026-06-10",
+      "rceptNo": "20260610000528"
     },
     {
       "id": "dart-20260609000459",
@@ -120,54 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-06-04",
       "rceptNo": "20260604000077"
-    },
-    {
-      "id": "dart-20260602000150",
-      "name": "최인수",
-      "position": "상무",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 1178,
-      "action": "BUY",
-      "filedAt": "2026-06-02",
-      "rceptNo": "20260602000150"
-    },
-    {
-      "id": "dart-20260602000524",
-      "name": "박동문",
-      "position": "사외이사",
-      "stock": "하나금융지주",
-      "amountKRW": 0,
-      "shareDelta": 500,
-      "action": "BUY",
-      "filedAt": "2026-06-02",
-      "rceptNo": "20260602000524"
-    },
-    {
-      "id": "dart-20260602000497",
-      "name": "이상현",
-      "position": "상무",
-      "stock": "LG에너지솔루션",
-      "amountKRW": 0,
-      "shareDelta": -280,
-      "action": "SELL",
-      "filedAt": "2026-06-02",
-      "rceptNo": "20260602000497"
-    },
-    {
-      "id": "dart-20260602000421",
-      "name": "김경석",
-      "position": "상무",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 1,
-      "action": "BUY",
-      "filedAt": "2026-06-02",
-      "rceptNo": "20260602000421"
     }
   ],
-  "fetchedAt": "2026-06-10T06:17:43.882Z",
-  "inspected": 4562,
-  "matched": 4545,
+  "fetchedAt": "2026-06-10T12:16:06.357Z",
+  "inspected": 4565,
+  "matched": 4548,
   "source": "DART OpenAPI elestock.json"
 }
