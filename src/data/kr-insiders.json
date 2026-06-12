@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20260612000303",
+      "name": "이재술",
+      "position": "사외이사",
+      "stock": "하나금융지주",
+      "amountKRW": 0,
+      "shareDelta": -300,
+      "action": "SELL",
+      "filedAt": "2026-06-12",
+      "rceptNo": "20260612000303"
+    },
+    {
       "id": "dart-20260611000242",
       "name": "주동욱",
       "position": "상무",
@@ -153,20 +164,9 @@
       "action": "BUY",
       "filedAt": "2026-06-09",
       "rceptNo": "20260609000450"
-    },
-    {
-      "id": "dart-20260608000002",
-      "name": "박태훈",
-      "position": "상무",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 81,
-      "action": "BUY",
-      "filedAt": "2026-06-08",
-      "rceptNo": "20260608000002"
     }
   ],
-  "fetchedAt": "2026-06-12T00:17:41.774Z",
+  "fetchedAt": "2026-06-12T06:17:20.308Z",
   "inspected": 4567,
   "matched": 4550,
   "source": "DART OpenAPI elestock.json"
