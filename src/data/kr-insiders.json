@@ -1,7 +1,173 @@
 {
-  "trades": [],
-  "fetchedAt": "2026-06-17T12:20:23.394Z",
-  "inspected": 0,
-  "matched": 0,
+  "trades": [
+    {
+      "id": "dart-20260617000422",
+      "name": "KANG KUN HYUK",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 428,
+      "action": "BUY",
+      "filedAt": "2026-06-17",
+      "rceptNo": "20260617000422"
+    },
+    {
+      "id": "dart-20260612000681",
+      "name": "오성환",
+      "position": "상무",
+      "stock": "LG에너지솔루션",
+      "amountKRW": 0,
+      "shareDelta": 1267,
+      "action": "BUY",
+      "filedAt": "2026-06-12",
+      "rceptNo": "20260612000681"
+    },
+    {
+      "id": "dart-20260612000303",
+      "name": "이재술",
+      "position": "사외이사",
+      "stock": "하나금융지주",
+      "amountKRW": 0,
+      "shareDelta": -300,
+      "action": "SELL",
+      "filedAt": "2026-06-12",
+      "rceptNo": "20260612000303"
+    },
+    {
+      "id": "dart-20260611000242",
+      "name": "주동욱",
+      "position": "상무",
+      "stock": "KB금융",
+      "amountKRW": 0,
+      "shareDelta": 500,
+      "action": "BUY",
+      "filedAt": "2026-06-11",
+      "rceptNo": "20260611000242"
+    },
+    {
+      "id": "dart-20260611000174",
+      "name": "이강열",
+      "position": "전무",
+      "stock": "LG에너지솔루션",
+      "amountKRW": 0,
+      "shareDelta": 253,
+      "action": "BUY",
+      "filedAt": "2026-06-11",
+      "rceptNo": "20260611000174"
+    },
+    {
+      "id": "dart-20260611000509",
+      "name": "호경업",
+      "position": "상무",
+      "stock": "LG화학",
+      "amountKRW": 0,
+      "shareDelta": 100,
+      "action": "BUY",
+      "filedAt": "2026-06-11",
+      "rceptNo": "20260611000509"
+    },
+    {
+      "id": "dart-20260611000049",
+      "name": "박원재",
+      "position": "상무",
+      "stock": "LG전자",
+      "amountKRW": 0,
+      "shareDelta": 100,
+      "action": "BUY",
+      "filedAt": "2026-06-11",
+      "rceptNo": "20260611000049"
+    },
+    {
+      "id": "dart-20260610000431",
+      "name": "김성호",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": -700,
+      "action": "SELL",
+      "filedAt": "2026-06-10",
+      "rceptNo": "20260610000431"
+    },
+    {
+      "id": "dart-20260610000235",
+      "name": "오상원",
+      "position": "IT본부장",
+      "stock": "KB금융",
+      "amountKRW": 0,
+      "shareDelta": -316,
+      "action": "SELL",
+      "filedAt": "2026-06-10",
+      "rceptNo": "20260610000235"
+    },
+    {
+      "id": "dart-20260610000422",
+      "name": "오성권",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": -272,
+      "action": "SELL",
+      "filedAt": "2026-06-10",
+      "rceptNo": "20260610000422"
+    },
+    {
+      "id": "dart-20260610000413",
+      "name": "임주열",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": -50,
+      "action": "SELL",
+      "filedAt": "2026-06-10",
+      "rceptNo": "20260610000413"
+    },
+    {
+      "id": "dart-20260610000528",
+      "name": "강상원",
+      "position": "상무",
+      "stock": "현대모비스",
+      "amountKRW": 0,
+      "shareDelta": 7,
+      "action": "BUY",
+      "filedAt": "2026-06-10",
+      "rceptNo": "20260610000528"
+    },
+    {
+      "id": "dart-20260609000459",
+      "name": "최준기",
+      "position": "담당",
+      "stock": "SK하이닉스",
+      "amountKRW": 0,
+      "shareDelta": 2205,
+      "action": "BUY",
+      "filedAt": "2026-06-09",
+      "rceptNo": "20260609000459"
+    },
+    {
+      "id": "dart-20260609000462",
+      "name": "김주선",
+      "position": "사장",
+      "stock": "SK하이닉스",
+      "amountKRW": 0,
+      "shareDelta": -1000,
+      "action": "SELL",
+      "filedAt": "2026-06-09",
+      "rceptNo": "20260609000462"
+    },
+    {
+      "id": "dart-20260609000465",
+      "name": "강춘호",
+      "position": "담당",
+      "stock": "SK하이닉스",
+      "amountKRW": 0,
+      "shareDelta": -419,
+      "action": "SELL",
+      "filedAt": "2026-06-09",
+      "rceptNo": "20260609000465"
+    }
+  ],
+  "fetchedAt": "2026-06-17T18:17:42.102Z",
+  "inspected": 4562,
+  "matched": 4545,
   "source": "DART OpenAPI elestock.json"
 }
