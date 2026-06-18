@@ -1,6 +1,72 @@
 {
   "trades": [
     {
+      "id": "dart-20260618000257",
+      "name": "이종화",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": 4750,
+      "action": "BUY",
+      "filedAt": "2026-06-18",
+      "rceptNo": "20260618000257"
+    },
+    {
+      "id": "dart-20260618000260",
+      "name": "이일구",
+      "position": "리더/부문장",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": 2000,
+      "action": "BUY",
+      "filedAt": "2026-06-18",
+      "rceptNo": "20260618000260"
+    },
+    {
+      "id": "dart-20260618000276",
+      "name": "목경태",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": 700,
+      "action": "BUY",
+      "filedAt": "2026-06-18",
+      "rceptNo": "20260618000276"
+    },
+    {
+      "id": "dart-20260618000224",
+      "name": "최승락",
+      "position": "리더/부문장",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": 500,
+      "action": "BUY",
+      "filedAt": "2026-06-18",
+      "rceptNo": "20260618000224"
+    },
+    {
+      "id": "dart-20260618000271",
+      "name": "이도경",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": 500,
+      "action": "BUY",
+      "filedAt": "2026-06-18",
+      "rceptNo": "20260618000271"
+    },
+    {
+      "id": "dart-20260618000233",
+      "name": "임주열",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": 200,
+      "action": "BUY",
+      "filedAt": "2026-06-18",
+      "rceptNo": "20260618000233"
+    },
+    {
       "id": "dart-20260617000422",
       "name": "KANG KUN HYUK",
       "position": "상무",
@@ -98,76 +164,10 @@
       "action": "SELL",
       "filedAt": "2026-06-10",
       "rceptNo": "20260610000235"
-    },
-    {
-      "id": "dart-20260610000422",
-      "name": "오성권",
-      "position": "리더",
-      "stock": "NAVER",
-      "amountKRW": 0,
-      "shareDelta": -272,
-      "action": "SELL",
-      "filedAt": "2026-06-10",
-      "rceptNo": "20260610000422"
-    },
-    {
-      "id": "dart-20260610000413",
-      "name": "임주열",
-      "position": "리더",
-      "stock": "NAVER",
-      "amountKRW": 0,
-      "shareDelta": -50,
-      "action": "SELL",
-      "filedAt": "2026-06-10",
-      "rceptNo": "20260610000413"
-    },
-    {
-      "id": "dart-20260610000528",
-      "name": "강상원",
-      "position": "상무",
-      "stock": "현대모비스",
-      "amountKRW": 0,
-      "shareDelta": 7,
-      "action": "BUY",
-      "filedAt": "2026-06-10",
-      "rceptNo": "20260610000528"
-    },
-    {
-      "id": "dart-20260609000459",
-      "name": "최준기",
-      "position": "담당",
-      "stock": "SK하이닉스",
-      "amountKRW": 0,
-      "shareDelta": 2205,
-      "action": "BUY",
-      "filedAt": "2026-06-09",
-      "rceptNo": "20260609000459"
-    },
-    {
-      "id": "dart-20260609000462",
-      "name": "김주선",
-      "position": "사장",
-      "stock": "SK하이닉스",
-      "amountKRW": 0,
-      "shareDelta": -1000,
-      "action": "SELL",
-      "filedAt": "2026-06-09",
-      "rceptNo": "20260609000462"
-    },
-    {
-      "id": "dart-20260609000465",
-      "name": "강춘호",
-      "position": "담당",
-      "stock": "SK하이닉스",
-      "amountKRW": 0,
-      "shareDelta": -419,
-      "action": "SELL",
-      "filedAt": "2026-06-09",
-      "rceptNo": "20260609000465"
     }
   ],
-  "fetchedAt": "2026-06-18T06:17:32.437Z",
-  "inspected": 4562,
-  "matched": 4545,
+  "fetchedAt": "2026-06-18T12:17:53.404Z",
+  "inspected": 4569,
+  "matched": 4551,
   "source": "DART OpenAPI elestock.json"
 }
