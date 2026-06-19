@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20260619000587",
+      "name": "윤지미",
+      "position": "CA협의체\n의장아젠다지원팀장",
+      "stock": "카카오",
+      "amountKRW": 0,
+      "shareDelta": -4188,
+      "action": "SELL",
+      "filedAt": "2026-06-19",
+      "rceptNo": "20260619000587"
+    },
+    {
       "id": "dart-20260619000284",
       "name": "김재홍",
       "position": "상무",
@@ -153,21 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-06-11",
       "rceptNo": "20260611000049"
-    },
-    {
-      "id": "dart-20260610000431",
-      "name": "김성호",
-      "position": "리더",
-      "stock": "NAVER",
-      "amountKRW": 0,
-      "shareDelta": -700,
-      "action": "SELL",
-      "filedAt": "2026-06-10",
-      "rceptNo": "20260610000431"
     }
   ],
-  "fetchedAt": "2026-06-19T06:17:43.157Z",
-  "inspected": 4568,
-  "matched": 4550,
+  "fetchedAt": "2026-06-19T12:17:45.331Z",
+  "inspected": 4561,
+  "matched": 4543,
   "source": "DART OpenAPI elestock.json"
 }
