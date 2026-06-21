@@ -20,10 +20,10 @@
       "id": "us-comm",
       "name": "통신·미디어",
       "market": "US",
-      "changePct": 0.23,
-      "changePct1d": 0.23,
-      "changePct1w": -2.38,
-      "changePct1m": -5.52,
+      "changePct": -2.56,
+      "changePct1d": -2.56,
+      "changePct1w": -1.41,
+      "changePct1m": -6.44,
       "marketCapBillion": 0,
       "topTickers": [
         "GOOGL",
@@ -36,10 +36,10 @@
       "id": "us-disc",
       "name": "소비재 (임의)",
       "market": "US",
-      "changePct": 1.45,
-      "changePct1d": 1.45,
-      "changePct1w": 0.74,
-      "changePct1m": 1.85,
+      "changePct": -1.1,
+      "changePct1d": -1.1,
+      "changePct1w": 3.23,
+      "changePct1m": 0.72,
       "marketCapBillion": 0,
       "topTickers": [
         "AMZN",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-06-21T05:07:37.447Z",
+  "fetchedAt": "2026-06-21T06:07:43.415Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
