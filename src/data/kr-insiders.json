@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20260622000001",
+      "name": "배순민",
+      "position": "상무",
+      "stock": "삼성에스디에스",
+      "amountKRW": 0,
+      "shareDelta": 100,
+      "action": "BUY",
+      "filedAt": "2026-06-22",
+      "rceptNo": "20260622000001"
+    },
+    {
       "id": "dart-20260619000587",
       "name": "윤지미",
       "position": "CA협의체\n의장아젠다지원팀장",
@@ -153,21 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-06-11",
       "rceptNo": "20260611000509"
-    },
-    {
-      "id": "dart-20260611000049",
-      "name": "박원재",
-      "position": "상무",
-      "stock": "LG전자",
-      "amountKRW": 0,
-      "shareDelta": 100,
-      "action": "BUY",
-      "filedAt": "2026-06-11",
-      "rceptNo": "20260611000049"
     }
   ],
-  "fetchedAt": "2026-06-21T18:17:44.768Z",
-  "inspected": 4555,
-  "matched": 4537,
+  "fetchedAt": "2026-06-22T00:17:46.207Z",
+  "inspected": 4556,
+  "matched": 4538,
   "source": "DART OpenAPI elestock.json"
 }
