@@ -1,6 +1,28 @@
 {
   "trades": [
     {
+      "id": "dart-20260622000294",
+      "name": "이원진",
+      "position": "사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -3000,
+      "action": "SELL",
+      "filedAt": "2026-06-22",
+      "rceptNo": "20260622000294"
+    },
+    {
+      "id": "dart-20260622000376",
+      "name": "김태훈",
+      "position": "부사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -300,
+      "action": "SELL",
+      "filedAt": "2026-06-22",
+      "rceptNo": "20260622000376"
+    },
+    {
       "id": "dart-20260622000001",
       "name": "배순민",
       "position": "상무",
@@ -142,32 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-06-11",
       "rceptNo": "20260611000242"
-    },
-    {
-      "id": "dart-20260611000174",
-      "name": "이강열",
-      "position": "전무",
-      "stock": "LG에너지솔루션",
-      "amountKRW": 0,
-      "shareDelta": 253,
-      "action": "BUY",
-      "filedAt": "2026-06-11",
-      "rceptNo": "20260611000174"
-    },
-    {
-      "id": "dart-20260611000509",
-      "name": "호경업",
-      "position": "상무",
-      "stock": "LG화학",
-      "amountKRW": 0,
-      "shareDelta": 100,
-      "action": "BUY",
-      "filedAt": "2026-06-11",
-      "rceptNo": "20260611000509"
     }
   ],
-  "fetchedAt": "2026-06-22T06:16:21.239Z",
-  "inspected": 4556,
-  "matched": 4538,
+  "fetchedAt": "2026-06-22T12:16:25.327Z",
+  "inspected": 4558,
+  "matched": 4540,
   "source": "DART OpenAPI elestock.json"
 }
