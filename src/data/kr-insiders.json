@@ -1,6 +1,28 @@
 {
   "trades": [
     {
+      "id": "dart-20260625000389",
+      "name": "김용찬",
+      "position": "부사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -290,
+      "action": "SELL",
+      "filedAt": "2026-06-25",
+      "rceptNo": "20260625000389"
+    },
+    {
+      "id": "dart-20260625000445",
+      "name": "민대홍",
+      "position": "상무",
+      "stock": "삼성에스디에스",
+      "amountKRW": 0,
+      "shareDelta": 100,
+      "action": "BUY",
+      "filedAt": "2026-06-25",
+      "rceptNo": "20260625000445"
+    },
+    {
       "id": "dart-20260622000294",
       "name": "이원진",
       "position": "사장",
@@ -142,32 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-06-12",
       "rceptNo": "20260612000681"
-    },
-    {
-      "id": "dart-20260612000303",
-      "name": "이재술",
-      "position": "사외이사",
-      "stock": "하나금융지주",
-      "amountKRW": 0,
-      "shareDelta": -300,
-      "action": "SELL",
-      "filedAt": "2026-06-12",
-      "rceptNo": "20260612000303"
-    },
-    {
-      "id": "dart-20260611000242",
-      "name": "주동욱",
-      "position": "상무",
-      "stock": "KB금융",
-      "amountKRW": 0,
-      "shareDelta": 500,
-      "action": "BUY",
-      "filedAt": "2026-06-11",
-      "rceptNo": "20260611000242"
     }
   ],
-  "fetchedAt": "2026-06-25T06:17:45.966Z",
-  "inspected": 4556,
-  "matched": 4538,
+  "fetchedAt": "2026-06-25T12:16:12.209Z",
+  "inspected": 4558,
+  "matched": 4540,
   "source": "DART OpenAPI elestock.json"
 }
