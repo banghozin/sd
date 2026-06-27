@@ -131,10 +131,10 @@
       "id": "us-materials",
       "name": "소재",
       "market": "US",
-      "changePct": 0.86,
-      "changePct1d": 0.86,
-      "changePct1w": -0.44,
-      "changePct1m": 1.57,
+      "changePct": -0.46,
+      "changePct1d": -0.46,
+      "changePct1w": -0.03,
+      "changePct1m": 1.2,
       "marketCapBillion": 0,
       "topTickers": [
         "LIN",
@@ -161,10 +161,10 @@
       "id": "us-realty",
       "name": "부동산",
       "market": "US",
-      "changePct": 1.64,
-      "changePct1d": 1.64,
-      "changePct1w": 3.79,
-      "changePct1m": 2.07,
+      "changePct": 1.46,
+      "changePct1d": 1.46,
+      "changePct1w": 4.05,
+      "changePct1m": 2.26,
       "marketCapBillion": 0,
       "topTickers": [
         "AMT",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-06-27T07:07:44.844Z",
+  "fetchedAt": "2026-06-27T08:02:17.567Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
