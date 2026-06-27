@@ -52,10 +52,10 @@
       "id": "us-staples",
       "name": "소비재 (필수)",
       "market": "US",
-      "changePct": 0.92,
-      "changePct1d": 0.92,
-      "changePct1w": 2.4,
-      "changePct1m": 0.85,
+      "changePct": 0.32,
+      "changePct1d": 0.32,
+      "changePct1w": 1.93,
+      "changePct1m": 1.99,
       "marketCapBillion": 0,
       "topTickers": [
         "WMT",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-06-27T04:12:39.769Z",
+  "fetchedAt": "2026-06-27T05:07:36.957Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
