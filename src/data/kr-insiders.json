@@ -1,6 +1,28 @@
 {
   "trades": [
     {
+      "id": "dart-20260629000070",
+      "name": "이태희",
+      "position": "부사장",
+      "stock": "삼성에스디에스",
+      "amountKRW": 0,
+      "shareDelta": 500,
+      "action": "BUY",
+      "filedAt": "2026-06-29",
+      "rceptNo": "20260629000070"
+    },
+    {
+      "id": "dart-20260629000162",
+      "name": "한호전",
+      "position": "상무",
+      "stock": "삼성에스디에스",
+      "amountKRW": 0,
+      "shareDelta": 100,
+      "action": "BUY",
+      "filedAt": "2026-06-29",
+      "rceptNo": "20260629000162"
+    },
+    {
       "id": "dart-20260626000675",
       "name": "Lee Sungki",
       "position": "상무",
@@ -142,32 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-06-18",
       "rceptNo": "20260618000260"
-    },
-    {
-      "id": "dart-20260618000276",
-      "name": "목경태",
-      "position": "리더",
-      "stock": "NAVER",
-      "amountKRW": 0,
-      "shareDelta": 700,
-      "action": "BUY",
-      "filedAt": "2026-06-18",
-      "rceptNo": "20260618000276"
-    },
-    {
-      "id": "dart-20260618000224",
-      "name": "최승락",
-      "position": "리더/부문장",
-      "stock": "NAVER",
-      "amountKRW": 0,
-      "shareDelta": 500,
-      "action": "BUY",
-      "filedAt": "2026-06-18",
-      "rceptNo": "20260618000224"
     }
   ],
-  "fetchedAt": "2026-06-29T00:17:38.331Z",
-  "inspected": 4559,
-  "matched": 4541,
+  "fetchedAt": "2026-06-29T06:17:48.432Z",
+  "inspected": 4561,
+  "matched": 4543,
   "source": "DART OpenAPI elestock.json"
 }
