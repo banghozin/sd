@@ -1,6 +1,50 @@
 {
   "trades": [
     {
+      "id": "dart-20260630000544",
+      "name": "박정민",
+      "position": "부사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -1790,
+      "action": "SELL",
+      "filedAt": "2026-06-30",
+      "rceptNo": "20260630000544"
+    },
+    {
+      "id": "dart-20260630000278",
+      "name": "김학길",
+      "position": "상무",
+      "stock": "삼성에스디에스",
+      "amountKRW": 0,
+      "shareDelta": 500,
+      "action": "BUY",
+      "filedAt": "2026-06-30",
+      "rceptNo": "20260630000278"
+    },
+    {
+      "id": "dart-20260630000344",
+      "name": "김성곤",
+      "position": "상무",
+      "stock": "삼성에스디에스",
+      "amountKRW": 0,
+      "shareDelta": 100,
+      "action": "BUY",
+      "filedAt": "2026-06-30",
+      "rceptNo": "20260630000344"
+    },
+    {
+      "id": "dart-20260630000459",
+      "name": "유송",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 50,
+      "action": "BUY",
+      "filedAt": "2026-06-30",
+      "rceptNo": "20260630000459"
+    },
+    {
       "id": "dart-20260629000070",
       "name": "이태희",
       "position": "부사장",
@@ -120,54 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-06-22",
       "rceptNo": "20260622000001"
-    },
-    {
-      "id": "dart-20260619000587",
-      "name": "윤지미",
-      "position": "CA협의체\n의장아젠다지원팀장",
-      "stock": "카카오",
-      "amountKRW": 0,
-      "shareDelta": -4188,
-      "action": "SELL",
-      "filedAt": "2026-06-19",
-      "rceptNo": "20260619000587"
-    },
-    {
-      "id": "dart-20260619000284",
-      "name": "김재홍",
-      "position": "상무",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": -410,
-      "action": "SELL",
-      "filedAt": "2026-06-19",
-      "rceptNo": "20260619000284"
-    },
-    {
-      "id": "dart-20260618000257",
-      "name": "이종화",
-      "position": "리더",
-      "stock": "NAVER",
-      "amountKRW": 0,
-      "shareDelta": 4750,
-      "action": "BUY",
-      "filedAt": "2026-06-18",
-      "rceptNo": "20260618000257"
-    },
-    {
-      "id": "dart-20260618000260",
-      "name": "이일구",
-      "position": "리더/부문장",
-      "stock": "NAVER",
-      "amountKRW": 0,
-      "shareDelta": 2000,
-      "action": "BUY",
-      "filedAt": "2026-06-18",
-      "rceptNo": "20260618000260"
     }
   ],
-  "fetchedAt": "2026-06-30T00:17:31.090Z",
-  "inspected": 4561,
-  "matched": 4543,
+  "fetchedAt": "2026-06-30T06:17:18.002Z",
+  "inspected": 4565,
+  "matched": 4547,
   "source": "DART OpenAPI elestock.json"
 }
