@@ -1,6 +1,39 @@
 {
   "trades": [
     {
+      "id": "dart-20260703000005",
+      "name": "홍기영",
+      "position": "상무",
+      "stock": "삼성에스디에스",
+      "amountKRW": 0,
+      "shareDelta": 120,
+      "action": "BUY",
+      "filedAt": "2026-07-03",
+      "rceptNo": "20260703000005"
+    },
+    {
+      "id": "dart-20260702000607",
+      "name": "이동섭",
+      "position": "상무",
+      "stock": "삼성에스디에스",
+      "amountKRW": 0,
+      "shareDelta": 100,
+      "action": "BUY",
+      "filedAt": "2026-07-03",
+      "rceptNo": "20260702000607"
+    },
+    {
+      "id": "dart-20260702000611",
+      "name": "배순민",
+      "position": "상무",
+      "stock": "삼성에스디에스",
+      "amountKRW": 0,
+      "shareDelta": 100,
+      "action": "BUY",
+      "filedAt": "2026-07-03",
+      "rceptNo": "20260702000611"
+    },
+    {
       "id": "dart-20260702000015",
       "name": "LEE HOJOON",
       "position": "부사장",
@@ -131,43 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-07-01",
       "rceptNo": "20260701000525"
-    },
-    {
-      "id": "dart-20260701000532",
-      "name": "박상범",
-      "position": "담당",
-      "stock": "SK하이닉스",
-      "amountKRW": 0,
-      "shareDelta": 263,
-      "action": "BUY",
-      "filedAt": "2026-07-01",
-      "rceptNo": "20260701000532"
-    },
-    {
-      "id": "dart-20260701000702",
-      "name": "김정욱",
-      "position": "부사장",
-      "stock": "삼성에스디에스",
-      "amountKRW": 0,
-      "shareDelta": 200,
-      "action": "BUY",
-      "filedAt": "2026-07-01",
-      "rceptNo": "20260701000702"
-    },
-    {
-      "id": "dart-20260701000117",
-      "name": "김창민",
-      "position": "상무",
-      "stock": "삼성에스디에스",
-      "amountKRW": 0,
-      "shareDelta": 200,
-      "action": "BUY",
-      "filedAt": "2026-07-01",
-      "rceptNo": "20260701000117"
     }
   ],
-  "fetchedAt": "2026-07-02T18:16:09.641Z",
-  "inspected": 4584,
-  "matched": 4566,
+  "fetchedAt": "2026-07-03T00:17:37.759Z",
+  "inspected": 4587,
+  "matched": 4569,
   "source": "DART OpenAPI elestock.json"
 }
