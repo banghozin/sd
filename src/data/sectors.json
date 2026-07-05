@@ -193,8 +193,8 @@
       "market": "KR",
       "changePct": 8.54,
       "changePct1d": 8.54,
-      "changePct1w": null,
-      "changePct1m": null,
+      "changePct1w": -13.53,
+      "changePct1m": -13.64,
       "marketCapBillion": 0,
       "topTickers": [
         "네이버",
@@ -238,8 +238,8 @@
       "market": "KR",
       "changePct": -0.33,
       "changePct1d": -0.33,
-      "changePct1w": null,
-      "changePct1m": null,
+      "changePct1w": 4.62,
+      "changePct1m": -14.41,
       "marketCapBillion": 0,
       "topTickers": [
         "삼성바이오로직스",
@@ -325,8 +325,8 @@
       "market": "KR",
       "changePct": 5.13,
       "changePct1d": 5.13,
-      "changePct1w": null,
-      "changePct1m": null,
+      "changePct1w": -3.18,
+      "changePct1m": -9.27,
       "marketCapBillion": 0,
       "topTickers": [
         "아모레퍼시픽"
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-07-05T05:07:44.603Z",
+  "fetchedAt": "2026-07-05T06:07:39.641Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
