@@ -268,8 +268,8 @@
       "market": "KR",
       "changePct": 1.78,
       "changePct1d": 1.78,
-      "changePct1w": null,
-      "changePct1m": null,
+      "changePct1w": 5.23,
+      "changePct1m": -21.39,
       "marketCapBillion": 0,
       "topTickers": [
         "POSCO홀딩스"
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-07-05T07:07:44.152Z",
+  "fetchedAt": "2026-07-05T08:07:46.022Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
