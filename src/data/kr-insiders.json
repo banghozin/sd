@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20260706000113",
+      "name": "박인석",
+      "position": "상무",
+      "stock": "삼성에스디에스",
+      "amountKRW": 0,
+      "shareDelta": 200,
+      "action": "BUY",
+      "filedAt": "2026-07-06",
+      "rceptNo": "20260706000113"
+    },
+    {
       "id": "dart-20260703000500",
       "name": "임원기",
       "position": "전사PR 성과리더",
@@ -100,6 +111,17 @@
       "rceptNo": "20260702000611"
     },
     {
+      "id": "dart-20260703000027",
+      "name": "김범수",
+      "position": "부사장",
+      "stock": "삼성에스디에스",
+      "amountKRW": 0,
+      "shareDelta": 100,
+      "action": "BUY",
+      "filedAt": "2026-07-03",
+      "rceptNo": "20260703000027"
+    },
+    {
       "id": "dart-20260703000625",
       "name": "김승진",
       "position": "상무",
@@ -122,17 +144,6 @@
       "rceptNo": "20260703000133"
     },
     {
-      "id": "dart-20260703000027",
-      "name": "김범수",
-      "position": "부사장",
-      "stock": "삼성에스디에스",
-      "amountKRW": 0,
-      "shareDelta": 100,
-      "action": "BUY",
-      "filedAt": "2026-07-03",
-      "rceptNo": "20260703000027"
-    },
-    {
       "id": "dart-20260702000015",
       "name": "LEE HOJOON",
       "position": "부사장",
@@ -153,21 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-07-02",
       "rceptNo": "20260702000516"
-    },
-    {
-      "id": "dart-20260702000398",
-      "name": "김종필",
-      "position": "부사장",
-      "stock": "삼성에스디에스",
-      "amountKRW": 0,
-      "shareDelta": 500,
-      "action": "BUY",
-      "filedAt": "2026-07-02",
-      "rceptNo": "20260702000398"
     }
   ],
-  "fetchedAt": "2026-07-06T00:17:32.165Z",
-  "inspected": 4588,
-  "matched": 4570,
+  "fetchedAt": "2026-07-06T06:17:51.257Z",
+  "inspected": 4589,
+  "matched": 4571,
   "source": "DART OpenAPI elestock.json"
 }
