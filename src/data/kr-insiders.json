@@ -1,6 +1,50 @@
 {
   "trades": [
     {
+      "id": "dart-20260709000662",
+      "name": "신경섭",
+      "position": "부사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -1700,
+      "action": "SELL",
+      "filedAt": "2026-07-09",
+      "rceptNo": "20260709000662"
+    },
+    {
+      "id": "dart-20260709000673",
+      "name": "정우용",
+      "position": "상무",
+      "stock": "삼성에스디에스",
+      "amountKRW": 0,
+      "shareDelta": 98,
+      "action": "BUY",
+      "filedAt": "2026-07-09",
+      "rceptNo": "20260709000673"
+    },
+    {
+      "id": "dart-20260709000691",
+      "name": "양준철",
+      "position": "부사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -60,
+      "action": "SELL",
+      "filedAt": "2026-07-09",
+      "rceptNo": "20260709000691"
+    },
+    {
+      "id": "dart-20260709000609",
+      "name": "안대중",
+      "position": "부사장",
+      "stock": "삼성에스디에스",
+      "amountKRW": 0,
+      "shareDelta": 57,
+      "action": "BUY",
+      "filedAt": "2026-07-09",
+      "rceptNo": "20260709000609"
+    },
+    {
       "id": "dart-20260708000363",
       "name": "백창현",
       "position": "상무",
@@ -120,54 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-07-03",
       "rceptNo": "20260703000595"
-    },
-    {
-      "id": "dart-20260703000594",
-      "name": "박일우",
-      "position": "상무",
-      "stock": "삼성에스디에스",
-      "amountKRW": 0,
-      "shareDelta": 250,
-      "action": "BUY",
-      "filedAt": "2026-07-03",
-      "rceptNo": "20260703000594"
-    },
-    {
-      "id": "dart-20260703000649",
-      "name": "김현성",
-      "position": "상무",
-      "stock": "삼성에스디에스",
-      "amountKRW": 0,
-      "shareDelta": 200,
-      "action": "BUY",
-      "filedAt": "2026-07-03",
-      "rceptNo": "20260703000649"
-    },
-    {
-      "id": "dart-20260703000005",
-      "name": "홍기영",
-      "position": "상무",
-      "stock": "삼성에스디에스",
-      "amountKRW": 0,
-      "shareDelta": 120,
-      "action": "BUY",
-      "filedAt": "2026-07-03",
-      "rceptNo": "20260703000005"
-    },
-    {
-      "id": "dart-20260702000607",
-      "name": "이동섭",
-      "position": "상무",
-      "stock": "삼성에스디에스",
-      "amountKRW": 0,
-      "shareDelta": 100,
-      "action": "BUY",
-      "filedAt": "2026-07-03",
-      "rceptNo": "20260702000607"
     }
   ],
-  "fetchedAt": "2026-07-09T06:17:27.263Z",
-  "inspected": 4594,
-  "matched": 4576,
+  "fetchedAt": "2026-07-09T12:16:16.522Z",
+  "inspected": 4598,
+  "matched": 4580,
   "source": "DART OpenAPI elestock.json"
 }
