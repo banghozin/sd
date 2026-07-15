@@ -1,22 +1,6 @@
 {
   "sectors": [
     {
-      "id": "us-tech",
-      "name": "기술·반도체",
-      "market": "US",
-      "changePct": -1.16,
-      "changePct1d": -1.16,
-      "changePct1w": 0.03,
-      "changePct1m": 4.08,
-      "marketCapBillion": 0,
-      "topTickers": [
-        "AAPL",
-        "MSFT",
-        "NVDA"
-      ],
-      "ticker": "XLK"
-    },
-    {
       "id": "us-comm",
       "name": "통신·미디어",
       "market": "US",
@@ -334,10 +318,10 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-07-15T11:07:44.245Z",
+  "fetchedAt": "2026-07-15T11:44:30.107Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
-    "success": 22
+    "success": 21
   }
 }
