@@ -306,6 +306,20 @@
       "ticker": "139250.KS"
     },
     {
+      "id": "kr-shipbuild",
+      "name": "조선·기계",
+      "market": "KR",
+      "changePct": 3.55,
+      "changePct1d": 3.55,
+      "changePct1w": -1.96,
+      "changePct1m": -28.7,
+      "marketCapBillion": 0,
+      "topTickers": [
+        "HD현대중공업"
+      ],
+      "ticker": "139220.KS"
+    },
+    {
       "id": "kr-cosmetic",
       "name": "음식료·화장품",
       "market": "KR",
@@ -320,10 +334,10 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-07-15T12:07:46.383Z",
+  "fetchedAt": "2026-07-15T13:07:44.358Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
-    "success": 21
+    "success": 22
   }
 }
