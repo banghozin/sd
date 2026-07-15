@@ -1,6 +1,22 @@
 {
   "sectors": [
     {
+      "id": "us-tech",
+      "name": "기술·반도체",
+      "market": "US",
+      "changePct": -1.16,
+      "changePct1d": -1.16,
+      "changePct1w": 0.03,
+      "changePct1m": 4.08,
+      "marketCapBillion": 0,
+      "topTickers": [
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "ticker": "XLK"
+    },
+    {
       "id": "us-comm",
       "name": "통신·미디어",
       "market": "US",
@@ -290,20 +306,6 @@
       "ticker": "139250.KS"
     },
     {
-      "id": "kr-shipbuild",
-      "name": "조선·기계",
-      "market": "KR",
-      "changePct": 3.55,
-      "changePct1d": 3.55,
-      "changePct1w": -1.96,
-      "changePct1m": -28.7,
-      "marketCapBillion": 0,
-      "topTickers": [
-        "HD현대중공업"
-      ],
-      "ticker": "139220.KS"
-    },
-    {
       "id": "kr-cosmetic",
       "name": "음식료·화장품",
       "market": "KR",
@@ -318,7 +320,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-07-15T11:44:30.107Z",
+  "fetchedAt": "2026-07-15T12:07:46.383Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
