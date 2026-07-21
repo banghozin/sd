@@ -233,21 +233,6 @@
       "ticker": "091170.KS"
     },
     {
-      "id": "kr-bio",
-      "name": "바이오·제약",
-      "market": "KR",
-      "changePct": -2.1,
-      "changePct1d": -2.1,
-      "changePct1w": -5.88,
-      "changePct1m": -18.81,
-      "marketCapBillion": 0,
-      "topTickers": [
-        "삼성바이오로직스",
-        "셀트리온"
-      ],
-      "ticker": "244580.KS"
-    },
-    {
       "id": "kr-battery",
       "name": "2차전지",
       "market": "KR",
@@ -334,10 +319,10 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-07-21T12:07:38.601Z",
+  "fetchedAt": "2026-07-21T13:07:40.116Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
-    "success": 22
+    "success": 21
   }
 }
