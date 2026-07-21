@@ -1,6 +1,61 @@
 {
   "trades": [
     {
+      "id": "dart-20260721000994",
+      "name": "노태문",
+      "position": "대표사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 22678,
+      "action": "BUY",
+      "filedAt": "2026-07-21",
+      "rceptNo": "20260721000994"
+    },
+    {
+      "id": "dart-20260721001338",
+      "name": "정현호",
+      "position": "부회장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 13419,
+      "action": "BUY",
+      "filedAt": "2026-07-21",
+      "rceptNo": "20260721001338"
+    },
+    {
+      "id": "dart-20260721001109",
+      "name": "전영현",
+      "position": "대표부회장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 10469,
+      "action": "BUY",
+      "filedAt": "2026-07-21",
+      "rceptNo": "20260721001109"
+    },
+    {
+      "id": "dart-20260721001223",
+      "name": "김수목",
+      "position": "사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 10069,
+      "action": "BUY",
+      "filedAt": "2026-07-21",
+      "rceptNo": "20260721001223"
+    },
+    {
+      "id": "dart-20260721001074",
+      "name": "김용관",
+      "position": "사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 9990,
+      "action": "BUY",
+      "filedAt": "2026-07-21",
+      "rceptNo": "20260721001074"
+    },
+    {
       "id": "dart-20260721000595",
       "name": "최원준",
       "position": "사장",
@@ -10,6 +65,83 @@
       "action": "BUY",
       "filedAt": "2026-07-21",
       "rceptNo": "20260721000595"
+    },
+    {
+      "id": "dart-20260721001346",
+      "name": "박학규",
+      "position": "사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 9819,
+      "action": "BUY",
+      "filedAt": "2026-07-21",
+      "rceptNo": "20260721001346"
+    },
+    {
+      "id": "dart-20260721000853",
+      "name": "박용인",
+      "position": "사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 9501,
+      "action": "BUY",
+      "filedAt": "2026-07-21",
+      "rceptNo": "20260721000853"
+    },
+    {
+      "id": "dart-20260721001194",
+      "name": "백수현",
+      "position": "사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 8954,
+      "action": "BUY",
+      "filedAt": "2026-07-21",
+      "rceptNo": "20260721001194"
+    },
+    {
+      "id": "dart-20260721001259",
+      "name": "엄대현",
+      "position": "사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 8676,
+      "action": "BUY",
+      "filedAt": "2026-07-21",
+      "rceptNo": "20260721001259"
+    },
+    {
+      "id": "dart-20260721001205",
+      "name": "안중현",
+      "position": "사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 8508,
+      "action": "BUY",
+      "filedAt": "2026-07-21",
+      "rceptNo": "20260721001205"
+    },
+    {
+      "id": "dart-20260721000984",
+      "name": "남석우",
+      "position": "사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 8326,
+      "action": "BUY",
+      "filedAt": "2026-07-21",
+      "rceptNo": "20260721000984"
+    },
+    {
+      "id": "dart-20260721001154",
+      "name": "최진원",
+      "position": "부사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 7888,
+      "action": "BUY",
+      "filedAt": "2026-07-21",
+      "rceptNo": "20260721001154"
     },
     {
       "id": "dart-20260721000569",
@@ -23,151 +155,19 @@
       "rceptNo": "20260721000569"
     },
     {
-      "id": "dart-20260721000436",
-      "name": "조기재",
-      "position": "부사장",
+      "id": "dart-20260721001283",
+      "name": "김원경",
+      "position": "사장",
       "stock": "삼성전자",
       "amountKRW": 0,
-      "shareDelta": 5000,
+      "shareDelta": 6986,
       "action": "BUY",
       "filedAt": "2026-07-21",
-      "rceptNo": "20260721000436"
-    },
-    {
-      "id": "dart-20260721000366",
-      "name": "황상준",
-      "position": "부사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 4575,
-      "action": "BUY",
-      "filedAt": "2026-07-21",
-      "rceptNo": "20260721000366"
-    },
-    {
-      "id": "dart-20260721000238",
-      "name": "최진혁",
-      "position": "부사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 4571,
-      "action": "BUY",
-      "filedAt": "2026-07-21",
-      "rceptNo": "20260721000238"
-    },
-    {
-      "id": "dart-20260721000309",
-      "name": "김재준",
-      "position": "부사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 3803,
-      "action": "BUY",
-      "filedAt": "2026-07-21",
-      "rceptNo": "20260721000309"
-    },
-    {
-      "id": "dart-20260721000258",
-      "name": "서형석",
-      "position": "부사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 3726,
-      "action": "BUY",
-      "filedAt": "2026-07-21",
-      "rceptNo": "20260721000258"
-    },
-    {
-      "id": "dart-20260721000399",
-      "name": "이재열",
-      "position": "부사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 3712,
-      "action": "BUY",
-      "filedAt": "2026-07-21",
-      "rceptNo": "20260721000399"
-    },
-    {
-      "id": "dart-20260721000546",
-      "name": "정윤",
-      "position": "부사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 3555,
-      "action": "BUY",
-      "filedAt": "2026-07-21",
-      "rceptNo": "20260721000546"
-    },
-    {
-      "id": "dart-20260721000293",
-      "name": "문준",
-      "position": "부사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 3485,
-      "action": "BUY",
-      "filedAt": "2026-07-21",
-      "rceptNo": "20260721000293"
-    },
-    {
-      "id": "dart-20260721000298",
-      "name": "허길영",
-      "position": "부사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 3228,
-      "action": "BUY",
-      "filedAt": "2026-07-21",
-      "rceptNo": "20260721000298"
-    },
-    {
-      "id": "dart-20260721000572",
-      "name": "김유석",
-      "position": "부사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 3001,
-      "action": "BUY",
-      "filedAt": "2026-07-21",
-      "rceptNo": "20260721000572"
-    },
-    {
-      "id": "dart-20260721000380",
-      "name": "신승철",
-      "position": "부사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 2975,
-      "action": "BUY",
-      "filedAt": "2026-07-21",
-      "rceptNo": "20260721000380"
-    },
-    {
-      "id": "dart-20260721000239",
-      "name": "지현기",
-      "position": "부사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 2936,
-      "action": "BUY",
-      "filedAt": "2026-07-21",
-      "rceptNo": "20260721000239"
-    },
-    {
-      "id": "dart-20260721000432",
-      "name": "송두근",
-      "position": "부사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 2907,
-      "action": "BUY",
-      "filedAt": "2026-07-21",
-      "rceptNo": "20260721000432"
+      "rceptNo": "20260721001283"
     }
   ],
-  "fetchedAt": "2026-07-21T06:17:51.026Z",
-  "inspected": 4931,
-  "matched": 4912,
+  "fetchedAt": "2026-07-21T12:17:29.032Z",
+  "inspected": 5363,
+  "matched": 5344,
   "source": "DART OpenAPI elestock.json"
 }
