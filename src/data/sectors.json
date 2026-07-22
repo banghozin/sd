@@ -84,10 +84,10 @@
       "id": "us-finance",
       "name": "금융",
       "market": "US",
-      "changePct": -0.12,
-      "changePct1d": -0.12,
-      "changePct1w": -0.92,
-      "changePct1m": 4.36,
+      "changePct": -0.11,
+      "changePct1d": -0.11,
+      "changePct1w": -0.9,
+      "changePct1m": 4.38,
       "marketCapBillion": 0,
       "topTickers": [
         "JPM",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-07-22T20:18:26.594Z",
+  "fetchedAt": "2026-07-22T21:07:38.040Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
