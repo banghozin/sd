@@ -23,6 +23,17 @@
       "rceptNo": "20260722000207"
     },
     {
+      "id": "dart-20260722000429",
+      "name": "임경욱",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 32,
+      "action": "BUY",
+      "filedAt": "2026-07-22",
+      "rceptNo": "20260722000429"
+    },
+    {
       "id": "dart-20260721000994",
       "name": "노태문",
       "position": "대표사장",
@@ -153,21 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-07-21",
       "rceptNo": "20260721000984"
-    },
-    {
-      "id": "dart-20260721001154",
-      "name": "최진원",
-      "position": "부사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 7888,
-      "action": "BUY",
-      "filedAt": "2026-07-21",
-      "rceptNo": "20260721001154"
     }
   ],
-  "fetchedAt": "2026-07-22T06:17:20.162Z",
-  "inspected": 4806,
-  "matched": 4787,
+  "fetchedAt": "2026-07-22T12:17:54.099Z",
+  "inspected": 5366,
+  "matched": 5347,
   "source": "DART OpenAPI elestock.json"
 }
