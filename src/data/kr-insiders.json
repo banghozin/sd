@@ -1,6 +1,39 @@
 {
   "trades": [
     {
+      "id": "dart-20260723000114",
+      "name": "부민혁",
+      "position": "부사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -1080,
+      "action": "SELL",
+      "filedAt": "2026-07-23",
+      "rceptNo": "20260723000114"
+    },
+    {
+      "id": "dart-20260723000134",
+      "name": "정영훈",
+      "position": "상무",
+      "stock": "삼성에스디에스",
+      "amountKRW": 0,
+      "shareDelta": 150,
+      "action": "BUY",
+      "filedAt": "2026-07-23",
+      "rceptNo": "20260723000134"
+    },
+    {
+      "id": "dart-20260723000135",
+      "name": "민대홍",
+      "position": "상무",
+      "stock": "삼성에스디에스",
+      "amountKRW": 0,
+      "shareDelta": 60,
+      "action": "BUY",
+      "filedAt": "2026-07-23",
+      "rceptNo": "20260723000135"
+    },
+    {
       "id": "dart-20260722000161",
       "name": "Lee Sungki",
       "position": "상무",
@@ -131,43 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-07-21",
       "rceptNo": "20260721001194"
-    },
-    {
-      "id": "dart-20260721001259",
-      "name": "엄대현",
-      "position": "사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 8676,
-      "action": "BUY",
-      "filedAt": "2026-07-21",
-      "rceptNo": "20260721001259"
-    },
-    {
-      "id": "dart-20260721001205",
-      "name": "안중현",
-      "position": "사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 8508,
-      "action": "BUY",
-      "filedAt": "2026-07-21",
-      "rceptNo": "20260721001205"
-    },
-    {
-      "id": "dart-20260721000984",
-      "name": "남석우",
-      "position": "사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 8326,
-      "action": "BUY",
-      "filedAt": "2026-07-21",
-      "rceptNo": "20260721000984"
     }
   ],
-  "fetchedAt": "2026-07-23T00:17:49.310Z",
-  "inspected": 5366,
-  "matched": 5347,
+  "fetchedAt": "2026-07-23T06:17:26.654Z",
+  "inspected": 4810,
+  "matched": 4791,
   "source": "DART OpenAPI elestock.json"
 }
