@@ -1,6 +1,28 @@
 {
   "trades": [
     {
+      "id": "dart-20260724000026",
+      "name": "정재한",
+      "position": "전무",
+      "stock": "LG에너지솔루션",
+      "amountKRW": 0,
+      "shareDelta": 300,
+      "action": "BUY",
+      "filedAt": "2026-07-24",
+      "rceptNo": "20260724000026"
+    },
+    {
+      "id": "dart-20260724000067",
+      "name": "이관희",
+      "position": "상무",
+      "stock": "삼성에스디에스",
+      "amountKRW": 0,
+      "shareDelta": 100,
+      "action": "BUY",
+      "filedAt": "2026-07-24",
+      "rceptNo": "20260724000067"
+    },
+    {
       "id": "dart-20260723000114",
       "name": "부민혁",
       "position": "부사장",
@@ -142,32 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-07-21",
       "rceptNo": "20260721001346"
-    },
-    {
-      "id": "dart-20260721000853",
-      "name": "박용인",
-      "position": "사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 9501,
-      "action": "BUY",
-      "filedAt": "2026-07-21",
-      "rceptNo": "20260721000853"
-    },
-    {
-      "id": "dart-20260721001194",
-      "name": "백수현",
-      "position": "사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 8954,
-      "action": "BUY",
-      "filedAt": "2026-07-21",
-      "rceptNo": "20260721001194"
     }
   ],
-  "fetchedAt": "2026-07-24T00:16:00.312Z",
-  "inspected": 5367,
-  "matched": 5348,
+  "fetchedAt": "2026-07-24T06:16:04.938Z",
+  "inspected": 5369,
+  "matched": 5350,
   "source": "DART OpenAPI elestock.json"
 }
