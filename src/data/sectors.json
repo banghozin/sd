@@ -36,10 +36,10 @@
       "id": "us-disc",
       "name": "소비재 (임의)",
       "market": "US",
-      "changePct": 0.6,
-      "changePct1d": 0.6,
-      "changePct1w": -5.22,
-      "changePct1m": -4.92,
+      "changePct": -4.04,
+      "changePct1d": -4.04,
+      "changePct1w": -6.76,
+      "changePct1m": -3.82,
       "marketCapBillion": 0,
       "topTickers": [
         "AMZN",
@@ -84,10 +84,10 @@
       "id": "us-finance",
       "name": "금융",
       "market": "US",
-      "changePct": 0.86,
-      "changePct1d": 0.86,
-      "changePct1w": 0.09,
-      "changePct1m": 4.82,
+      "changePct": 0.46,
+      "changePct1d": 0.46,
+      "changePct1w": -0.78,
+      "changePct1m": 4.51,
       "marketCapBillion": 0,
       "topTickers": [
         "JPM",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-07-26T03:48:40.081Z",
+  "fetchedAt": "2026-07-26T04:07:39.972Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
