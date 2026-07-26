@@ -36,10 +36,10 @@
       "id": "us-disc",
       "name": "소비재 (임의)",
       "market": "US",
-      "changePct": -4.04,
-      "changePct1d": -4.04,
-      "changePct1w": -6.76,
-      "changePct1m": -3.82,
+      "changePct": 0.6,
+      "changePct1d": 0.6,
+      "changePct1w": -5.22,
+      "changePct1m": -4.92,
       "marketCapBillion": 0,
       "topTickers": [
         "AMZN",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-07-26T05:07:37.362Z",
+  "fetchedAt": "2026-07-26T06:07:43.278Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
