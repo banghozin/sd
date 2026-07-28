@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20260728000492",
+      "name": "최제원",
+      "position": "상무",
+      "stock": "LG에너지솔루션",
+      "amountKRW": 0,
+      "shareDelta": 1035,
+      "action": "BUY",
+      "filedAt": "2026-07-28",
+      "rceptNo": "20260728000492"
+    },
+    {
       "id": "dart-20260728000302",
       "name": "김지훈",
       "position": "상무",
@@ -153,21 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-07-21",
       "rceptNo": "20260721001223"
-    },
-    {
-      "id": "dart-20260721001074",
-      "name": "김용관",
-      "position": "사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 9990,
-      "action": "BUY",
-      "filedAt": "2026-07-21",
-      "rceptNo": "20260721001074"
     }
   ],
-  "fetchedAt": "2026-07-28T06:17:42.409Z",
-  "inspected": 4812,
-  "matched": 4793,
+  "fetchedAt": "2026-07-28T12:16:00.662Z",
+  "inspected": 5372,
+  "matched": 5353,
   "source": "DART OpenAPI elestock.json"
 }
