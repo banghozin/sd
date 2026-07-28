@@ -20,10 +20,10 @@
       "id": "us-comm",
       "name": "통신·미디어",
       "market": "US",
-      "changePct": 1.28,
-      "changePct1d": 1.28,
-      "changePct1w": -2.83,
-      "changePct1m": 1.97,
+      "changePct": 2.16,
+      "changePct1d": 2.16,
+      "changePct1w": -2.7,
+      "changePct1m": 1.05,
       "marketCapBillion": 0,
       "topTickers": [
         "GOOGL",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-07-28T12:08:14.091Z",
+  "fetchedAt": "2026-07-28T13:07:46.339Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
