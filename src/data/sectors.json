@@ -22,8 +22,8 @@
       "market": "US",
       "changePct": 1.87,
       "changePct1d": 1.87,
-      "changePct1w": -1.02,
-      "changePct1m": 3.87,
+      "changePct1w": -0.33,
+      "changePct1m": 3.29,
       "marketCapBillion": 0,
       "topTickers": [
         "GOOGL",
@@ -38,8 +38,8 @@
       "market": "US",
       "changePct": 1.48,
       "changePct1d": 1.48,
-      "changePct1w": -1.86,
-      "changePct1m": -0.77,
+      "changePct1w": -2.08,
+      "changePct1m": -1.65,
       "marketCapBillion": 0,
       "topTickers": [
         "AMZN",
@@ -52,10 +52,10 @@
       "id": "us-staples",
       "name": "소비재 (필수)",
       "market": "US",
-      "changePct": 1.98,
-      "changePct1d": 1.98,
-      "changePct1w": 2.58,
-      "changePct1m": 3.71,
+      "changePct": 1.99,
+      "changePct1d": 1.99,
+      "changePct1w": 3.57,
+      "changePct1m": 2.77,
       "marketCapBillion": 0,
       "topTickers": [
         "WMT",
@@ -100,10 +100,10 @@
       "id": "us-energy",
       "name": "에너지",
       "market": "US",
-      "changePct": -1.39,
-      "changePct1d": -1.39,
-      "changePct1w": -1.62,
-      "changePct1m": 6.89,
+      "changePct": -1.35,
+      "changePct1d": -1.35,
+      "changePct1w": -1.59,
+      "changePct1m": 6.93,
       "marketCapBillion": 0,
       "topTickers": [
         "XOM",
@@ -163,8 +163,8 @@
       "market": "US",
       "changePct": 0.55,
       "changePct1d": 0.55,
-      "changePct1w": 1.72,
-      "changePct1m": 3.18,
+      "changePct1w": 1.79,
+      "changePct1m": 1.7,
       "marketCapBillion": 0,
       "topTickers": [
         "AMT",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-07-28T20:22:18.563Z",
+  "fetchedAt": "2026-07-28T21:07:49.912Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
