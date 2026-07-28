@@ -161,10 +161,10 @@
       "id": "us-realty",
       "name": "부동산",
       "market": "US",
-      "changePct": 1.8,
-      "changePct1d": 1.8,
-      "changePct1w": 0.75,
-      "changePct1m": 2.81,
+      "changePct": -0.41,
+      "changePct1d": -0.41,
+      "changePct1w": 1.17,
+      "changePct1m": 2.62,
       "marketCapBillion": 0,
       "topTickers": [
         "AMT",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-07-28T09:42:35.739Z",
+  "fetchedAt": "2026-07-28T10:07:48.428Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
