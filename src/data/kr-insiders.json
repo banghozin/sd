@@ -1,6 +1,39 @@
 {
   "trades": [
     {
+      "id": "dart-20260729000521",
+      "name": "양준철",
+      "position": "부사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -1250,
+      "action": "SELL",
+      "filedAt": "2026-07-29",
+      "rceptNo": "20260729000521"
+    },
+    {
+      "id": "dart-20260729000343",
+      "name": "여명구",
+      "position": "부사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -500,
+      "action": "SELL",
+      "filedAt": "2026-07-29",
+      "rceptNo": "20260729000343"
+    },
+    {
+      "id": "dart-20260729000512",
+      "name": "정진국",
+      "position": "부사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -400,
+      "action": "SELL",
+      "filedAt": "2026-07-29",
+      "rceptNo": "20260729000512"
+    },
+    {
       "id": "dart-20260728000492",
       "name": "최제원",
       "position": "상무",
@@ -131,43 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-07-21",
       "rceptNo": "20260721000994"
-    },
-    {
-      "id": "dart-20260721001338",
-      "name": "정현호",
-      "position": "부회장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 13419,
-      "action": "BUY",
-      "filedAt": "2026-07-21",
-      "rceptNo": "20260721001338"
-    },
-    {
-      "id": "dart-20260721001109",
-      "name": "전영현",
-      "position": "대표부회장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 10469,
-      "action": "BUY",
-      "filedAt": "2026-07-21",
-      "rceptNo": "20260721001109"
-    },
-    {
-      "id": "dart-20260721001223",
-      "name": "김수목",
-      "position": "사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 10069,
-      "action": "BUY",
-      "filedAt": "2026-07-21",
-      "rceptNo": "20260721001223"
     }
   ],
-  "fetchedAt": "2026-07-29T06:16:03.675Z",
-  "inspected": 5372,
-  "matched": 5353,
+  "fetchedAt": "2026-07-29T12:18:00.006Z",
+  "inspected": 5375,
+  "matched": 5356,
   "source": "DART OpenAPI elestock.json"
 }
