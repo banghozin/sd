@@ -12,6 +12,17 @@
       "rceptNo": "20260730000240"
     },
     {
+      "id": "dart-20260730000497",
+      "name": "정지훈",
+      "position": "상무",
+      "stock": "현대자동차",
+      "amountKRW": 0,
+      "shareDelta": 15,
+      "action": "BUY",
+      "filedAt": "2026-07-30",
+      "rceptNo": "20260730000497"
+    },
+    {
       "id": "dart-20260729000521",
       "name": "양준철",
       "position": "부사장",
@@ -153,20 +164,9 @@
       "action": "BUY",
       "filedAt": "2026-07-22",
       "rceptNo": "20260722000207"
-    },
-    {
-      "id": "dart-20260722000429",
-      "name": "임경욱",
-      "position": "상무",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 32,
-      "action": "BUY",
-      "filedAt": "2026-07-22",
-      "rceptNo": "20260722000429"
     }
   ],
-  "fetchedAt": "2026-07-30T06:16:02.387Z",
+  "fetchedAt": "2026-07-30T12:16:02.877Z",
   "inspected": 5376,
   "matched": 5357,
   "source": "DART OpenAPI elestock.json"
