@@ -4,10 +4,10 @@
       "id": "us-tech",
       "name": "기술·반도체",
       "market": "US",
-      "changePct": 5.45,
-      "changePct1d": 5.45,
-      "changePct1w": -1.57,
-      "changePct1m": -7.81,
+      "changePct": 5.5,
+      "changePct1d": 5.5,
+      "changePct1w": -1.52,
+      "changePct1m": -7.76,
       "marketCapBillion": 0,
       "topTickers": [
         "AAPL",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-07-30T20:22:01.860Z",
+  "fetchedAt": "2026-07-30T21:07:37.437Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
