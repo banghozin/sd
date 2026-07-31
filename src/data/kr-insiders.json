@@ -12,6 +12,28 @@
       "rceptNo": "20260731000082"
     },
     {
+      "id": "dart-20260731000755",
+      "name": "노태문",
+      "position": "대표사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 3045,
+      "action": "BUY",
+      "filedAt": "2026-07-31",
+      "rceptNo": "20260731000755"
+    },
+    {
+      "id": "dart-20260731000690",
+      "name": "이종민",
+      "position": "부사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -381,
+      "action": "SELL",
+      "filedAt": "2026-07-31",
+      "rceptNo": "20260731000690"
+    },
+    {
       "id": "dart-20260730000240",
       "name": "김현석",
       "position": "상무",
@@ -142,32 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-07-23",
       "rceptNo": "20260723000134"
-    },
-    {
-      "id": "dart-20260723000135",
-      "name": "민대홍",
-      "position": "상무",
-      "stock": "삼성에스디에스",
-      "amountKRW": 0,
-      "shareDelta": 60,
-      "action": "BUY",
-      "filedAt": "2026-07-23",
-      "rceptNo": "20260723000135"
-    },
-    {
-      "id": "dart-20260722000161",
-      "name": "Lee Sungki",
-      "position": "상무",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": -937,
-      "action": "SELL",
-      "filedAt": "2026-07-22",
-      "rceptNo": "20260722000161"
     }
   ],
-  "fetchedAt": "2026-07-31T06:17:20.738Z",
-  "inspected": 5377,
-  "matched": 5358,
+  "fetchedAt": "2026-07-31T12:17:53.757Z",
+  "inspected": 5379,
+  "matched": 5360,
   "source": "DART OpenAPI elestock.json"
 }
