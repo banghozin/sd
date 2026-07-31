@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20260731000082",
+      "name": "최태원",
+      "position": "회장",
+      "stock": "SK하이닉스",
+      "amountKRW": 0,
+      "shareDelta": 3620,
+      "action": "BUY",
+      "filedAt": "2026-07-31",
+      "rceptNo": "20260731000082"
+    },
+    {
       "id": "dart-20260730000240",
       "name": "김현석",
       "position": "상무",
@@ -153,21 +164,10 @@
       "action": "SELL",
       "filedAt": "2026-07-22",
       "rceptNo": "20260722000161"
-    },
-    {
-      "id": "dart-20260722000207",
-      "name": "김민",
-      "position": "상무",
-      "stock": "삼성에스디에스",
-      "amountKRW": 0,
-      "shareDelta": 100,
-      "action": "BUY",
-      "filedAt": "2026-07-22",
-      "rceptNo": "20260722000207"
     }
   ],
-  "fetchedAt": "2026-07-31T00:16:03.953Z",
-  "inspected": 5376,
-  "matched": 5357,
+  "fetchedAt": "2026-07-31T06:17:20.738Z",
+  "inspected": 5377,
+  "matched": 5358,
   "source": "DART OpenAPI elestock.json"
 }
