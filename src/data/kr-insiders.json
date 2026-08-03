@@ -12,6 +12,17 @@
       "rceptNo": "20260803000043"
     },
     {
+      "id": "dart-20260803000395",
+      "name": "하명복",
+      "position": "담당",
+      "stock": "SK텔레콤",
+      "amountKRW": 0,
+      "shareDelta": 715,
+      "action": "BUY",
+      "filedAt": "2026-08-03",
+      "rceptNo": "20260803000395"
+    },
+    {
       "id": "dart-20260803000197",
       "name": "신영주",
       "position": "부사장",
@@ -153,21 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-07-27",
       "rceptNo": "20260727000099"
-    },
-    {
-      "id": "dart-20260724000026",
-      "name": "정재한",
-      "position": "전무",
-      "stock": "LG에너지솔루션",
-      "amountKRW": 0,
-      "shareDelta": 300,
-      "action": "BUY",
-      "filedAt": "2026-07-24",
-      "rceptNo": "20260724000026"
     }
   ],
-  "fetchedAt": "2026-08-03T06:17:29.881Z",
-  "inspected": 4822,
-  "matched": 4803,
+  "fetchedAt": "2026-08-03T12:17:37.203Z",
+  "inspected": 4823,
+  "matched": 4804,
   "source": "DART OpenAPI elestock.json"
 }
