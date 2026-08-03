@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20260803000004",
+      "name": "박태훈",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -185,
+      "action": "SELL",
+      "filedAt": "2026-08-03",
+      "rceptNo": "20260803000004"
+    },
+    {
       "id": "dart-20260731000082",
       "name": "최태원",
       "position": "회장",
@@ -153,21 +164,10 @@
       "action": "SELL",
       "filedAt": "2026-07-23",
       "rceptNo": "20260723000114"
-    },
-    {
-      "id": "dart-20260723000134",
-      "name": "정영훈",
-      "position": "상무",
-      "stock": "삼성에스디에스",
-      "amountKRW": 0,
-      "shareDelta": 150,
-      "action": "BUY",
-      "filedAt": "2026-07-23",
-      "rceptNo": "20260723000134"
     }
   ],
-  "fetchedAt": "2026-08-02T18:16:00.328Z",
-  "inspected": 5378,
-  "matched": 5359,
+  "fetchedAt": "2026-08-03T00:17:52.385Z",
+  "inspected": 5379,
+  "matched": 5360,
   "source": "DART OpenAPI elestock.json"
 }
