@@ -1,6 +1,39 @@
 {
   "trades": [
     {
+      "id": "dart-20260803000043",
+      "name": "조익현",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -950,
+      "action": "SELL",
+      "filedAt": "2026-08-03",
+      "rceptNo": "20260803000043"
+    },
+    {
+      "id": "dart-20260803000197",
+      "name": "신영주",
+      "position": "부사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -200,
+      "action": "SELL",
+      "filedAt": "2026-08-03",
+      "rceptNo": "20260803000197"
+    },
+    {
+      "id": "dart-20260803000173",
+      "name": "김현우",
+      "position": "부사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -200,
+      "action": "SELL",
+      "filedAt": "2026-08-03",
+      "rceptNo": "20260803000173"
+    },
+    {
       "id": "dart-20260803000004",
       "name": "박태훈",
       "position": "상무",
@@ -10,17 +43,6 @@
       "action": "SELL",
       "filedAt": "2026-08-03",
       "rceptNo": "20260803000004"
-    },
-    {
-      "id": "dart-20260731000082",
-      "name": "최태원",
-      "position": "회장",
-      "stock": "SK하이닉스",
-      "amountKRW": 0,
-      "shareDelta": 3620,
-      "action": "BUY",
-      "filedAt": "2026-07-31",
-      "rceptNo": "20260731000082"
     },
     {
       "id": "dart-20260731000755",
@@ -142,32 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-07-24",
       "rceptNo": "20260724000026"
-    },
-    {
-      "id": "dart-20260724000067",
-      "name": "이관희",
-      "position": "상무",
-      "stock": "삼성에스디에스",
-      "amountKRW": 0,
-      "shareDelta": 100,
-      "action": "BUY",
-      "filedAt": "2026-07-24",
-      "rceptNo": "20260724000067"
-    },
-    {
-      "id": "dart-20260723000114",
-      "name": "부민혁",
-      "position": "부사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": -1080,
-      "action": "SELL",
-      "filedAt": "2026-07-23",
-      "rceptNo": "20260723000114"
     }
   ],
-  "fetchedAt": "2026-08-03T00:17:52.385Z",
-  "inspected": 5379,
-  "matched": 5360,
+  "fetchedAt": "2026-08-03T06:17:29.881Z",
+  "inspected": 4822,
+  "matched": 4803,
   "source": "DART OpenAPI elestock.json"
 }
