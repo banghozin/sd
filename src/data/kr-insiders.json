@@ -12,6 +12,50 @@
       "rceptNo": "20260805000166"
     },
     {
+      "id": "dart-20260805000493",
+      "name": "김혜인",
+      "position": "부사장",
+      "stock": "현대자동차",
+      "amountKRW": 0,
+      "shareDelta": 2023,
+      "action": "BUY",
+      "filedAt": "2026-08-05",
+      "rceptNo": "20260805000493"
+    },
+    {
+      "id": "dart-20260805000333",
+      "name": "황상준",
+      "position": "부사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -1700,
+      "action": "SELL",
+      "filedAt": "2026-08-05",
+      "rceptNo": "20260805000333"
+    },
+    {
+      "id": "dart-20260805000496",
+      "name": "피트 졸리",
+      "position": "상무",
+      "stock": "현대자동차",
+      "amountKRW": 0,
+      "shareDelta": 700,
+      "action": "BUY",
+      "filedAt": "2026-08-05",
+      "rceptNo": "20260805000496"
+    },
+    {
+      "id": "dart-20260805000322",
+      "name": "김동춘",
+      "position": "대표이사 사장",
+      "stock": "LG화학",
+      "amountKRW": 0,
+      "shareDelta": 427,
+      "action": "BUY",
+      "filedAt": "2026-08-05",
+      "rceptNo": "20260805000322"
+    },
+    {
       "id": "dart-20260805000203",
       "name": "심재현",
       "position": "부사장",
@@ -21,6 +65,17 @@
       "action": "SELL",
       "filedAt": "2026-08-05",
       "rceptNo": "20260805000203"
+    },
+    {
+      "id": "dart-20260805000501",
+      "name": "필리페 게랑부토",
+      "position": "Executive\nVice President",
+      "stock": "현대자동차",
+      "amountKRW": 0,
+      "shareDelta": 169,
+      "action": "BUY",
+      "filedAt": "2026-08-05",
+      "rceptNo": "20260805000501"
     },
     {
       "id": "dart-20260805000010",
@@ -109,65 +164,10 @@
       "action": "SELL",
       "filedAt": "2026-08-03",
       "rceptNo": "20260803000197"
-    },
-    {
-      "id": "dart-20260803000004",
-      "name": "박태훈",
-      "position": "상무",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": -185,
-      "action": "SELL",
-      "filedAt": "2026-08-03",
-      "rceptNo": "20260803000004"
-    },
-    {
-      "id": "dart-20260731000082",
-      "name": "최태원",
-      "position": "회장",
-      "stock": "SK하이닉스",
-      "amountKRW": 0,
-      "shareDelta": 3620,
-      "action": "BUY",
-      "filedAt": "2026-07-31",
-      "rceptNo": "20260731000082"
-    },
-    {
-      "id": "dart-20260731000755",
-      "name": "노태문",
-      "position": "대표사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 3045,
-      "action": "BUY",
-      "filedAt": "2026-07-31",
-      "rceptNo": "20260731000755"
-    },
-    {
-      "id": "dart-20260731000690",
-      "name": "이종민",
-      "position": "부사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": -381,
-      "action": "SELL",
-      "filedAt": "2026-07-31",
-      "rceptNo": "20260731000690"
-    },
-    {
-      "id": "dart-20260730000240",
-      "name": "김현석",
-      "position": "상무",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": -230,
-      "action": "SELL",
-      "filedAt": "2026-07-30",
-      "rceptNo": "20260730000240"
     }
   ],
-  "fetchedAt": "2026-08-05T06:16:05.486Z",
-  "inspected": 5389,
-  "matched": 5370,
+  "fetchedAt": "2026-08-05T12:17:29.396Z",
+  "inspected": 4833,
+  "matched": 4814,
   "source": "DART OpenAPI elestock.json"
 }
