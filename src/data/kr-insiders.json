@@ -12,6 +12,28 @@
       "rceptNo": "20260806000001"
     },
     {
+      "id": "dart-20260806000098",
+      "name": "김용찬",
+      "position": "부사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -200,
+      "action": "SELL",
+      "filedAt": "2026-08-06",
+      "rceptNo": "20260806000098"
+    },
+    {
+      "id": "dart-20260806000236",
+      "name": "김경륜",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -110,
+      "action": "SELL",
+      "filedAt": "2026-08-06",
+      "rceptNo": "20260806000236"
+    },
+    {
       "id": "dart-20260805000166",
       "name": "이태관",
       "position": "부사장",
@@ -142,32 +164,10 @@
       "action": "SELL",
       "filedAt": "2026-08-03",
       "rceptNo": "20260803000043"
-    },
-    {
-      "id": "dart-20260803000395",
-      "name": "하명복",
-      "position": "담당",
-      "stock": "SK텔레콤",
-      "amountKRW": 0,
-      "shareDelta": 715,
-      "action": "BUY",
-      "filedAt": "2026-08-03",
-      "rceptNo": "20260803000395"
-    },
-    {
-      "id": "dart-20260803000173",
-      "name": "김현우",
-      "position": "부사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": -200,
-      "action": "SELL",
-      "filedAt": "2026-08-03",
-      "rceptNo": "20260803000173"
     }
   ],
-  "fetchedAt": "2026-08-06T00:17:31.740Z",
-  "inspected": 5393,
-  "matched": 5374,
+  "fetchedAt": "2026-08-06T06:17:39.467Z",
+  "inspected": 4836,
+  "matched": 4817,
   "source": "DART OpenAPI elestock.json"
 }
