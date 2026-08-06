@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20260806000501",
+      "name": "권정현",
+      "position": "부사장",
+      "stock": "현대자동차",
+      "amountKRW": 0,
+      "shareDelta": 931,
+      "action": "BUY",
+      "filedAt": "2026-08-06",
+      "rceptNo": "20260806000501"
+    },
+    {
       "id": "dart-20260806000001",
       "name": "김용성",
       "position": "부사장",
@@ -21,6 +32,17 @@
       "action": "SELL",
       "filedAt": "2026-08-06",
       "rceptNo": "20260806000098"
+    },
+    {
+      "id": "dart-20260806000484",
+      "name": "김영아",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 170,
+      "action": "BUY",
+      "filedAt": "2026-08-06",
+      "rceptNo": "20260806000484"
     },
     {
       "id": "dart-20260806000236",
@@ -142,32 +164,10 @@
       "action": "SELL",
       "filedAt": "2026-08-04",
       "rceptNo": "20260804000544"
-    },
-    {
-      "id": "dart-20260804000499",
-      "name": "얀손헨릭",
-      "position": "상무",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 94,
-      "action": "BUY",
-      "filedAt": "2026-08-04",
-      "rceptNo": "20260804000499"
-    },
-    {
-      "id": "dart-20260803000043",
-      "name": "조익현",
-      "position": "상무",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": -950,
-      "action": "SELL",
-      "filedAt": "2026-08-03",
-      "rceptNo": "20260803000043"
     }
   ],
-  "fetchedAt": "2026-08-06T06:17:39.467Z",
-  "inspected": 4836,
-  "matched": 4817,
+  "fetchedAt": "2026-08-06T12:16:07.497Z",
+  "inspected": 5397,
+  "matched": 5378,
   "source": "DART OpenAPI elestock.json"
 }
