@@ -166,8 +166,8 @@
       "rceptNo": "20260805000333"
     }
   ],
-  "fetchedAt": "2026-08-09T06:16:04.486Z",
-  "inspected": 5402,
-  "matched": 5383,
+  "fetchedAt": "2026-08-09T12:17:36.397Z",
+  "inspected": 4843,
+  "matched": 4824,
   "source": "DART OpenAPI elestock.json"
 }
