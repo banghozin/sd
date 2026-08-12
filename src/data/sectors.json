@@ -20,10 +20,10 @@
       "id": "us-comm",
       "name": "통신·미디어",
       "market": "US",
-      "changePct": 0.02,
-      "changePct1d": 0.02,
-      "changePct1w": -0.06,
-      "changePct1m": -0.33,
+      "changePct": -0.5,
+      "changePct1d": -0.5,
+      "changePct1w": -0.69,
+      "changePct1m": -0.29,
       "marketCapBillion": 0,
       "topTickers": [
         "GOOGL",
@@ -161,10 +161,10 @@
       "id": "us-realty",
       "name": "부동산",
       "market": "US",
-      "changePct": -2,
-      "changePct1d": -2,
-      "changePct1w": -2.43,
-      "changePct1m": -0.83,
+      "changePct": -0.72,
+      "changePct1d": -0.72,
+      "changePct1w": -2.41,
+      "changePct1m": -1.39,
       "marketCapBillion": 0,
       "topTickers": [
         "AMT",
@@ -239,7 +239,7 @@
       "changePct": -2.95,
       "changePct1d": -2.95,
       "changePct1w": 5.79,
-      "changePct1m": 10.72,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "삼성바이오로직스",
@@ -254,7 +254,7 @@
       "changePct": 0.95,
       "changePct1d": 0.95,
       "changePct1w": 9.29,
-      "changePct1m": 6.64,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "LG에너지솔루션",
@@ -312,7 +312,7 @@
       "changePct": 1.88,
       "changePct1d": 1.88,
       "changePct1w": 2.43,
-      "changePct1m": 10,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "HD현대중공업"
@@ -326,7 +326,7 @@
       "changePct": 3.89,
       "changePct1d": 3.89,
       "changePct1w": 1.82,
-      "changePct1m": 1.99,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "아모레퍼시픽"
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-08-12T09:08:08.928Z",
+  "fetchedAt": "2026-08-12T10:07:46.091Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
