@@ -39,7 +39,7 @@
       "changePct": -0.36,
       "changePct1d": -0.36,
       "changePct1w": 0.8,
-      "changePct1m": 2.76,
+      "changePct1m": 2.05,
       "marketCapBillion": 0,
       "topTickers": [
         "AMZN",
@@ -194,7 +194,7 @@
       "changePct": 11.92,
       "changePct1d": 11.92,
       "changePct1w": -5.79,
-      "changePct1m": -22.59,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "네이버",
@@ -269,7 +269,7 @@
       "changePct": -0.69,
       "changePct1d": -0.69,
       "changePct1w": 5.62,
-      "changePct1m": 14.27,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "POSCO홀딩스"
@@ -298,7 +298,7 @@
       "changePct": 1.1,
       "changePct1d": 1.1,
       "changePct1w": 5.63,
-      "changePct1m": 5.99,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "LG화학"
@@ -312,7 +312,7 @@
       "changePct": 1.88,
       "changePct1d": 1.88,
       "changePct1w": 2.43,
-      "changePct1m": null,
+      "changePct1m": 10,
       "marketCapBillion": 0,
       "topTickers": [
         "HD현대중공업"
@@ -326,7 +326,7 @@
       "changePct": 3.89,
       "changePct1d": 3.89,
       "changePct1w": 1.82,
-      "changePct1m": null,
+      "changePct1m": 1.99,
       "marketCapBillion": 0,
       "topTickers": [
         "아모레퍼시픽"
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-08-12T10:07:46.091Z",
+  "fetchedAt": "2026-08-12T10:16:34.152Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
