@@ -39,7 +39,7 @@
       "changePct": -1.13,
       "changePct1d": -1.13,
       "changePct1w": -0.63,
-      "changePct1m": 0.55,
+      "changePct1m": 1.72,
       "marketCapBillion": 0,
       "topTickers": [
         "AMZN",
@@ -134,7 +134,7 @@
       "changePct": -1.24,
       "changePct1d": -1.24,
       "changePct1w": -0.11,
-      "changePct1m": 3.83,
+      "changePct1m": 3.32,
       "marketCapBillion": 0,
       "topTickers": [
         "LIN",
@@ -179,7 +179,7 @@
       "changePct": 4.2,
       "changePct1d": 4.2,
       "changePct1w": -0.38,
-      "changePct1m": null,
+      "changePct1m": -8.73,
       "marketCapBillion": 0,
       "topTickers": [
         "삼성전자",
@@ -194,7 +194,7 @@
       "changePct": 11.92,
       "changePct1d": 11.92,
       "changePct1w": -5.79,
-      "changePct1m": null,
+      "changePct1m": -22.59,
       "marketCapBillion": 0,
       "topTickers": [
         "네이버",
@@ -209,7 +209,7 @@
       "changePct": 1.61,
       "changePct1d": 1.61,
       "changePct1w": 1.7,
-      "changePct1m": null,
+      "changePct1m": -0.32,
       "marketCapBillion": 0,
       "topTickers": [
         "현대차",
@@ -239,7 +239,7 @@
       "changePct": -2.95,
       "changePct1d": -2.95,
       "changePct1w": 5.79,
-      "changePct1m": null,
+      "changePct1m": 10.72,
       "marketCapBillion": 0,
       "topTickers": [
         "삼성바이오로직스",
@@ -254,7 +254,7 @@
       "changePct": 0.95,
       "changePct1d": 0.95,
       "changePct1w": 9.29,
-      "changePct1m": null,
+      "changePct1m": 6.64,
       "marketCapBillion": 0,
       "topTickers": [
         "LG에너지솔루션",
@@ -269,7 +269,7 @@
       "changePct": -0.69,
       "changePct1d": -0.69,
       "changePct1w": 5.62,
-      "changePct1m": null,
+      "changePct1m": 14.27,
       "marketCapBillion": 0,
       "topTickers": [
         "POSCO홀딩스"
@@ -283,7 +283,7 @@
       "changePct": -3.48,
       "changePct1d": -3.48,
       "changePct1w": 3.55,
-      "changePct1m": null,
+      "changePct1m": 3.08,
       "marketCapBillion": 0,
       "topTickers": [
         "크래프톤",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-08-12T23:07:38.566Z",
+  "fetchedAt": "2026-08-12T23:53:19.388Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
