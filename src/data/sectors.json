@@ -20,10 +20,10 @@
       "id": "us-comm",
       "name": "통신·미디어",
       "market": "US",
-      "changePct": -0.5,
-      "changePct1d": -0.5,
-      "changePct1w": -0.69,
-      "changePct1m": -0.29,
+      "changePct": 0.02,
+      "changePct1d": 0.02,
+      "changePct1w": -0.06,
+      "changePct1m": -0.33,
       "marketCapBillion": 0,
       "topTickers": [
         "GOOGL",
@@ -161,10 +161,10 @@
       "id": "us-realty",
       "name": "부동산",
       "market": "US",
-      "changePct": -0.72,
-      "changePct1d": -0.72,
-      "changePct1w": -2.41,
-      "changePct1m": -1.39,
+      "changePct": -2,
+      "changePct1d": -2,
+      "changePct1w": -2.43,
+      "changePct1m": -0.83,
       "marketCapBillion": 0,
       "topTickers": [
         "AMT",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-08-12T08:36:22.842Z",
+  "fetchedAt": "2026-08-12T09:08:08.928Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
