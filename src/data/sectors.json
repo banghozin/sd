@@ -22,8 +22,8 @@
       "market": "US",
       "changePct": 2.07,
       "changePct1d": 2.07,
-      "changePct1w": 1.23,
-      "changePct1m": -0.73,
+      "changePct1w": 1.52,
+      "changePct1m": 0.99,
       "marketCapBillion": 0,
       "topTickers": [
         "GOOGL",
@@ -39,7 +39,7 @@
       "changePct": 0.48,
       "changePct1d": 0.48,
       "changePct1w": 0.3,
-      "changePct1m": 2.08,
+      "changePct1m": 1.24,
       "marketCapBillion": 0,
       "topTickers": [
         "AMZN",
@@ -118,7 +118,7 @@
       "changePct": -0.05,
       "changePct1d": -0.05,
       "changePct1w": 0.56,
-      "changePct1m": 2.13,
+      "changePct1m": 3.18,
       "marketCapBillion": 0,
       "topTickers": [
         "GE",
@@ -163,8 +163,8 @@
       "market": "US",
       "changePct": 1.42,
       "changePct1d": 1.42,
-      "changePct1w": 0.69,
-      "changePct1m": 0.94,
+      "changePct1w": -0.18,
+      "changePct1m": 1.44,
       "marketCapBillion": 0,
       "topTickers": [
         "AMT",
@@ -239,7 +239,7 @@
       "changePct": -0.06,
       "changePct1d": -0.06,
       "changePct1w": 3.73,
-      "changePct1m": null,
+      "changePct1m": 14.51,
       "marketCapBillion": 0,
       "topTickers": [
         "삼성바이오로직스",
@@ -254,7 +254,7 @@
       "changePct": 0.66,
       "changePct1d": 0.66,
       "changePct1w": 9.06,
-      "changePct1m": null,
+      "changePct1m": 10.75,
       "marketCapBillion": 0,
       "topTickers": [
         "LG에너지솔루션",
@@ -269,7 +269,7 @@
       "changePct": 0.61,
       "changePct1d": 0.61,
       "changePct1w": 3.14,
-      "changePct1m": null,
+      "changePct1m": 17.37,
       "marketCapBillion": 0,
       "topTickers": [
         "POSCO홀딩스"
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-08-13T23:07:44.060Z",
+  "fetchedAt": "2026-08-13T23:52:41.892Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
