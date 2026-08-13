@@ -39,7 +39,7 @@
       "changePct": 0.48,
       "changePct1d": 0.48,
       "changePct1w": 0.3,
-      "changePct1m": 1.24,
+      "changePct1m": 2.08,
       "marketCapBillion": 0,
       "topTickers": [
         "AMZN",
@@ -118,7 +118,7 @@
       "changePct": -0.05,
       "changePct1d": -0.05,
       "changePct1w": 0.56,
-      "changePct1m": 3.18,
+      "changePct1m": 2.13,
       "marketCapBillion": 0,
       "topTickers": [
         "GE",
@@ -164,7 +164,7 @@
       "changePct": 1.42,
       "changePct1d": 1.42,
       "changePct1w": 0.69,
-      "changePct1m": 1.26,
+      "changePct1m": 0.94,
       "marketCapBillion": 0,
       "topTickers": [
         "AMT",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-08-13T22:55:53.099Z",
+  "fetchedAt": "2026-08-13T23:07:44.060Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
