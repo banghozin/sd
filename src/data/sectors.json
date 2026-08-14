@@ -22,8 +22,8 @@
       "market": "US",
       "changePct": 2.07,
       "changePct1d": 2.07,
-      "changePct1w": 1.23,
-      "changePct1m": -0.73,
+      "changePct1w": 1.52,
+      "changePct1m": 0.99,
       "marketCapBillion": 0,
       "topTickers": [
         "GOOGL",
@@ -39,7 +39,7 @@
       "changePct": 0.48,
       "changePct1d": 0.48,
       "changePct1w": 0.3,
-      "changePct1m": 2.08,
+      "changePct1m": 1.24,
       "marketCapBillion": 0,
       "topTickers": [
         "AMZN",
@@ -163,8 +163,8 @@
       "market": "US",
       "changePct": 1.42,
       "changePct1d": 1.42,
-      "changePct1w": 0.69,
-      "changePct1m": 1.26,
+      "changePct1w": -0.18,
+      "changePct1m": 1.44,
       "marketCapBillion": 0,
       "topTickers": [
         "AMT",
@@ -194,7 +194,7 @@
       "changePct": 6.81,
       "changePct1d": 6.81,
       "changePct1w": 38.41,
-      "changePct1m": null,
+      "changePct1m": -25.27,
       "marketCapBillion": 0,
       "topTickers": [
         "네이버",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-08-14T08:07:37.095Z",
+  "fetchedAt": "2026-08-14T08:23:45.396Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
