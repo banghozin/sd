@@ -23,7 +23,7 @@
       "changePct": 2.07,
       "changePct1d": 2.07,
       "changePct1w": 1.23,
-      "changePct1m": 0.86,
+      "changePct1m": -0.73,
       "marketCapBillion": 0,
       "topTickers": [
         "GOOGL",
@@ -39,7 +39,7 @@
       "changePct": 0.48,
       "changePct1d": 0.48,
       "changePct1w": 0.3,
-      "changePct1m": 2.08,
+      "changePct1m": 1.24,
       "marketCapBillion": 0,
       "topTickers": [
         "AMZN",
@@ -134,7 +134,7 @@
       "changePct": -0.51,
       "changePct1d": -0.51,
       "changePct1w": 0.27,
-      "changePct1m": 3.42,
+      "changePct1m": 3.58,
       "marketCapBillion": 0,
       "topTickers": [
         "LIN",
@@ -254,7 +254,7 @@
       "changePct": 3.38,
       "changePct1d": 3.38,
       "changePct1w": 6.25,
-      "changePct1m": null,
+      "changePct1m": 8.08,
       "marketCapBillion": 0,
       "topTickers": [
         "LG에너지솔루션",
@@ -283,7 +283,7 @@
       "changePct": 0.27,
       "changePct1d": 0.27,
       "changePct1w": -2.44,
-      "changePct1m": 5.86,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "크래프톤",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-08-14T11:07:39.495Z",
+  "fetchedAt": "2026-08-14T11:53:00.130Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
