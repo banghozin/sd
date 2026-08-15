@@ -23,7 +23,7 @@
       "changePct": 0.36,
       "changePct1d": 0.36,
       "changePct1w": 1.53,
-      "changePct1m": 0.27,
+      "changePct1m": 1.35,
       "marketCapBillion": 0,
       "topTickers": [
         "GOOGL",
@@ -254,7 +254,7 @@
       "changePct": 3.38,
       "changePct1d": 3.38,
       "changePct1w": 6.25,
-      "changePct1m": 8.08,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "LG에너지솔루션",
@@ -298,7 +298,7 @@
       "changePct": 3.64,
       "changePct1d": 3.64,
       "changePct1w": 6.8,
-      "changePct1m": null,
+      "changePct1m": 7.82,
       "marketCapBillion": 0,
       "topTickers": [
         "LG화학"
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-08-15T11:07:38.020Z",
+  "fetchedAt": "2026-08-15T11:30:15.303Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
