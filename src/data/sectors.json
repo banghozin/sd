@@ -39,7 +39,7 @@
       "changePct": -0.21,
       "changePct1d": -0.21,
       "changePct1w": -1.38,
-      "changePct1m": 0.73,
+      "changePct1m": 1.98,
       "marketCapBillion": 0,
       "topTickers": [
         "AMZN",
@@ -209,7 +209,7 @@
       "changePct": 4.97,
       "changePct1d": 4.97,
       "changePct1w": 8.56,
-      "changePct1m": 6.82,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "현대차",
@@ -239,7 +239,7 @@
       "changePct": 0.06,
       "changePct1d": 0.06,
       "changePct1w": 3.55,
-      "changePct1m": null,
+      "changePct1m": 8.26,
       "marketCapBillion": 0,
       "topTickers": [
         "삼성바이오로직스",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-08-15T17:07:36.797Z",
+  "fetchedAt": "2026-08-15T17:30:19.245Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
