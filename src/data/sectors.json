@@ -23,7 +23,7 @@
       "changePct": 0.36,
       "changePct1d": 0.36,
       "changePct1w": 1.53,
-      "changePct1m": 1.35,
+      "changePct1m": 0.27,
       "marketCapBillion": 0,
       "topTickers": [
         "GOOGL",
@@ -39,7 +39,7 @@
       "changePct": -0.21,
       "changePct1d": -0.21,
       "changePct1w": -1.38,
-      "changePct1m": 0.73,
+      "changePct1m": 1.98,
       "marketCapBillion": 0,
       "topTickers": [
         "AMZN",
@@ -118,7 +118,7 @@
       "changePct": 0.39,
       "changePct1d": 0.39,
       "changePct1w": 0.72,
-      "changePct1m": 3.53,
+      "changePct1m": 3.4,
       "marketCapBillion": 0,
       "topTickers": [
         "GE",
@@ -179,7 +179,7 @@
       "changePct": 2.16,
       "changePct1d": 2.16,
       "changePct1w": 17.17,
-      "changePct1m": null,
+      "changePct1m": -13.59,
       "marketCapBillion": 0,
       "topTickers": [
         "삼성전자",
@@ -239,7 +239,7 @@
       "changePct": 0.06,
       "changePct1d": 0.06,
       "changePct1w": 3.55,
-      "changePct1m": null,
+      "changePct1m": 8.26,
       "marketCapBillion": 0,
       "topTickers": [
         "삼성바이오로직스",
@@ -254,7 +254,7 @@
       "changePct": 3.38,
       "changePct1d": 3.38,
       "changePct1w": 6.25,
-      "changePct1m": null,
+      "changePct1m": 8.08,
       "marketCapBillion": 0,
       "topTickers": [
         "LG에너지솔루션",
@@ -269,7 +269,7 @@
       "changePct": 0.53,
       "changePct1d": 0.53,
       "changePct1w": 3.17,
-      "changePct1m": null,
+      "changePct1m": 14.89,
       "marketCapBillion": 0,
       "topTickers": [
         "POSCO홀딩스"
@@ -312,7 +312,7 @@
       "changePct": 1.38,
       "changePct1d": 1.38,
       "changePct1w": 5.55,
-      "changePct1m": null,
+      "changePct1m": 9.92,
       "marketCapBillion": 0,
       "topTickers": [
         "HD현대중공업"
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-08-15T22:07:46.813Z",
+  "fetchedAt": "2026-08-15T22:32:55.812Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
