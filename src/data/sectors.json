@@ -39,7 +39,7 @@
       "changePct": -0.21,
       "changePct1d": -0.21,
       "changePct1w": -1.38,
-      "changePct1m": 1.98,
+      "changePct1m": 0.73,
       "marketCapBillion": 0,
       "topTickers": [
         "AMZN",
@@ -134,7 +134,7 @@
       "changePct": 0.44,
       "changePct1d": 0.44,
       "changePct1w": -0.61,
-      "changePct1m": 3.24,
+      "changePct1m": 3.75,
       "marketCapBillion": 0,
       "topTickers": [
         "LIN",
@@ -164,7 +164,7 @@
       "changePct": 0.33,
       "changePct1d": 0.33,
       "changePct1w": 0.64,
-      "changePct1m": -0.42,
+      "changePct1m": 1.78,
       "marketCapBillion": 0,
       "topTickers": [
         "AMT",
@@ -209,7 +209,7 @@
       "changePct": 4.97,
       "changePct1d": 4.97,
       "changePct1w": 8.56,
-      "changePct1m": 6.82,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "현대차",
@@ -254,7 +254,7 @@
       "changePct": 3.38,
       "changePct1d": 3.38,
       "changePct1w": 6.25,
-      "changePct1m": null,
+      "changePct1m": 8.08,
       "marketCapBillion": 0,
       "topTickers": [
         "LG에너지솔루션",
@@ -269,7 +269,7 @@
       "changePct": 0.53,
       "changePct1d": 0.53,
       "changePct1w": 3.17,
-      "changePct1m": 14.89,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "POSCO홀딩스"
@@ -298,7 +298,7 @@
       "changePct": 3.64,
       "changePct1d": 3.64,
       "changePct1w": 6.8,
-      "changePct1m": 7.82,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "LG화학"
@@ -312,7 +312,7 @@
       "changePct": 1.38,
       "changePct1d": 1.38,
       "changePct1w": 5.55,
-      "changePct1m": 9.92,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "HD현대중공업"
@@ -326,7 +326,7 @@
       "changePct": 3.3,
       "changePct1d": 3.3,
       "changePct1w": 12.05,
-      "changePct1m": 1.49,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "아모레퍼시픽"
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-08-15T06:53:20.971Z",
+  "fetchedAt": "2026-08-15T07:07:41.174Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
