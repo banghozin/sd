@@ -23,7 +23,7 @@
       "changePct": 0.36,
       "changePct1d": 0.36,
       "changePct1w": 1.53,
-      "changePct1m": 0.27,
+      "changePct1m": 1.35,
       "marketCapBillion": 0,
       "topTickers": [
         "GOOGL",
@@ -118,7 +118,7 @@
       "changePct": 0.39,
       "changePct1d": 0.39,
       "changePct1w": 0.72,
-      "changePct1m": 3.4,
+      "changePct1m": 3.53,
       "marketCapBillion": 0,
       "topTickers": [
         "GE",
@@ -209,7 +209,7 @@
       "changePct": 4.97,
       "changePct1d": 4.97,
       "changePct1w": 8.56,
-      "changePct1m": null,
+      "changePct1m": 6.82,
       "marketCapBillion": 0,
       "topTickers": [
         "현대차",
@@ -239,7 +239,7 @@
       "changePct": 0.06,
       "changePct1d": 0.06,
       "changePct1w": 3.55,
-      "changePct1m": null,
+      "changePct1m": 8.26,
       "marketCapBillion": 0,
       "topTickers": [
         "삼성바이오로직스",
@@ -312,7 +312,7 @@
       "changePct": 1.38,
       "changePct1d": 1.38,
       "changePct1w": 5.55,
-      "changePct1m": null,
+      "changePct1m": 9.92,
       "marketCapBillion": 0,
       "topTickers": [
         "HD현대중공업"
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-08-15T09:35:14.784Z",
+  "fetchedAt": "2026-08-15T10:07:38.688Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
