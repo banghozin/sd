@@ -23,7 +23,7 @@
       "changePct": 0.36,
       "changePct1d": 0.36,
       "changePct1w": 1.53,
-      "changePct1m": 0.27,
+      "changePct1m": 1.35,
       "marketCapBillion": 0,
       "topTickers": [
         "GOOGL",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-08-15T19:29:15.760Z",
+  "fetchedAt": "2026-08-15T20:07:36.738Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
