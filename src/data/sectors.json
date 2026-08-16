@@ -22,8 +22,8 @@
       "market": "US",
       "changePct": 0.36,
       "changePct1d": 0.36,
-      "changePct1w": 1.59,
-      "changePct1m": -0.38,
+      "changePct1w": 1.53,
+      "changePct1m": 0.27,
       "marketCapBillion": 0,
       "topTickers": [
         "GOOGL",
@@ -118,7 +118,7 @@
       "changePct": 0.39,
       "changePct1d": 0.39,
       "changePct1w": 0.72,
-      "changePct1m": 3.53,
+      "changePct1m": 3.4,
       "marketCapBillion": 0,
       "topTickers": [
         "GE",
@@ -163,8 +163,8 @@
       "market": "US",
       "changePct": 0.33,
       "changePct1d": 0.33,
-      "changePct1w": 1.03,
-      "changePct1m": 1.59,
+      "changePct1w": 0.64,
+      "changePct1m": -0.42,
       "marketCapBillion": 0,
       "topTickers": [
         "AMT",
@@ -179,7 +179,7 @@
       "changePct": 2.16,
       "changePct1d": 2.16,
       "changePct1w": 17.17,
-      "changePct1m": -13.59,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "삼성전자",
@@ -239,7 +239,7 @@
       "changePct": 0.06,
       "changePct1d": 0.06,
       "changePct1w": 3.55,
-      "changePct1m": 8.26,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "삼성바이오로직스",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-08-16T21:07:44.393Z",
+  "fetchedAt": "2026-08-16T21:29:51.785Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
