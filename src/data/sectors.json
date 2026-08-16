@@ -179,7 +179,7 @@
       "changePct": 2.16,
       "changePct1d": 2.16,
       "changePct1w": 17.17,
-      "changePct1m": -13.59,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "삼성전자",
@@ -194,7 +194,7 @@
       "changePct": 6.81,
       "changePct1d": 6.81,
       "changePct1w": 38.41,
-      "changePct1m": -25.27,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "네이버",
@@ -224,7 +224,7 @@
       "changePct": 1.06,
       "changePct1d": 1.06,
       "changePct1w": -2.59,
-      "changePct1m": -1.61,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "KB금융",
@@ -239,7 +239,7 @@
       "changePct": 0.06,
       "changePct1d": 0.06,
       "changePct1w": 3.55,
-      "changePct1m": 8.26,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "삼성바이오로직스",
@@ -254,7 +254,7 @@
       "changePct": 3.38,
       "changePct1d": 3.38,
       "changePct1w": 6.25,
-      "changePct1m": 8.08,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "LG에너지솔루션",
@@ -269,7 +269,7 @@
       "changePct": 0.53,
       "changePct1d": 0.53,
       "changePct1w": 3.17,
-      "changePct1m": 14.89,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "POSCO홀딩스"
@@ -283,7 +283,7 @@
       "changePct": 0.27,
       "changePct1d": 0.27,
       "changePct1w": -2.44,
-      "changePct1m": 5.86,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "크래프톤",
@@ -326,7 +326,7 @@
       "changePct": 3.3,
       "changePct1d": 3.3,
       "changePct1w": 12.05,
-      "changePct1m": 1.49,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "아모레퍼시픽"
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-08-16T03:08:57.827Z",
+  "fetchedAt": "2026-08-16T04:08:23.630Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
