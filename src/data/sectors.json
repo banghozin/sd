@@ -22,8 +22,8 @@
       "market": "US",
       "changePct": -1.89,
       "changePct1d": -1.89,
-      "changePct1w": -0.9,
-      "changePct1m": 0.15,
+      "changePct1w": -0.39,
+      "changePct1m": -1.62,
       "marketCapBillion": 0,
       "topTickers": [
         "GOOGL",
@@ -163,8 +163,8 @@
       "market": "US",
       "changePct": -0.97,
       "changePct1d": -0.97,
-      "changePct1w": 0.97,
-      "changePct1m": -1.3,
+      "changePct1w": -0.33,
+      "changePct1m": -1.39,
       "marketCapBillion": 0,
       "topTickers": [
         "AMT",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-08-17T21:07:36.907Z",
+  "fetchedAt": "2026-08-17T21:34:54.006Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
