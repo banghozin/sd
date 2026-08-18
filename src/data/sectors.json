@@ -22,8 +22,8 @@
       "market": "US",
       "changePct": -0.31,
       "changePct1d": -0.31,
-      "changePct1w": -0.71,
-      "changePct1m": -1.93,
+      "changePct1w": -1.21,
+      "changePct1m": -0.15,
       "marketCapBillion": 0,
       "topTickers": [
         "GOOGL",
@@ -163,8 +163,8 @@
       "market": "US",
       "changePct": -0.45,
       "changePct1d": -0.45,
-      "changePct1w": 1.25,
-      "changePct1m": -1.33,
+      "changePct1w": 0.52,
+      "changePct1m": -1.74,
       "marketCapBillion": 0,
       "topTickers": [
         "AMT",
@@ -194,7 +194,7 @@
       "changePct": -6.65,
       "changePct1d": -6.65,
       "changePct1w": 27.24,
-      "changePct1m": null,
+      "changePct1m": -12.32,
       "marketCapBillion": 0,
       "topTickers": [
         "네이버",
@@ -209,7 +209,7 @@
       "changePct": -4.23,
       "changePct1d": -4.23,
       "changePct1w": 2.74,
-      "changePct1m": null,
+      "changePct1m": 2.58,
       "marketCapBillion": 0,
       "topTickers": [
         "현대차",
@@ -224,7 +224,7 @@
       "changePct": -0.77,
       "changePct1d": -0.77,
       "changePct1w": -0.56,
-      "changePct1m": null,
+      "changePct1m": -2.46,
       "marketCapBillion": 0,
       "topTickers": [
         "KB금융",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-08-18T21:33:32.174Z",
+  "fetchedAt": "2026-08-18T22:07:43.844Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
