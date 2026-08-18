@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20260818000199",
+      "name": "피트 졸리",
+      "position": "상무",
+      "stock": "현대자동차",
+      "amountKRW": 0,
+      "shareDelta": -700,
+      "action": "SELL",
+      "filedAt": "2026-08-18",
+      "rceptNo": "20260818000199"
+    },
+    {
       "id": "dart-20260814002506",
       "name": "이정안",
       "position": "리더",
@@ -153,21 +164,10 @@
       "action": "SELL",
       "filedAt": "2026-08-10",
       "rceptNo": "20260810000078"
-    },
-    {
-      "id": "dart-20260810000227",
-      "name": "강석채",
-      "position": "부사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": -500,
-      "action": "SELL",
-      "filedAt": "2026-08-10",
-      "rceptNo": "20260810000227"
     }
   ],
-  "fetchedAt": "2026-08-18T06:15:58.337Z",
-  "inspected": 5408,
-  "matched": 5389,
+  "fetchedAt": "2026-08-18T12:17:49.623Z",
+  "inspected": 5409,
+  "matched": 5390,
   "source": "DART OpenAPI elestock.json"
 }
