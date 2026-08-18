@@ -1,7 +1,8 @@
 import { TrendingUp } from "lucide-react";
-import fxData from "@/data/fx.json";
+import { getFx } from "@/lib/remote-data";
 
-export function FxBadge() {
+export async function FxBadge() {
+  const fxData = await getFx();
   const rate = fxData.rate;
   const asOf = fxData.asOf;
 

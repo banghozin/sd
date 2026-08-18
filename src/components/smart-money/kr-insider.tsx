@@ -13,27 +13,11 @@ import {
   KR_INSIDER_TRADES as MOCK_KR,
   type KrInsiderTrade,
 } from "@/lib/mock-data/smart-money";
-import liveDart from "@/data/kr-insiders.json";
 import { formatKRW } from "@/lib/portfolio-analysis";
+import type { KrInsiderTradeLive } from "@/lib/remote-data";
 import { ActionBadge } from "./action-badge";
 import { SortableHeader, type SortDir } from "./sortable-header";
 import { StarButton } from "@/components/watchlist/star-button";
-
-type LiveTrade = {
-  id: string;
-  name: string;
-  position: string;
-  stock: string;
-  amountKRW: number;
-  shareDelta?: number;
-  action: "BUY" | "SELL";
-  filedAt: string;
-};
-
-const liveTrades = (liveDart.trades ?? []) as LiveTrade[];
-const KR_INSIDER_TRADES: (KrInsiderTrade & { shareDelta?: number })[] =
-  liveTrades.length > 0 ? liveTrades : MOCK_KR;
-const IS_LIVE = liveTrades.length > 0;
 
 function formatShares(n: number): string {
   return `${Math.abs(n).toLocaleString("ko-KR")}주`;
@@ -67,9 +51,17 @@ function sortTrades(
   });
 }
 
-export function KrInsider() {
+type KrInsiderProps = {
+  /** Live DART disclosures; empty falls back to mock data. */
+  liveTrades: KrInsiderTradeLive[];
+};
+
+export function KrInsider({ liveTrades }: KrInsiderProps) {
   const [sortKey, setSortKey] = useState<SortKey>("filedAt");
   const [sortDir, setSortDir] = useState<SortDir>("desc");
+
+  const isLive = liveTrades.length > 0;
+  const trades: SortableTrade[] = isLive ? liveTrades : MOCK_KR;
 
   const handleSort = (key: SortKey) => {
     if (key === sortKey) {
@@ -81,14 +73,14 @@ export function KrInsider() {
   };
 
   const sorted = useMemo(
-    () => sortTrades(KR_INSIDER_TRADES, sortKey, sortDir),
-    [sortKey, sortDir],
+    () => sortTrades(trades, sortKey, sortDir),
+    [trades, sortKey, sortDir],
   );
 
   return (
     <>
       <div className="mb-3 flex flex-wrap items-center gap-2 text-xs md:text-sm">
-        {IS_LIVE ? (
+        {isLive ? (
           <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-2.5 py-1 font-semibold text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />
             LIVE · DART
@@ -99,7 +91,7 @@ export function KrInsider() {
           </span>
         )}
         <span className="text-muted-foreground">
-          {IS_LIVE
+          {isLive
             ? "1시간마다 자동 갱신 · 거래 단가는 공시 본문에 있어 주식 수로 표시"
             : "실데이터는 다음 자동 갱신 시 채워집니다"}
         </span>

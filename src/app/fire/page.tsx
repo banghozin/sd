@@ -4,7 +4,7 @@ import { FireSimulator } from "@/components/fire/fire-simulator";
 import { GuideSection } from "@/components/layout/guide-section";
 import { FxBadge } from "@/components/layout/fx-badge";
 import { DataDisclaimer } from "@/components/layout/data-disclaimer";
-import fxData from "@/data/fx.json";
+import { getFx } from "@/lib/remote-data";
 
 export const metadata: Metadata = {
   title: "FIRE 시뮬레이터 — 배당 DRIP 복리 계산기",
@@ -13,7 +13,9 @@ export const metadata: Metadata = {
   alternates: { canonical: "/fire" },
 };
 
-export default function FirePage() {
+export default async function FirePage() {
+  const fxData = await getFx();
+
   return (
     <div className="flex flex-col gap-6 md:gap-8">
       <header className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">

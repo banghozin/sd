@@ -3,6 +3,7 @@ import { Radar, ShieldCheck } from "lucide-react";
 import { SmartMoney } from "@/components/smart-money/smart-money";
 import { GuideSection } from "@/components/layout/guide-section";
 import { NextUpdate } from "@/components/layout/next-update";
+import { getKrInsiders, getUs13F } from "@/lib/remote-data";
 
 export const metadata: Metadata = {
   title: "스마트 머니 추적 — 13F 헤지펀드 + DART 임원 매수",
@@ -11,7 +12,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/smart-money" },
 };
 
-export default function SmartMoneyPage() {
+export default async function SmartMoneyPage() {
+  const [krInsiders, us13f] = await Promise.all([
+    getKrInsiders(),
+    getUs13F(),
+  ]);
+
   return (
     <div className="flex flex-col gap-6 md:gap-8">
       <header className="flex items-start gap-3">
@@ -39,7 +45,10 @@ export default function SmartMoneyPage() {
         </div>
       </header>
 
-      <SmartMoney />
+      <SmartMoney
+        liveTrades={krInsiders.trades ?? []}
+        liveHoldings={us13f.holdings ?? []}
+      />
 
       <GuideSection
         title="스마트 머니, 왜 따라갈 가치가 있나요?"

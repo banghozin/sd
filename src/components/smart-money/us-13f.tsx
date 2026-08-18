@@ -13,18 +13,10 @@ import {
   US_13F_HOLDINGS as MOCK_US_13F,
   type Us13FHolding,
 } from "@/lib/mock-data/smart-money";
-import live13F from "@/data/us-13f.json";
 import { cn } from "@/lib/utils";
 import { ActionBadge } from "./action-badge";
 import { SortableHeader, type SortDir } from "./sortable-header";
 import { StarButton } from "@/components/watchlist/star-button";
-
-// Use real SEC EDGAR data when available; fall back to mock if the GitHub
-// Actions workflow hasn't seeded data yet.
-const liveHoldings = (live13F.holdings ?? []) as Us13FHolding[];
-const US_13F_HOLDINGS: Us13FHolding[] =
-  liveHoldings.length > 0 ? liveHoldings : MOCK_US_13F;
-const IS_LIVE = liveHoldings.length > 0;
 
 type SortKey = keyof Pick<
   Us13FHolding,
@@ -76,9 +68,19 @@ function changeSign(h: Us13FHolding): number {
   return Math.sign(h.changePct);
 }
 
-export function Us13F() {
+type Us13FProps = {
+  /** Live SEC EDGAR holdings; empty falls back to mock data. */
+  liveHoldings: Us13FHolding[];
+};
+
+export function Us13F({ liveHoldings }: Us13FProps) {
   const [sortKey, setSortKey] = useState<SortKey>("changePct");
   const [sortDir, setSortDir] = useState<SortDir>("desc");
+
+  // Use real SEC EDGAR data when available; fall back to mock if the GitHub
+  // Actions workflow hasn't seeded data yet.
+  const isLive = liveHoldings.length > 0;
+  const holdings = isLive ? liveHoldings : MOCK_US_13F;
 
   const handleSort = (key: SortKey) => {
     if (key === sortKey) {
@@ -92,14 +94,14 @@ export function Us13F() {
   };
 
   const sorted = useMemo(
-    () => sortHoldings(US_13F_HOLDINGS, sortKey, sortDir),
-    [sortKey, sortDir],
+    () => sortHoldings(holdings, sortKey, sortDir),
+    [holdings, sortKey, sortDir],
   );
 
   return (
     <>
       <div className="mb-3 flex items-center gap-2 text-xs md:text-sm">
-        {IS_LIVE ? (
+        {isLive ? (
           <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-2.5 py-1 font-semibold text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />
             LIVE · SEC EDGAR
@@ -110,7 +112,7 @@ export function Us13F() {
           </span>
         )}
         <span className="text-muted-foreground">
-          {IS_LIVE
+          {isLive
             ? "분기마다 자동 갱신 (45일 지연 공시)"
             : "실데이터는 다음 자동 갱신 시 채워집니다"}
         </span>

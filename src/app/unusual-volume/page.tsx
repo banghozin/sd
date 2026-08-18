@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Activity, AlertTriangle, TrendingUp } from "lucide-react";
-import unusualVolumeData from "@/data/unusual-volume.json";
+import { getUnusualVolume } from "@/lib/remote-data";
 import { SignalTable } from "@/components/unusual-volume/signal-table";
 import { LastUpdated } from "@/components/unusual-volume/last-updated";
 import { NextUpdate } from "@/components/layout/next-update";
@@ -13,30 +13,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/unusual-volume" },
 };
 
-type Signal = {
-  ticker: string;
-  name: string;
-  price: number;
-  priceChangePct: number;
-  todayVolume: number;
-  avg5dVolume: number;
-  rvol: number;
-  elapsedMin: number;
-  mcap: number;
-};
-
-type DataShape = {
-  generatedAt: string;
-  marketStatus: string;
-  universeCount?: number;
-  scannedCount?: number;
-  count: number;
-  signals: Signal[];
-};
-
-const data = unusualVolumeData as DataShape;
-
-export default function UnusualVolumePage() {
+export default async function UnusualVolumePage() {
+  const data = await getUnusualVolume();
   const isFresh = data.generatedAt !== "1970-01-01T00:00:00.000Z";
   const marketLabel =
     data.marketStatus === "open"

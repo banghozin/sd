@@ -1,0 +1,3 @@
+# Shell scripts run in the Vercel/GitHub Actions Linux build images — CRLF
+# would break the shebang and every line ending.
+*.sh text eol=lf

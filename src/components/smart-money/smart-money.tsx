@@ -1,10 +1,17 @@
 "use client";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import type { Us13FHolding } from "@/lib/mock-data/smart-money";
+import type { KrInsiderTradeLive } from "@/lib/remote-data";
 import { KrInsider } from "./kr-insider";
 import { Us13F } from "./us-13f";
 
-export function SmartMoney() {
+type SmartMoneyProps = {
+  liveTrades: KrInsiderTradeLive[];
+  liveHoldings: Us13FHolding[];
+};
+
+export function SmartMoney({ liveTrades, liveHoldings }: SmartMoneyProps) {
   return (
     <Tabs defaultValue="KR" className="flex flex-col gap-5 md:gap-6">
       <TabsList className="group-data-horizontal/tabs:h-auto grid w-full grid-cols-2 gap-1.5 rounded-2xl bg-muted p-1.5 md:max-w-md">
@@ -23,11 +30,11 @@ export function SmartMoney() {
       </TabsList>
 
       <TabsContent value="KR" className="mt-0">
-        <KrInsider />
+        <KrInsider liveTrades={liveTrades} />
       </TabsContent>
 
       <TabsContent value="US" className="mt-0">
-        <Us13F />
+        <Us13F liveHoldings={liveHoldings} />
       </TabsContent>
     </Tabs>
   );

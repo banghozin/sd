@@ -3,6 +3,7 @@ import { LayoutGrid } from "lucide-react";
 import { HeatmapSection } from "@/components/heatmap/heatmap-section";
 import { GuideSection } from "@/components/layout/guide-section";
 import { NextUpdate } from "@/components/layout/next-update";
+import { getSectors } from "@/lib/remote-data";
 
 export const metadata: Metadata = {
   title: "섹터 맵 — 한·미 주식 산업별 등락률 히트맵",
@@ -11,7 +12,9 @@ export const metadata: Metadata = {
   alternates: { canonical: "/sector-map" },
 };
 
-export default function SectorMapPage() {
+export default async function SectorMapPage() {
+  const sectorData = await getSectors();
+
   // Manual KST formatting (no Intl) to keep server/client output identical
   const now = new Date();
   const kst = new Date(now.getTime() + 9 * 60 * 60 * 1000);
@@ -37,7 +40,10 @@ export default function SectorMapPage() {
         </div>
       </header>
 
-      <HeatmapSection />
+      <HeatmapSection
+        liveSectors={sectorData.sectors ?? []}
+        fetchedAt={sectorData.fetchedAt ?? null}
+      />
 
       <GuideSection
         title="섹터 맵, 어떻게 읽나요?"

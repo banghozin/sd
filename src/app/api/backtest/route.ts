@@ -1,8 +1,6 @@
-import { readFile } from "node:fs/promises";
-import { resolve } from "node:path";
 import { unstable_cache } from "next/cache";
+import { getSignalHistory, type SignalHistoryData } from "@/lib/remote-data";
 
-const HISTORY_PATH = resolve(process.cwd(), "src/data/signal-history.json");
 const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36";
 
@@ -19,21 +17,7 @@ const HORIZON_TRADING_DAYS = {
 type Horizon = keyof typeof HORIZON_TRADING_DAYS;
 const HORIZONS: Horizon[] = ["oneDay", "oneWeek", "oneMonth"];
 
-type HistoryEntry = {
-  date: string;
-  ticker: string;
-  name: string;
-  rvol: number;
-  priceAtDetection: number;
-  priceChangePctAtDetection: number;
-  mcap: number;
-  capturedAt: string;
-};
-
-type HistoryFile = {
-  lastUpdated: string;
-  signals: HistoryEntry[];
-};
+type HistoryEntry = SignalHistoryData["signals"][number];
 
 type Returns = Partial<Record<Horizon, number | null>> & {
   current: number | null;
@@ -155,16 +139,12 @@ function pickReturn(rows: StatRow[], horizon: Horizon | "current"): number[] {
   return out;
 }
 
-const getCachedBacktest = unstable_cache(
-  async () => {
-    let history: HistoryFile = { lastUpdated: "", signals: [] };
-    try {
-      const raw = await readFile(HISTORY_PATH, "utf-8");
-      history = JSON.parse(raw) as HistoryFile;
-    } catch {
-      return null;
-    }
-
+// The history file itself is fetched outside the cache (cheap); `lastUpdated`
+// is folded into the cache key so a new scan invalidates the expensive Yahoo
+// aggregation below instead of serving stale numbers for up to 10 minutes.
+const getCachedBacktest = (history: SignalHistoryData) =>
+  unstable_cache(
+    async () => {
     if (history.signals.length === 0) {
       return {
         lastUpdated: history.lastUpdated,
@@ -267,10 +247,10 @@ const getCachedBacktest = unstable_cache(
       rvolBuckets,
       sessionBuckets,
     };
-  },
-  ["backtest-data-v2"],
-  { revalidate: 600 },
-);
+    },
+    ["backtest-data-v3", history.lastUpdated],
+    { revalidate: 600 },
+  )();
 
 function computeHorizonStats(rows: StatRow[]) {
   return {
@@ -299,10 +279,8 @@ function emptyBucketStats<K extends string>(keys: K[]) {
 }
 
 export async function GET() {
-  const data = await getCachedBacktest();
-  if (!data) {
-    return Response.json({ error: "history unavailable" }, { status: 503 });
-  }
+  const history = await getSignalHistory();
+  const data = await getCachedBacktest(history);
   return Response.json(data, {
     headers: {
       "Cache-Control": "public, s-maxage=600, stale-while-revalidate=1800",
