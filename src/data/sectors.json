@@ -39,7 +39,7 @@
       "changePct": -0.33,
       "changePct1d": -0.33,
       "changePct1w": -2.42,
-      "changePct1m": -0.84,
+      "changePct1m": 1.53,
       "marketCapBillion": 0,
       "topTickers": [
         "AMZN",
@@ -134,7 +134,7 @@
       "changePct": -0.88,
       "changePct1d": -0.88,
       "changePct1w": -2.74,
-      "changePct1m": 1.75,
+      "changePct1m": 3.5,
       "marketCapBillion": 0,
       "topTickers": [
         "LIN",
@@ -179,7 +179,7 @@
       "changePct": -5.81,
       "changePct1d": -5.81,
       "changePct1w": 3.47,
-      "changePct1m": null,
+      "changePct1m": -5.13,
       "marketCapBillion": 0,
       "topTickers": [
         "삼성전자",
@@ -209,7 +209,7 @@
       "changePct": -2.54,
       "changePct1d": -2.54,
       "changePct1w": 1.35,
-      "changePct1m": null,
+      "changePct1m": 4.95,
       "marketCapBillion": 0,
       "topTickers": [
         "현대차",
@@ -239,7 +239,7 @@
       "changePct": -0.41,
       "changePct1d": -0.41,
       "changePct1w": -8.32,
-      "changePct1m": null,
+      "changePct1m": 8.79,
       "marketCapBillion": 0,
       "topTickers": [
         "삼성바이오로직스",
@@ -254,7 +254,7 @@
       "changePct": 0.11,
       "changePct1d": 0.11,
       "changePct1w": 0.17,
-      "changePct1m": null,
+      "changePct1m": 12.63,
       "marketCapBillion": 0,
       "topTickers": [
         "LG에너지솔루션",
@@ -269,7 +269,7 @@
       "changePct": -2.15,
       "changePct1d": -2.15,
       "changePct1w": -3.74,
-      "changePct1m": null,
+      "changePct1m": 15.71,
       "marketCapBillion": 0,
       "topTickers": [
         "POSCO홀딩스"
@@ -283,7 +283,7 @@
       "changePct": -0.55,
       "changePct1d": -0.55,
       "changePct1w": -8.66,
-      "changePct1m": null,
+      "changePct1m": 3.36,
       "marketCapBillion": 0,
       "topTickers": [
         "크래프톤",
@@ -312,7 +312,7 @@
       "changePct": -0.6,
       "changePct1d": -0.6,
       "changePct1w": -0.2,
-      "changePct1m": null,
+      "changePct1m": 17.83,
       "marketCapBillion": 0,
       "topTickers": [
         "HD현대중공업"
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-08-19T10:39:35.333Z",
+  "fetchedAt": "2026-08-19T11:07:38.137Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
