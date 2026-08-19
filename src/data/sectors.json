@@ -23,7 +23,7 @@
       "changePct": 0.76,
       "changePct1d": 0.76,
       "changePct1w": 0.95,
-      "changePct1m": 0.47,
+      "changePct1m": 0.61,
       "marketCapBillion": 0,
       "topTickers": [
         "GOOGL",
@@ -118,7 +118,7 @@
       "changePct": -0.88,
       "changePct1d": -0.88,
       "changePct1w": -2.11,
-      "changePct1m": 1.84,
+      "changePct1m": 1,
       "marketCapBillion": 0,
       "topTickers": [
         "GE",
@@ -164,7 +164,7 @@
       "changePct": 0.81,
       "changePct1d": 0.81,
       "changePct1w": 1.12,
-      "changePct1m": -0.53,
+      "changePct1m": -0.46,
       "marketCapBillion": 0,
       "topTickers": [
         "AMT",
@@ -179,7 +179,7 @@
       "changePct": -5.81,
       "changePct1d": -5.81,
       "changePct1w": 3.47,
-      "changePct1m": -5.13,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "삼성전자",
@@ -194,7 +194,7 @@
       "changePct": -13.46,
       "changePct1d": -13.46,
       "changePct1w": 9.54,
-      "changePct1m": -17.88,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "네이버",
@@ -209,7 +209,7 @@
       "changePct": -2.54,
       "changePct1d": -2.54,
       "changePct1w": 1.35,
-      "changePct1m": 4.95,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "현대차",
@@ -224,7 +224,7 @@
       "changePct": -1.31,
       "changePct1d": -1.31,
       "changePct1w": -0.72,
-      "changePct1m": 0.33,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "KB금융",
@@ -239,7 +239,7 @@
       "changePct": -0.41,
       "changePct1d": -0.41,
       "changePct1w": -8.32,
-      "changePct1m": 8.79,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "삼성바이오로직스",
@@ -254,7 +254,7 @@
       "changePct": 0.11,
       "changePct1d": 0.11,
       "changePct1w": 0.17,
-      "changePct1m": 12.63,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "LG에너지솔루션",
@@ -269,7 +269,7 @@
       "changePct": -2.15,
       "changePct1d": -2.15,
       "changePct1w": -3.74,
-      "changePct1m": 15.71,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "POSCO홀딩스"
@@ -312,7 +312,7 @@
       "changePct": -0.6,
       "changePct1d": -0.6,
       "changePct1w": -0.2,
-      "changePct1m": 17.83,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "HD현대중공업"
@@ -326,7 +326,7 @@
       "changePct": -5.83,
       "changePct1d": -5.83,
       "changePct1w": 1.97,
-      "changePct1m": 3.72,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "아모레퍼시픽"
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-08-19T21:35:09.092Z",
+  "fetchedAt": "2026-08-19T22:07:34.433Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
