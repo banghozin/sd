@@ -39,7 +39,7 @@
       "changePct": 1.92,
       "changePct1d": 1.92,
       "changePct1w": 0.59,
-      "changePct1m": 2.73,
+      "changePct1m": 3.24,
       "marketCapBillion": 0,
       "topTickers": [
         "AMZN",
@@ -326,7 +326,7 @@
       "changePct": -5.83,
       "changePct1d": -5.83,
       "changePct1w": 1.97,
-      "changePct1m": null,
+      "changePct1m": 3.72,
       "marketCapBillion": 0,
       "topTickers": [
         "아모레퍼시픽"
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-08-19T22:35:53.047Z",
+  "fetchedAt": "2026-08-19T23:07:40.029Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
