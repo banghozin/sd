@@ -39,7 +39,7 @@
       "changePct": 1.92,
       "changePct1d": 1.92,
       "changePct1w": 0.59,
-      "changePct1m": 3.24,
+      "changePct1m": 2.73,
       "marketCapBillion": 0,
       "topTickers": [
         "AMZN",
@@ -269,7 +269,7 @@
       "changePct": -2.15,
       "changePct1d": -2.15,
       "changePct1w": -3.74,
-      "changePct1m": null,
+      "changePct1m": 15.71,
       "marketCapBillion": 0,
       "topTickers": [
         "POSCO홀딩스"
@@ -283,7 +283,7 @@
       "changePct": -0.55,
       "changePct1d": -0.55,
       "changePct1w": -8.66,
-      "changePct1m": null,
+      "changePct1m": 3.36,
       "marketCapBillion": 0,
       "topTickers": [
         "크래프톤",
@@ -326,7 +326,7 @@
       "changePct": -5.83,
       "changePct1d": -5.83,
       "changePct1w": 1.97,
-      "changePct1m": 3.72,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "아모레퍼시픽"
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-08-19T23:07:40.029Z",
+  "fetchedAt": "2026-08-19T23:32:20.808Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
