@@ -22,8 +22,8 @@
       "market": "US",
       "changePct": -0.31,
       "changePct1d": -0.31,
-      "changePct1w": -1.21,
-      "changePct1m": -0.15,
+      "changePct1w": -0.71,
+      "changePct1m": -1.93,
       "marketCapBillion": 0,
       "topTickers": [
         "GOOGL",
@@ -39,7 +39,7 @@
       "changePct": -0.33,
       "changePct1d": -0.33,
       "changePct1w": -2.42,
-      "changePct1m": 1.53,
+      "changePct1m": -0.84,
       "marketCapBillion": 0,
       "topTickers": [
         "AMZN",
@@ -118,7 +118,7 @@
       "changePct": -1.48,
       "changePct1d": -1.48,
       "changePct1w": -1.15,
-      "changePct1m": 3.06,
+      "changePct1m": 1.95,
       "marketCapBillion": 0,
       "topTickers": [
         "GE",
@@ -163,8 +163,8 @@
       "market": "US",
       "changePct": -0.45,
       "changePct1d": -0.45,
-      "changePct1w": 0.52,
-      "changePct1m": -1.74,
+      "changePct1w": 1.25,
+      "changePct1m": -1.33,
       "marketCapBillion": 0,
       "topTickers": [
         "AMT",
@@ -194,7 +194,7 @@
       "changePct": -13.46,
       "changePct1d": -13.46,
       "changePct1w": 9.54,
-      "changePct1m": -17.88,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "네이버",
@@ -224,7 +224,7 @@
       "changePct": -1.31,
       "changePct1d": -1.31,
       "changePct1w": -0.72,
-      "changePct1m": 0.33,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "KB금융",
@@ -239,7 +239,7 @@
       "changePct": -0.41,
       "changePct1d": -0.41,
       "changePct1w": -8.32,
-      "changePct1m": 8.79,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "삼성바이오로직스",
@@ -283,7 +283,7 @@
       "changePct": -0.55,
       "changePct1d": -0.55,
       "changePct1w": -8.66,
-      "changePct1m": 3.36,
+      "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
         "크래프톤",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-08-19T07:07:32.777Z",
+  "fetchedAt": "2026-08-19T07:48:52.775Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
