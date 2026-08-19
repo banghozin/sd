@@ -22,8 +22,8 @@
       "market": "US",
       "changePct": -0.31,
       "changePct1d": -0.31,
-      "changePct1w": -0.71,
-      "changePct1m": -0.29,
+      "changePct1w": -1.21,
+      "changePct1m": -0.15,
       "marketCapBillion": 0,
       "topTickers": [
         "GOOGL",
@@ -39,7 +39,7 @@
       "changePct": -0.33,
       "changePct1d": -0.33,
       "changePct1w": -2.42,
-      "changePct1m": -0.84,
+      "changePct1m": 1.53,
       "marketCapBillion": 0,
       "topTickers": [
         "AMZN",
@@ -134,7 +134,7 @@
       "changePct": -0.88,
       "changePct1d": -0.88,
       "changePct1w": -2.74,
-      "changePct1m": 1.75,
+      "changePct1m": 3.5,
       "marketCapBillion": 0,
       "topTickers": [
         "LIN",
@@ -163,8 +163,8 @@
       "market": "US",
       "changePct": -0.45,
       "changePct1d": -0.45,
-      "changePct1w": 1.25,
-      "changePct1m": -1.83,
+      "changePct1w": 0.52,
+      "changePct1m": -1.74,
       "marketCapBillion": 0,
       "topTickers": [
         "AMT",
@@ -194,7 +194,7 @@
       "changePct": -13.46,
       "changePct1d": -13.46,
       "changePct1w": 9.54,
-      "changePct1m": null,
+      "changePct1m": -17.88,
       "marketCapBillion": 0,
       "topTickers": [
         "네이버",
@@ -209,7 +209,7 @@
       "changePct": -2.54,
       "changePct1d": -2.54,
       "changePct1w": 1.35,
-      "changePct1m": null,
+      "changePct1m": 4.95,
       "marketCapBillion": 0,
       "topTickers": [
         "현대차",
@@ -224,7 +224,7 @@
       "changePct": -1.31,
       "changePct1d": -1.31,
       "changePct1w": -0.72,
-      "changePct1m": null,
+      "changePct1m": 0.33,
       "marketCapBillion": 0,
       "topTickers": [
         "KB금융",
@@ -269,7 +269,7 @@
       "changePct": -2.15,
       "changePct1d": -2.15,
       "changePct1w": -3.74,
-      "changePct1m": null,
+      "changePct1m": 15.71,
       "marketCapBillion": 0,
       "topTickers": [
         "POSCO홀딩스"
@@ -283,7 +283,7 @@
       "changePct": -0.55,
       "changePct1d": -0.55,
       "changePct1w": -8.66,
-      "changePct1m": null,
+      "changePct1m": 3.36,
       "marketCapBillion": 0,
       "topTickers": [
         "크래프톤",
@@ -312,7 +312,7 @@
       "changePct": -0.6,
       "changePct1d": -0.6,
       "changePct1w": -0.2,
-      "changePct1m": null,
+      "changePct1m": 17.83,
       "marketCapBillion": 0,
       "topTickers": [
         "HD현대중공업"
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-08-19T12:07:38.971Z",
+  "fetchedAt": "2026-08-19T13:04:03.042Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
