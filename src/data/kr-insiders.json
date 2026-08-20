@@ -1,6 +1,28 @@
 {
   "trades": [
     {
+      "id": "dart-20260820000290",
+      "name": "김경태",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -450,
+      "action": "SELL",
+      "filedAt": "2026-08-20",
+      "rceptNo": "20260820000290"
+    },
+    {
+      "id": "dart-20260820000040",
+      "name": "이희곤",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 40,
+      "action": "BUY",
+      "filedAt": "2026-08-20",
+      "rceptNo": "20260820000040"
+    },
+    {
       "id": "dart-20260818000199",
       "name": "피트 졸리",
       "position": "상무",
@@ -45,6 +67,17 @@
       "rceptNo": "20260814002553"
     },
     {
+      "id": "dart-20260814003950",
+      "name": "박태훈",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 614,
+      "action": "BUY",
+      "filedAt": "2026-08-14",
+      "rceptNo": "20260814003950"
+    },
+    {
       "id": "dart-20260814002598",
       "name": "이상철",
       "position": "리더/부문장",
@@ -54,6 +87,17 @@
       "action": "BUY",
       "filedAt": "2026-08-14",
       "rceptNo": "20260814002598"
+    },
+    {
+      "id": "dart-20260814003973",
+      "name": "박태훈",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 589,
+      "action": "BUY",
+      "filedAt": "2026-08-14",
+      "rceptNo": "20260814003973"
     },
     {
       "id": "dart-20260814002654",
@@ -78,96 +122,52 @@
       "rceptNo": "20260814002859"
     },
     {
-      "id": "dart-20260807000722",
-      "name": "강경돈",
-      "position": "리더",
-      "stock": "NAVER",
+      "id": "dart-20260814003912",
+      "name": "박태훈",
+      "position": "상무",
+      "stock": "삼성전자",
       "amountKRW": 0,
-      "shareDelta": -200,
+      "shareDelta": -197,
       "action": "SELL",
-      "filedAt": "2026-08-07",
-      "rceptNo": "20260807000722"
+      "filedAt": "2026-08-14",
+      "rceptNo": "20260814003912"
     },
     {
-      "id": "dart-20260807000587",
-      "name": "엄태성",
+      "id": "dart-20260814003747",
+      "name": "박태훈",
       "position": "상무",
-      "stock": "하나금융지주",
+      "stock": "삼성전자",
       "amountKRW": 0,
-      "shareDelta": 150,
+      "shareDelta": 34,
       "action": "BUY",
-      "filedAt": "2026-08-07",
-      "rceptNo": "20260807000587"
+      "filedAt": "2026-08-14",
+      "rceptNo": "20260814003747"
     },
     {
-      "id": "dart-20260806000501",
-      "name": "권정현",
+      "id": "dart-20260811000285",
+      "name": "여명구",
       "position": "부사장",
-      "stock": "현대자동차",
+      "stock": "삼성전자",
       "amountKRW": 0,
-      "shareDelta": 931,
-      "action": "BUY",
-      "filedAt": "2026-08-06",
-      "rceptNo": "20260806000501"
+      "shareDelta": -1000,
+      "action": "SELL",
+      "filedAt": "2026-08-11",
+      "rceptNo": "20260811000285"
     },
     {
-      "id": "dart-20260805000493",
-      "name": "김혜인",
+      "id": "dart-20260811000011",
+      "name": "손영수",
       "position": "부사장",
-      "stock": "현대자동차",
+      "stock": "삼성전자",
       "amountKRW": 0,
-      "shareDelta": 2023,
-      "action": "BUY",
-      "filedAt": "2026-08-05",
-      "rceptNo": "20260805000493"
-    },
-    {
-      "id": "dart-20260805000496",
-      "name": "피트 졸리",
-      "position": "상무",
-      "stock": "현대자동차",
-      "amountKRW": 0,
-      "shareDelta": 700,
-      "action": "BUY",
-      "filedAt": "2026-08-05",
-      "rceptNo": "20260805000496"
-    },
-    {
-      "id": "dart-20260805000322",
-      "name": "김동춘",
-      "position": "대표이사 사장",
-      "stock": "LG화학",
-      "amountKRW": 0,
-      "shareDelta": 427,
-      "action": "BUY",
-      "filedAt": "2026-08-05",
-      "rceptNo": "20260805000322"
-    },
-    {
-      "id": "dart-20260805000501",
-      "name": "필리페 게랑부토",
-      "position": "Executive\nVice President",
-      "stock": "현대자동차",
-      "amountKRW": 0,
-      "shareDelta": 169,
-      "action": "BUY",
-      "filedAt": "2026-08-05",
-      "rceptNo": "20260805000501"
-    },
-    {
-      "id": "dart-20260803000395",
-      "name": "하명복",
-      "position": "담당",
-      "stock": "SK텔레콤",
-      "amountKRW": 0,
-      "shareDelta": 715,
-      "action": "BUY",
-      "filedAt": "2026-08-03",
-      "rceptNo": "20260803000395"
+      "shareDelta": -700,
+      "action": "SELL",
+      "filedAt": "2026-08-11",
+      "rceptNo": "20260811000011"
     }
   ],
-  "fetchedAt": "2026-08-20T12:17:00.113Z",
-  "inspected": 2013,
-  "matched": 1997,
+  "fetchedAt": "2026-08-20T18:17:48.702Z",
+  "inspected": 5410,
+  "matched": 5391,
   "source": "DART OpenAPI elestock.json"
 }
