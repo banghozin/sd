@@ -39,7 +39,7 @@
       "changePct": 1.92,
       "changePct1d": 1.92,
       "changePct1w": 0.59,
-      "changePct1m": 2.73,
+      "changePct1m": 3.24,
       "marketCapBillion": 0,
       "topTickers": [
         "AMZN",
@@ -176,10 +176,10 @@
       "id": "kr-semi",
       "name": "반도체",
       "market": "KR",
-      "changePct": 7.17,
-      "changePct1d": 7.17,
-      "changePct1w": 6.42,
-      "changePct1m": null,
+      "changePct": 7.25,
+      "changePct1d": 7.25,
+      "changePct1w": 6.49,
+      "changePct1m": -1.05,
       "marketCapBillion": 0,
       "topTickers": [
         "삼성전자",
@@ -191,9 +191,9 @@
       "id": "kr-it",
       "name": "IT·소프트웨어",
       "market": "KR",
-      "changePct": 12.64,
-      "changePct1d": 12.64,
-      "changePct1w": 10.26,
+      "changePct": 12.85,
+      "changePct1d": 12.85,
+      "changePct1w": 10.46,
       "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
@@ -206,9 +206,9 @@
       "id": "kr-auto",
       "name": "자동차",
       "market": "KR",
-      "changePct": -0.17,
-      "changePct1d": -0.17,
-      "changePct1w": -0.42,
+      "changePct": -0.08,
+      "changePct1d": -0.08,
+      "changePct1w": -0.34,
       "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
@@ -236,9 +236,9 @@
       "id": "kr-bio",
       "name": "바이오·제약",
       "market": "KR",
-      "changePct": 2.11,
-      "changePct1d": 2.11,
-      "changePct1w": -3.54,
+      "changePct": 2.05,
+      "changePct1d": 2.05,
+      "changePct1w": -3.6,
       "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
@@ -251,9 +251,9 @@
       "id": "kr-battery",
       "name": "2차전지",
       "market": "KR",
-      "changePct": 2.04,
-      "changePct1d": 2.04,
-      "changePct1w": 1.25,
+      "changePct": 2.06,
+      "changePct1d": 2.06,
+      "changePct1w": 1.27,
       "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
@@ -266,9 +266,9 @@
       "id": "kr-steel",
       "name": "철강·금속",
       "market": "KR",
-      "changePct": 3.38,
-      "changePct1d": 3.38,
-      "changePct1w": 0.2,
+      "changePct": 3.5,
+      "changePct1d": 3.5,
+      "changePct1w": 0.33,
       "changePct1m": null,
       "marketCapBillion": 0,
       "topTickers": [
@@ -283,7 +283,7 @@
       "changePct": 0.19,
       "changePct1d": 0.19,
       "changePct1w": -5.19,
-      "changePct1m": null,
+      "changePct1m": 4.76,
       "marketCapBillion": 0,
       "topTickers": [
         "크래프톤",
@@ -312,7 +312,7 @@
       "changePct": 1.95,
       "changePct1d": 1.95,
       "changePct1w": -0.13,
-      "changePct1m": null,
+      "changePct1m": 14.33,
       "marketCapBillion": 0,
       "topTickers": [
         "HD현대중공업"
@@ -326,7 +326,7 @@
       "changePct": 5.89,
       "changePct1d": 5.89,
       "changePct1w": 3.93,
-      "changePct1m": null,
+      "changePct1m": 6.09,
       "marketCapBillion": 0,
       "topTickers": [
         "아모레퍼시픽"
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-08-20T03:06:42.197Z",
+  "fetchedAt": "2026-08-20T03:07:37.955Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
