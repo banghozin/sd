@@ -23,7 +23,7 @@
       "changePct": 0.76,
       "changePct1d": 0.76,
       "changePct1w": 0.95,
-      "changePct1m": 0.61,
+      "changePct1m": 1.17,
       "marketCapBillion": 0,
       "topTickers": [
         "GOOGL",
@@ -164,7 +164,7 @@
       "changePct": 0.81,
       "changePct1d": 0.81,
       "changePct1w": 1.12,
-      "changePct1m": -0.95,
+      "changePct1m": -0.46,
       "marketCapBillion": 0,
       "topTickers": [
         "AMT",
@@ -209,7 +209,7 @@
       "changePct": -0.86,
       "changePct1d": -0.86,
       "changePct1w": -1.11,
-      "changePct1m": null,
+      "changePct1m": 2.58,
       "marketCapBillion": 0,
       "topTickers": [
         "현대차",
@@ -239,7 +239,7 @@
       "changePct": 2.17,
       "changePct1d": 2.17,
       "changePct1w": -3.48,
-      "changePct1m": null,
+      "changePct1m": 13.53,
       "marketCapBillion": 0,
       "topTickers": [
         "삼성바이오로직스",
@@ -254,7 +254,7 @@
       "changePct": 0.95,
       "changePct1d": 0.95,
       "changePct1w": 0.17,
-      "changePct1m": null,
+      "changePct1m": 12.78,
       "marketCapBillion": 0,
       "topTickers": [
         "LG에너지솔루션",
@@ -283,7 +283,7 @@
       "changePct": 0.37,
       "changePct1d": 0.37,
       "changePct1w": -5.01,
-      "changePct1m": null,
+      "changePct1m": 4.96,
       "marketCapBillion": 0,
       "topTickers": [
         "크래프톤",
@@ -298,7 +298,7 @@
       "changePct": -0.42,
       "changePct1d": -0.42,
       "changePct1w": 0.68,
-      "changePct1m": null,
+      "changePct1m": 8.15,
       "marketCapBillion": 0,
       "topTickers": [
         "LG화학"
@@ -326,7 +326,7 @@
       "changePct": 5.23,
       "changePct1d": 5.23,
       "changePct1w": 3.28,
-      "changePct1m": null,
+      "changePct1m": 5.43,
       "marketCapBillion": 0,
       "topTickers": [
         "아모레퍼시픽"
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-08-20T07:51:24.823Z",
+  "fetchedAt": "2026-08-20T08:07:36.676Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
