@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20260824000132",
+      "name": "이용석",
+      "position": "상무",
+      "stock": "현대자동차",
+      "amountKRW": 0,
+      "shareDelta": 360,
+      "action": "BUY",
+      "filedAt": "2026-08-24",
+      "rceptNo": "20260824000132"
+    },
+    {
       "id": "dart-20260821000615",
       "name": "김성래",
       "position": "담당",
@@ -153,21 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-08-14",
       "rceptNo": "20260814002553"
-    },
-    {
-      "id": "dart-20260814003950",
-      "name": "박태훈",
-      "position": "상무",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 614,
-      "action": "BUY",
-      "filedAt": "2026-08-14",
-      "rceptNo": "20260814003950"
     }
   ],
-  "fetchedAt": "2026-08-24T00:15:59.478Z",
-  "inspected": 5417,
-  "matched": 5398,
+  "fetchedAt": "2026-08-24T06:16:19.063Z",
+  "inspected": 5418,
+  "matched": 5399,
   "source": "DART OpenAPI elestock.json"
 }
