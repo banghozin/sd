@@ -50,45 +50,63 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
 
+      # cron-job.org triggers this same workflow through workflow_dispatch on
+      # its own schedule, on top of the `schedule:` above. That was running the
+      # job twice an hour and committing twice an hour during market hours.
+      #
+      # Rather than depend on someone remembering to turn the external job
+      # down, refuse to do the work twice within the same hour. `fetchedAt` in
+      # sectors.json is the timestamp of the last run that actually changed
+      # something, so a quiet market simply lets this fall through and the
+      # commit guard handles it.
+      - name: Skip if the data was refreshed in the last 50 minutes
+        id: guard
+        run: |
+          last="$(jq -r '.fetchedAt // empty' src/data/sectors.json 2>/dev/null)"
+          if [ -z "$last" ]; then
+            echo "No previous timestamp — running."
+            echo "skip=false" >>"$GITHUB_OUTPUT"
+            exit 0
+          fi
+          age=$(( $(date -u +%s) - $(date -u -d "$last" +%s) ))
+          if [ "$age" -lt 3000 ]; then
+            echo "Last refresh was $((age / 60)) minutes ago — skipping this run."
+            echo "skip=true" >>"$GITHUB_OUTPUT"
+          else
+            echo "Last refresh was $((age / 60)) minutes ago — running."
+            echo "skip=false" >>"$GITHUB_OUTPUT"
+          fi
+
       - name: Setup Node
+        if: steps.guard.outputs.skip != 'true'
         uses: actions/setup-node@v5
         with:
           node-version: "22"
           cache: "npm"
 
       - name: Install dependencies
+        if: steps.guard.outputs.skip != 'true'
         run: npm ci
 
       - name: Fetch FX (Frankfurter)
+        if: steps.guard.outputs.skip != 'true'
         run: npm run fetch:fx
         continue-on-error: true
 
       - name: Fetch sector ETFs (Yahoo Finance)
+        if: steps.guard.outputs.skip != 'true'
         run: npm run fetch:sectors
         continue-on-error: true
 
-      - name: Commit & push if changed
+      # The guard lives in scripts/commit-data.sh now. fx.json and sectors.json
+      # both carry `fetchedAt`, rewritten on every run, so the old whole-file
+      # comparison never skipped a commit — not once, in either direction.
+      - name: Commit & push if the data changed
+        if: steps.guard.outputs.skip != 'true'
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/
-          if git diff --staged --quiet; then
-            echo "No data changes to commit"
-            exit 0
-          fi
-          git commit -m "chore(data): auto-update FX + sectors [skip ci]"
-          # Retry push with rebase on conflict — handles concurrent runs
-          # racing each other to push to main.
-          for attempt in 1 2 3 4 5; do
-            if git push; then
-              echo "Push succeeded on attempt $attempt"
-              exit 0
-            fi
-            echo "Push failed on attempt $attempt — pulling and retrying..."
-            git pull --rebase origin main || exit 1
-          done
-          echo "Push failed after 5 attempts"
-          exit 1
+          bash scripts/commit-data.sh \
+            "chore(data): auto-update FX + sectors [skip ci]" \
+            src/data/
 
       - name: Notify on failure
         if: failure()

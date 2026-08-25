@@ -40,26 +40,14 @@ jobs:
       - name: Build universe
         run: npm run fetch:universe
 
-      - name: Commit & push if changed
+      # The guard lives in scripts/commit-data.sh now — see the comment there.
+      # universe.json carries `generatedAt` and `elapsedSeconds`, which change
+      # every run, so the old whole-file comparison never skipped anything.
+      - name: Commit & push if the data changed
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/universe.json
-          if git diff --staged --quiet; then
-            echo "No universe changes to commit"
-            exit 0
-          fi
-          git commit -m "chore(data): rebuild small-cap universe [skip ci]"
-          for attempt in 1 2 3 4 5; do
-            if git push; then
-              echo "Push succeeded on attempt $attempt"
-              exit 0
-            fi
-            echo "Push failed on attempt $attempt — pulling and retrying..."
-            git pull --rebase origin main || exit 1
-          done
-          echo "Push failed after 5 attempts"
-          exit 1
+          bash scripts/commit-data.sh \
+            "chore(data): rebuild small-cap universe [skip ci]" \
+            src/data/universe.json
 
       - name: Notify on failure
         if: failure()
