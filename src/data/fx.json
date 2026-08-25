@@ -1,1 +1,7 @@
-{"pair":"USD/KRW","rate":1384.26,"asOf":"2026-08-24","fetchedAt":"2026-08-25T07:40:26.035Z","source":"Frankfurter (ECB)"}
+{
+  "pair": "USD/KRW",
+  "rate": 1384.26,
+  "asOf": "2026-08-24",
+  "fetchedAt": "2026-08-25T07:07:29.198Z",
+  "source": "Frankfurter (ECB)"
+}
