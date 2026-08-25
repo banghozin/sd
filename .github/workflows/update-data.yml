@@ -1,12 +1,30 @@
 name: Update market data
 
 on:
-  # Every hour at :07 — GitHub deprioritises scheduled runs that
-  # overlap with "popular" cron minutes (:00, :15, :30, :45). Using
-  # an odd minute reduces the chance of being skipped under load.
-  # Schedule is best-effort and may drift up to ~30 minutes.
+  # Reduced 2026-08-25 from hourly (24 runs/day) to 4 runs on weekdays.
+  #
+  # Why: the Vercel Hobby plan allows 100 deployments per DAY across the
+  # whole account, and every data commit here creates one. In the 24h
+  # before this change the account had used ~75 of those, ~67 of them
+  # from this repo alone, and deployments started failing with
+  # `build-rate-limit` — including for a second project on the account.
+  #
+  # Two things were compounding it:
+  #   1. cron-job.org also triggers this same workflow hourly through
+  #      workflow_dispatch, so it was running TWICE an hour (~44 runs/day).
+  #      Reducing this schedule only fixes the GitHub half — the external
+  #      job needs to be turned down or off as well.
+  #   2. Every run rewrites `fetchedAt` in the JSON, so the file always
+  #      differs and the commit-if-changed guard never actually skips.
+  #      Overnight and weekend runs committed pure noise.
+  #
+  # Times are UTC and cover the US session under both DST and standard
+  # time: 14:07 around the open, 17:07 midday, 20:07 late, 21:07 after
+  # the close. Minute :07 avoids the busy :00/:15/:30/:45 slots, which
+  # GitHub deprioritises. Scheduled runs are best-effort and may drift
+  # up to ~30 minutes.
   schedule:
-    - cron: "7 * * * *"
+    - cron: "7 14,17,20,21 * * 1-5"
   # Allow manual trigger from the Actions tab
   workflow_dispatch:
 
