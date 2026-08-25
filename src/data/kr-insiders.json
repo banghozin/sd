@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20260825000280",
+      "name": "최현자",
+      "position": "사외이사",
+      "stock": "하나금융지주",
+      "amountKRW": 0,
+      "shareDelta": 130,
+      "action": "BUY",
+      "filedAt": "2026-08-25",
+      "rceptNo": "20260825000280"
+    },
+    {
       "id": "dart-20260824000222",
       "name": "안성준",
       "position": "상무",
@@ -153,21 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-08-14",
       "rceptNo": "20260814002506"
-    },
-    {
-      "id": "dart-20260814002444",
-      "name": "최승락",
-      "position": "리더/부문장",
-      "stock": "NAVER",
-      "amountKRW": 0,
-      "shareDelta": 1000,
-      "action": "BUY",
-      "filedAt": "2026-08-14",
-      "rceptNo": "20260814002444"
     }
   ],
-  "fetchedAt": "2026-08-25T06:16:00.991Z",
-  "inspected": 5419,
-  "matched": 5400,
+  "fetchedAt": "2026-08-25T12:17:28.304Z",
+  "inspected": 5420,
+  "matched": 5401,
   "source": "DART OpenAPI elestock.json"
 }
