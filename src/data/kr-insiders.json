@@ -78,6 +78,17 @@
       "rceptNo": "20260824000132"
     },
     {
+      "id": "dart-20260821000615",
+      "name": "김성래",
+      "position": "담당",
+      "stock": "SK하이닉스",
+      "amountKRW": 0,
+      "shareDelta": -595,
+      "action": "SELL",
+      "filedAt": "2026-08-21",
+      "rceptNo": "20260821000615"
+    },
+    {
       "id": "dart-20260821000262",
       "name": "이명재",
       "position": "상무",
@@ -89,85 +100,74 @@
       "rceptNo": "20260821000262"
     },
     {
-      "id": "dart-20260820000290",
-      "name": "김경태",
-      "position": "상무",
-      "stock": "삼성전자",
+      "id": "dart-20260821000513",
+      "name": "고승범",
+      "position": "독립이사",
+      "stock": "SK하이닉스",
       "amountKRW": 0,
-      "shareDelta": -450,
-      "action": "SELL",
-      "filedAt": "2026-08-20",
-      "rceptNo": "20260820000290"
-    },
-    {
-      "id": "dart-20260820000040",
-      "name": "이희곤",
-      "position": "상무",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 40,
+      "shareDelta": 17,
       "action": "BUY",
-      "filedAt": "2026-08-20",
-      "rceptNo": "20260820000040"
+      "filedAt": "2026-08-21",
+      "rceptNo": "20260821000513"
     },
     {
-      "id": "dart-20260818000199",
-      "name": "피트 졸리",
-      "position": "상무",
-      "stock": "현대자동차",
+      "id": "dart-20260821000516",
+      "name": "정덕균",
+      "position": "독립이사",
+      "stock": "SK하이닉스",
       "amountKRW": 0,
-      "shareDelta": -700,
-      "action": "SELL",
-      "filedAt": "2026-08-18",
-      "rceptNo": "20260818000199"
-    },
-    {
-      "id": "dart-20260814002506",
-      "name": "이정안",
-      "position": "리더",
-      "stock": "NAVER",
-      "amountKRW": 0,
-      "shareDelta": 5000,
+      "shareDelta": 13,
       "action": "BUY",
-      "filedAt": "2026-08-14",
-      "rceptNo": "20260814002506"
+      "filedAt": "2026-08-21",
+      "rceptNo": "20260821000516"
     },
     {
-      "id": "dart-20260814002444",
-      "name": "최승락",
-      "position": "리더/부문장",
-      "stock": "NAVER",
+      "id": "dart-20260821000519",
+      "name": "김정원",
+      "position": "독립이사",
+      "stock": "SK하이닉스",
       "amountKRW": 0,
-      "shareDelta": 1000,
+      "shareDelta": 13,
       "action": "BUY",
-      "filedAt": "2026-08-14",
-      "rceptNo": "20260814002444"
+      "filedAt": "2026-08-21",
+      "rceptNo": "20260821000519"
     },
     {
-      "id": "dart-20260814002553",
-      "name": "김정식",
-      "position": "리더",
-      "stock": "NAVER",
+      "id": "dart-20260821000524",
+      "name": "양동훈",
+      "position": "독립이사",
+      "stock": "SK하이닉스",
       "amountKRW": 0,
-      "shareDelta": 750,
+      "shareDelta": 13,
       "action": "BUY",
-      "filedAt": "2026-08-14",
-      "rceptNo": "20260814002553"
+      "filedAt": "2026-08-21",
+      "rceptNo": "20260821000524"
     },
     {
-      "id": "dart-20260814003950",
-      "name": "박태훈",
-      "position": "상무",
-      "stock": "삼성전자",
+      "id": "dart-20260821000527",
+      "name": "손현철",
+      "position": "독립이사",
+      "stock": "SK하이닉스",
       "amountKRW": 0,
-      "shareDelta": 614,
+      "shareDelta": 13,
       "action": "BUY",
-      "filedAt": "2026-08-14",
-      "rceptNo": "20260814003950"
+      "filedAt": "2026-08-21",
+      "rceptNo": "20260821000527"
+    },
+    {
+      "id": "dart-20260821000531",
+      "name": "최강국",
+      "position": "독립이사",
+      "stock": "SK하이닉스",
+      "amountKRW": 0,
+      "shareDelta": 13,
+      "action": "BUY",
+      "filedAt": "2026-08-21",
+      "rceptNo": "20260821000531"
     }
   ],
-  "fetchedAt": "2026-08-29T12:17:40.307Z",
-  "inspected": 4856,
-  "matched": 4837,
+  "fetchedAt": "2026-08-29T18:17:13.590Z",
+  "inspected": 5421,
+  "matched": 5402,
   "source": "DART OpenAPI elestock.json"
 }
