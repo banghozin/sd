@@ -1,22 +1,6 @@
 {
   "sectors": [
     {
-      "id": "us-tech",
-      "name": "기술·반도체",
-      "market": "US",
-      "changePct": 0.44,
-      "changePct1d": 0.44,
-      "changePct1w": 3.58,
-      "changePct1m": 6.36,
-      "marketCapBillion": 0,
-      "topTickers": [
-        "AAPL",
-        "MSFT",
-        "NVDA"
-      ],
-      "ticker": "XLK"
-    },
-    {
       "id": "us-comm",
       "name": "통신·미디어",
       "market": "US",
@@ -31,22 +15,6 @@
         "NFLX"
       ],
       "ticker": "XLC"
-    },
-    {
-      "id": "us-disc",
-      "name": "소비재 (임의)",
-      "market": "US",
-      "changePct": 0.61,
-      "changePct1d": 0.61,
-      "changePct1w": -1.21,
-      "changePct1m": 3.74,
-      "marketCapBillion": 0,
-      "topTickers": [
-        "AMZN",
-        "TSLA",
-        "HD"
-      ],
-      "ticker": "XLY"
     },
     {
       "id": "us-staples",
@@ -112,6 +80,22 @@
       "ticker": "XLE"
     },
     {
+      "id": "us-ind",
+      "name": "산업·방산",
+      "market": "US",
+      "changePct": -2.05,
+      "changePct1d": -2.05,
+      "changePct1w": -2.84,
+      "changePct1m": -1.83,
+      "marketCapBillion": 0,
+      "topTickers": [
+        "GE",
+        "RTX",
+        "BA"
+      ],
+      "ticker": "XLI"
+    },
+    {
       "id": "us-materials",
       "name": "소재",
       "market": "US",
@@ -125,6 +109,21 @@
         "SHW"
       ],
       "ticker": "XLB"
+    },
+    {
+      "id": "us-utility",
+      "name": "유틸리티",
+      "market": "US",
+      "changePct": -2.2,
+      "changePct1d": -2.2,
+      "changePct1w": -1.26,
+      "changePct1m": -5.44,
+      "marketCapBillion": 0,
+      "topTickers": [
+        "NEE",
+        "SO"
+      ],
+      "ticker": "XLU"
     },
     {
       "id": "us-realty",
@@ -303,7 +302,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-09-01T09:07:37.306Z",
+  "fetchedAt": "2026-09-01T10:07:39.738Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
