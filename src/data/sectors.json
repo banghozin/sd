@@ -318,12 +318,26 @@
         "HD현대중공업"
       ],
       "ticker": "139220.KS"
+    },
+    {
+      "id": "kr-cosmetic",
+      "name": "음식료·화장품",
+      "market": "KR",
+      "changePct": 0.4,
+      "changePct1d": 0.4,
+      "changePct1w": 1.45,
+      "changePct1m": 4.18,
+      "marketCapBillion": 0,
+      "topTickers": [
+        "아모레퍼시픽"
+      ],
+      "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-09-01T11:07:43.377Z",
+  "fetchedAt": "2026-09-01T12:07:39.518Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
-    "success": 21
+    "success": 22
   }
 }
