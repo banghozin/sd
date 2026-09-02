@@ -6,8 +6,8 @@
       "market": "US",
       "changePct": -1.53,
       "changePct1d": -1.53,
-      "changePct1w": 1.05,
-      "changePct1m": 3.15,
+      "changePct1w": 1.99,
+      "changePct1m": 4.73,
       "marketCapBillion": 0,
       "topTickers": [
         "AAPL",
@@ -22,8 +22,8 @@
       "market": "US",
       "changePct": -0.52,
       "changePct1d": -0.52,
-      "changePct1w": -2.03,
-      "changePct1m": -0.41,
+      "changePct1w": -1.28,
+      "changePct1m": 2.44,
       "marketCapBillion": 0,
       "topTickers": [
         "GOOGL",
@@ -38,8 +38,8 @@
       "market": "US",
       "changePct": -1.72,
       "changePct1d": -1.72,
-      "changePct1w": -2.85,
-      "changePct1m": -3.06,
+      "changePct1w": -3.14,
+      "changePct1m": -1.29,
       "marketCapBillion": 0,
       "topTickers": [
         "AMZN",
@@ -54,8 +54,8 @@
       "market": "US",
       "changePct": 0.32,
       "changePct1d": 0.32,
-      "changePct1w": -1.47,
-      "changePct1m": 0.46,
+      "changePct1w": -2.52,
+      "changePct1m": 0.24,
       "marketCapBillion": 0,
       "topTickers": [
         "WMT",
@@ -117,8 +117,8 @@
       "market": "US",
       "changePct": -1.37,
       "changePct1d": -1.37,
-      "changePct1w": -3.18,
-      "changePct1m": -5.69,
+      "changePct1w": -3.5,
+      "changePct1m": -3.95,
       "marketCapBillion": 0,
       "topTickers": [
         "GE",
@@ -134,7 +134,7 @@
       "changePct": -1.18,
       "changePct1d": -1.18,
       "changePct1w": -2.82,
-      "changePct1m": 2.08,
+      "changePct1m": 3.25,
       "marketCapBillion": 0,
       "topTickers": [
         "LIN",
@@ -148,8 +148,8 @@
       "market": "US",
       "changePct": 0.78,
       "changePct1d": 0.78,
-      "changePct1w": -1.73,
-      "changePct1m": -4.06,
+      "changePct1w": -1.53,
+      "changePct1m": -4.04,
       "marketCapBillion": 0,
       "topTickers": [
         "NEE",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-09-02T08:07:42.031Z",
+  "fetchedAt": "2026-09-02T11:07:46.686Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
