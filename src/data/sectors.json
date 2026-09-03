@@ -38,8 +38,8 @@
       "market": "US",
       "changePct": 0.24,
       "changePct1d": 0.24,
-      "changePct1w": -2.62,
-      "changePct1m": -2.83,
+      "changePct1w": -1.96,
+      "changePct1m": -2.9,
       "marketCapBillion": 0,
       "topTickers": [
         "AMZN",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-09-03T12:07:48.178Z",
+  "fetchedAt": "2026-09-03T13:07:44.743Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
