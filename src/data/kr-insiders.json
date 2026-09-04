@@ -144,17 +144,6 @@
       "rceptNo": "20260824000132"
     },
     {
-      "id": "dart-20260821000615",
-      "name": "김성래",
-      "position": "담당",
-      "stock": "SK하이닉스",
-      "amountKRW": 0,
-      "shareDelta": -595,
-      "action": "SELL",
-      "filedAt": "2026-08-21",
-      "rceptNo": "20260821000615"
-    },
-    {
       "id": "dart-20260821000262",
       "name": "이명재",
       "position": "상무",
@@ -164,10 +153,21 @@
       "action": "SELL",
       "filedAt": "2026-08-21",
       "rceptNo": "20260821000262"
+    },
+    {
+      "id": "dart-20260820000290",
+      "name": "김경태",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -450,
+      "action": "SELL",
+      "filedAt": "2026-08-20",
+      "rceptNo": "20260820000290"
     }
   ],
-  "fetchedAt": "2026-09-03T18:16:05.443Z",
-  "inspected": 5424,
-  "matched": 5405,
+  "fetchedAt": "2026-09-04T06:18:30.896Z",
+  "inspected": 4860,
+  "matched": 4841,
   "source": "DART OpenAPI elestock.json"
 }
