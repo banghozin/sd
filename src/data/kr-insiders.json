@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20260911000383",
+      "name": "이종화",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": -4750,
+      "action": "SELL",
+      "filedAt": "2026-09-11",
+      "rceptNo": "20260911000383"
+    },
+    {
       "id": "dart-20260909000113",
       "name": "배상기",
       "position": "부사장",
@@ -153,21 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-08-24",
       "rceptNo": "20260824000132"
-    },
-    {
-      "id": "dart-20260821000262",
-      "name": "이명재",
-      "position": "상무",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": -100,
-      "action": "SELL",
-      "filedAt": "2026-08-21",
-      "rceptNo": "20260821000262"
     }
   ],
-  "fetchedAt": "2026-09-11T06:17:45.127Z",
-  "inspected": 4854,
-  "matched": 4835,
+  "fetchedAt": "2026-09-11T12:16:02.638Z",
+  "inspected": 5419,
+  "matched": 5400,
   "source": "DART OpenAPI elestock.json"
 }
