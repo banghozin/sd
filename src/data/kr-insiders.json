@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20260914000248",
+      "name": "아포테커마띠유",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -36,
+      "action": "SELL",
+      "filedAt": "2026-09-14",
+      "rceptNo": "20260914000248"
+    },
+    {
       "id": "dart-20260911000383",
       "name": "이종화",
       "position": "리더",
@@ -153,21 +164,10 @@
       "action": "SELL",
       "filedAt": "2026-08-24",
       "rceptNo": "20260824000222"
-    },
-    {
-      "id": "dart-20260824000132",
-      "name": "이용석",
-      "position": "상무",
-      "stock": "현대자동차",
-      "amountKRW": 0,
-      "shareDelta": 360,
-      "action": "BUY",
-      "filedAt": "2026-08-24",
-      "rceptNo": "20260824000132"
     }
   ],
-  "fetchedAt": "2026-09-13T06:17:48.429Z",
-  "inspected": 5416,
-  "matched": 5397,
+  "fetchedAt": "2026-09-14T12:17:43.068Z",
+  "inspected": 4853,
+  "matched": 4834,
   "source": "DART OpenAPI elestock.json"
 }
