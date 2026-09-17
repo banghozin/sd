@@ -1,6 +1,39 @@
 {
   "trades": [
     {
+      "id": "dart-20260917000236",
+      "name": "한석주",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": 3000,
+      "action": "BUY",
+      "filedAt": "2026-09-17",
+      "rceptNo": "20260917000236"
+    },
+    {
+      "id": "dart-20260917000248",
+      "name": "이상철",
+      "position": "리더/부문장",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": 500,
+      "action": "BUY",
+      "filedAt": "2026-09-17",
+      "rceptNo": "20260917000248"
+    },
+    {
+      "id": "dart-20260917000239",
+      "name": "최승락",
+      "position": "리더/부문장",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": 500,
+      "action": "BUY",
+      "filedAt": "2026-09-17",
+      "rceptNo": "20260917000239"
+    },
+    {
       "id": "dart-20260917000097",
       "name": "신제윤",
       "position": "이사회의장, 독립이사",
@@ -131,43 +164,10 @@
       "action": "SELL",
       "filedAt": "2026-08-26",
       "rceptNo": "20260826000445"
-    },
-    {
-      "id": "dart-20260825000495",
-      "name": "배순민",
-      "position": "상무",
-      "stock": "삼성에스디에스",
-      "amountKRW": 0,
-      "shareDelta": 100,
-      "action": "BUY",
-      "filedAt": "2026-08-26",
-      "rceptNo": "20260825000495"
-    },
-    {
-      "id": "dart-20260826000434",
-      "name": "조미선",
-      "position": "상무",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 80,
-      "action": "BUY",
-      "filedAt": "2026-08-26",
-      "rceptNo": "20260826000434"
-    },
-    {
-      "id": "dart-20260825000280",
-      "name": "최현자",
-      "position": "사외이사",
-      "stock": "하나금융지주",
-      "amountKRW": 0,
-      "shareDelta": 130,
-      "action": "BUY",
-      "filedAt": "2026-08-25",
-      "rceptNo": "20260825000280"
     }
   ],
-  "fetchedAt": "2026-09-17T06:17:46.522Z",
-  "inspected": 4854,
-  "matched": 4835,
+  "fetchedAt": "2026-09-17T12:16:02.171Z",
+  "inspected": 5421,
+  "matched": 5402,
   "source": "DART OpenAPI elestock.json"
 }
