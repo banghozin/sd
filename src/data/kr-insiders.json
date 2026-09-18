@@ -1,6 +1,28 @@
 {
   "trades": [
     {
+      "id": "dart-20260918000338",
+      "name": "양현서",
+      "position": "상생사업 성과리더",
+      "stock": "카카오",
+      "amountKRW": 0,
+      "shareDelta": -7800,
+      "action": "SELL",
+      "filedAt": "2026-09-18",
+      "rceptNo": "20260918000338"
+    },
+    {
+      "id": "dart-20260918000328",
+      "name": "황유지",
+      "position": "메이커스 성과리더",
+      "stock": "카카오",
+      "amountKRW": 0,
+      "shareDelta": -7500,
+      "action": "SELL",
+      "filedAt": "2026-09-18",
+      "rceptNo": "20260918000328"
+    },
+    {
       "id": "dart-20260918000212",
       "name": "조혜경",
       "position": "독립이사",
@@ -142,32 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-09-01",
       "rceptNo": "20260901000205"
-    },
-    {
-      "id": "dart-20260901000199",
-      "name": "노미경",
-      "position": "독립이사",
-      "stock": "SK텔레콤",
-      "amountKRW": 0,
-      "shareDelta": 200,
-      "action": "BUY",
-      "filedAt": "2026-09-01",
-      "rceptNo": "20260901000199"
-    },
-    {
-      "id": "dart-20260831000066",
-      "name": "김은용",
-      "position": "상무",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": -80,
-      "action": "SELL",
-      "filedAt": "2026-08-31",
-      "rceptNo": "20260831000066"
     }
   ],
-  "fetchedAt": "2026-09-18T06:16:00.318Z",
-  "inspected": 5423,
-  "matched": 5404,
+  "fetchedAt": "2026-09-18T12:17:46.841Z",
+  "inspected": 4861,
+  "matched": 4842,
   "source": "DART OpenAPI elestock.json"
 }
