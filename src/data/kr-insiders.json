@@ -1,7 +1,173 @@
 {
-  "trades": [],
-  "fetchedAt": "2026-09-20T06:20:25.830Z",
-  "inspected": 0,
-  "matched": 0,
+  "trades": [
+    {
+      "id": "dart-20260918000338",
+      "name": "양현서",
+      "position": "상생사업 성과리더",
+      "stock": "카카오",
+      "amountKRW": 0,
+      "shareDelta": -7800,
+      "action": "SELL",
+      "filedAt": "2026-09-18",
+      "rceptNo": "20260918000338"
+    },
+    {
+      "id": "dart-20260918000328",
+      "name": "황유지",
+      "position": "메이커스 성과리더",
+      "stock": "카카오",
+      "amountKRW": 0,
+      "shareDelta": -7500,
+      "action": "SELL",
+      "filedAt": "2026-09-18",
+      "rceptNo": "20260918000328"
+    },
+    {
+      "id": "dart-20260918000212",
+      "name": "조혜경",
+      "position": "독립이사",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 300,
+      "action": "BUY",
+      "filedAt": "2026-09-18",
+      "rceptNo": "20260918000212"
+    },
+    {
+      "id": "dart-20260918000191",
+      "name": "이혁재",
+      "position": "독립이사",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 148,
+      "action": "BUY",
+      "filedAt": "2026-09-18",
+      "rceptNo": "20260918000191"
+    },
+    {
+      "id": "dart-20260917000236",
+      "name": "한석주",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": 3000,
+      "action": "BUY",
+      "filedAt": "2026-09-17",
+      "rceptNo": "20260917000236"
+    },
+    {
+      "id": "dart-20260917000248",
+      "name": "이상철",
+      "position": "리더/부문장",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": 500,
+      "action": "BUY",
+      "filedAt": "2026-09-17",
+      "rceptNo": "20260917000248"
+    },
+    {
+      "id": "dart-20260917000239",
+      "name": "최승락",
+      "position": "리더/부문장",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": 500,
+      "action": "BUY",
+      "filedAt": "2026-09-17",
+      "rceptNo": "20260917000239"
+    },
+    {
+      "id": "dart-20260917000097",
+      "name": "신제윤",
+      "position": "이사회의장, 독립이사",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 210,
+      "action": "BUY",
+      "filedAt": "2026-09-17",
+      "rceptNo": "20260917000097"
+    },
+    {
+      "id": "dart-20260914000248",
+      "name": "아포테커마띠유",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -36,
+      "action": "SELL",
+      "filedAt": "2026-09-14",
+      "rceptNo": "20260914000248"
+    },
+    {
+      "id": "dart-20260911000383",
+      "name": "이종화",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": -4750,
+      "action": "SELL",
+      "filedAt": "2026-09-11",
+      "rceptNo": "20260911000383"
+    },
+    {
+      "id": "dart-20260909000113",
+      "name": "배상기",
+      "position": "부사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -1164,
+      "action": "SELL",
+      "filedAt": "2026-09-09",
+      "rceptNo": "20260909000113"
+    },
+    {
+      "id": "dart-20260901000194",
+      "name": "김창보",
+      "position": "독립이사",
+      "stock": "SK텔레콤",
+      "amountKRW": 0,
+      "shareDelta": 261,
+      "action": "BUY",
+      "filedAt": "2026-09-01",
+      "rceptNo": "20260901000194"
+    },
+    {
+      "id": "dart-20260901000208",
+      "name": "임태섭",
+      "position": "독립이사",
+      "stock": "SK텔레콤",
+      "amountKRW": 0,
+      "shareDelta": 200,
+      "action": "BUY",
+      "filedAt": "2026-09-01",
+      "rceptNo": "20260901000208"
+    },
+    {
+      "id": "dart-20260901000202",
+      "name": "오혜연",
+      "position": "독립이사",
+      "stock": "SK텔레콤",
+      "amountKRW": 0,
+      "shareDelta": 200,
+      "action": "BUY",
+      "filedAt": "2026-09-01",
+      "rceptNo": "20260901000202"
+    },
+    {
+      "id": "dart-20260901000205",
+      "name": "이성엽",
+      "position": "독립이사",
+      "stock": "SK텔레콤",
+      "amountKRW": 0,
+      "shareDelta": 200,
+      "action": "BUY",
+      "filedAt": "2026-09-01",
+      "rceptNo": "20260901000205"
+    }
+  ],
+  "fetchedAt": "2026-09-20T12:16:01.501Z",
+  "inspected": 5414,
+  "matched": 5395,
   "source": "DART OpenAPI elestock.json"
 }
