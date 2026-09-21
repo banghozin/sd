@@ -1,6 +1,28 @@
 {
   "trades": [
     {
+      "id": "dart-20260921000197",
+      "name": "최현자",
+      "position": "사외이사",
+      "stock": "하나금융지주",
+      "amountKRW": 0,
+      "shareDelta": 70,
+      "action": "BUY",
+      "filedAt": "2026-09-21",
+      "rceptNo": "20260921000197"
+    },
+    {
+      "id": "dart-20260921000336",
+      "name": "박무곤",
+      "position": "상무",
+      "stock": "현대자동차",
+      "amountKRW": 0,
+      "shareDelta": 35,
+      "action": "BUY",
+      "filedAt": "2026-09-21",
+      "rceptNo": "20260921000336"
+    },
+    {
       "id": "dart-20260918000338",
       "name": "양현서",
       "position": "상생사업 성과리더",
@@ -142,32 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-09-01",
       "rceptNo": "20260901000208"
-    },
-    {
-      "id": "dart-20260901000202",
-      "name": "오혜연",
-      "position": "독립이사",
-      "stock": "SK텔레콤",
-      "amountKRW": 0,
-      "shareDelta": 200,
-      "action": "BUY",
-      "filedAt": "2026-09-01",
-      "rceptNo": "20260901000202"
-    },
-    {
-      "id": "dart-20260901000205",
-      "name": "이성엽",
-      "position": "독립이사",
-      "stock": "SK텔레콤",
-      "amountKRW": 0,
-      "shareDelta": 200,
-      "action": "BUY",
-      "filedAt": "2026-09-01",
-      "rceptNo": "20260901000205"
     }
   ],
-  "fetchedAt": "2026-09-20T12:16:01.501Z",
-  "inspected": 5414,
-  "matched": 5395,
+  "fetchedAt": "2026-09-21T12:16:07.549Z",
+  "inspected": 5416,
+  "matched": 5397,
   "source": "DART OpenAPI elestock.json"
 }
