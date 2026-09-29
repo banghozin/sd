@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20260929000342",
+      "name": "김상민",
+      "position": "전무",
+      "stock": "LG화학",
+      "amountKRW": 0,
+      "shareDelta": 120,
+      "action": "BUY",
+      "filedAt": "2026-09-29",
+      "rceptNo": "20260929000342"
+    },
+    {
       "id": "dart-20260922000524",
       "name": "허은녕",
       "position": "독립이사",
@@ -153,21 +164,10 @@
       "action": "SELL",
       "filedAt": "2026-09-11",
       "rceptNo": "20260911000383"
-    },
-    {
-      "id": "dart-20260909000113",
-      "name": "배상기",
-      "position": "부사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": -1164,
-      "action": "SELL",
-      "filedAt": "2026-09-09",
-      "rceptNo": "20260909000113"
     }
   ],
-  "fetchedAt": "2026-09-27T12:16:09.575Z",
-  "inspected": 5399,
-  "matched": 5380,
+  "fetchedAt": "2026-09-29T06:17:31.975Z",
+  "inspected": 5400,
+  "matched": 5381,
   "source": "DART OpenAPI elestock.json"
 }
