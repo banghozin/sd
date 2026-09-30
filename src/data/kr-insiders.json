@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20260930000861",
+      "name": "서진우",
+      "position": "부회장",
+      "stock": "SK하이닉스",
+      "amountKRW": 0,
+      "shareDelta": 80,
+      "action": "BUY",
+      "filedAt": "2026-09-30",
+      "rceptNo": "20260930000861"
+    },
+    {
       "id": "dart-20260929000342",
       "name": "김상민",
       "position": "전무",
@@ -153,21 +164,10 @@
       "action": "SELL",
       "filedAt": "2026-09-14",
       "rceptNo": "20260914000248"
-    },
-    {
-      "id": "dart-20260911000383",
-      "name": "이종화",
-      "position": "리더",
-      "stock": "NAVER",
-      "amountKRW": 0,
-      "shareDelta": -4750,
-      "action": "SELL",
-      "filedAt": "2026-09-11",
-      "rceptNo": "20260911000383"
     }
   ],
-  "fetchedAt": "2026-09-29T06:17:31.975Z",
-  "inspected": 5400,
-  "matched": 5381,
+  "fetchedAt": "2026-09-30T12:16:08.213Z",
+  "inspected": 5401,
+  "matched": 5382,
   "source": "DART OpenAPI elestock.json"
 }
