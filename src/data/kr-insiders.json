@@ -1,6 +1,28 @@
 {
   "trades": [
     {
+      "id": "dart-20261002000450",
+      "name": "심동윤",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": -828,
+      "action": "SELL",
+      "filedAt": "2026-10-02",
+      "rceptNo": "20261002000450"
+    },
+    {
+      "id": "dart-20261002000443",
+      "name": "오성권",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": -50,
+      "action": "SELL",
+      "filedAt": "2026-10-02",
+      "rceptNo": "20261002000443"
+    },
+    {
       "id": "dart-20261001000251",
       "name": "나현수",
       "position": "상무",
@@ -23,6 +45,17 @@
       "rceptNo": "20261001000203"
     },
     {
+      "id": "dart-20260930000861",
+      "name": "서진우",
+      "position": "부회장",
+      "stock": "SK하이닉스",
+      "amountKRW": 0,
+      "shareDelta": 80,
+      "action": "BUY",
+      "filedAt": "2026-09-30",
+      "rceptNo": "20260930000861"
+    },
+    {
       "id": "dart-20260929000342",
       "name": "김상민",
       "position": "전무",
@@ -43,6 +76,17 @@
       "action": "BUY",
       "filedAt": "2026-09-22",
       "rceptNo": "20260922000524"
+    },
+    {
+      "id": "dart-20260922000361",
+      "name": "정인철",
+      "position": "담당",
+      "stock": "SK하이닉스",
+      "amountKRW": 0,
+      "shareDelta": 142,
+      "action": "BUY",
+      "filedAt": "2026-09-22",
+      "rceptNo": "20260922000361"
     },
     {
       "id": "dart-20260921000197",
@@ -120,54 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-09-17",
       "rceptNo": "20260917000236"
-    },
-    {
-      "id": "dart-20260917000248",
-      "name": "이상철",
-      "position": "리더/부문장",
-      "stock": "NAVER",
-      "amountKRW": 0,
-      "shareDelta": 500,
-      "action": "BUY",
-      "filedAt": "2026-09-17",
-      "rceptNo": "20260917000248"
-    },
-    {
-      "id": "dart-20260917000239",
-      "name": "최승락",
-      "position": "리더/부문장",
-      "stock": "NAVER",
-      "amountKRW": 0,
-      "shareDelta": 500,
-      "action": "BUY",
-      "filedAt": "2026-09-17",
-      "rceptNo": "20260917000239"
-    },
-    {
-      "id": "dart-20260917000097",
-      "name": "신제윤",
-      "position": "이사회의장, 독립이사",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 210,
-      "action": "BUY",
-      "filedAt": "2026-09-17",
-      "rceptNo": "20260917000097"
-    },
-    {
-      "id": "dart-20260914000248",
-      "name": "아포테커마띠유",
-      "position": "상무",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": -36,
-      "action": "SELL",
-      "filedAt": "2026-09-14",
-      "rceptNo": "20260914000248"
     }
   ],
-  "fetchedAt": "2026-10-02T06:17:36.540Z",
-  "inspected": 4835,
-  "matched": 4816,
+  "fetchedAt": "2026-10-02T12:16:01.852Z",
+  "inspected": 5403,
+  "matched": 5384,
   "source": "DART OpenAPI elestock.json"
 }
