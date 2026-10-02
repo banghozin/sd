@@ -23,17 +23,6 @@
       "rceptNo": "20261001000203"
     },
     {
-      "id": "dart-20260930000861",
-      "name": "서진우",
-      "position": "부회장",
-      "stock": "SK하이닉스",
-      "amountKRW": 0,
-      "shareDelta": 80,
-      "action": "BUY",
-      "filedAt": "2026-09-30",
-      "rceptNo": "20260930000861"
-    },
-    {
       "id": "dart-20260929000342",
       "name": "김상민",
       "position": "전무",
@@ -54,17 +43,6 @@
       "action": "BUY",
       "filedAt": "2026-09-22",
       "rceptNo": "20260922000524"
-    },
-    {
-      "id": "dart-20260922000361",
-      "name": "정인철",
-      "position": "담당",
-      "stock": "SK하이닉스",
-      "amountKRW": 0,
-      "shareDelta": 142,
-      "action": "BUY",
-      "filedAt": "2026-09-22",
-      "rceptNo": "20260922000361"
     },
     {
       "id": "dart-20260921000197",
@@ -164,10 +142,32 @@
       "action": "BUY",
       "filedAt": "2026-09-17",
       "rceptNo": "20260917000239"
+    },
+    {
+      "id": "dart-20260917000097",
+      "name": "신제윤",
+      "position": "이사회의장, 독립이사",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 210,
+      "action": "BUY",
+      "filedAt": "2026-09-17",
+      "rceptNo": "20260917000097"
+    },
+    {
+      "id": "dart-20260914000248",
+      "name": "아포테커마띠유",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -36,
+      "action": "SELL",
+      "filedAt": "2026-09-14",
+      "rceptNo": "20260914000248"
     }
   ],
-  "fetchedAt": "2026-10-01T18:16:07.267Z",
-  "inspected": 5403,
-  "matched": 5384,
+  "fetchedAt": "2026-10-02T06:17:36.540Z",
+  "inspected": 4835,
+  "matched": 4816,
   "source": "DART OpenAPI elestock.json"
 }
