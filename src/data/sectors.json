@@ -100,10 +100,10 @@
       "id": "us-energy",
       "name": "에너지",
       "market": "US",
-      "changePct": 0.99,
-      "changePct1d": 0.99,
-      "changePct1w": 2.16,
-      "changePct1m": -1.24,
+      "changePct": 1,
+      "changePct1d": 1,
+      "changePct1w": 2.17,
+      "changePct1m": -1.23,
       "marketCapBillion": 0,
       "topTickers": [
         "XOM",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-10-05T20:18:18.482Z",
+  "fetchedAt": "2026-10-05T21:27:27.158Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
