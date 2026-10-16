@@ -1,6 +1,28 @@
 {
   "trades": [
     {
+      "id": "dart-20261016000492",
+      "name": "이재용",
+      "position": "회장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 7667100,
+      "action": "BUY",
+      "filedAt": "2026-10-16",
+      "rceptNo": "20261016000492"
+    },
+    {
+      "id": "dart-20261016000318",
+      "name": "김성호",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": -1000,
+      "action": "SELL",
+      "filedAt": "2026-10-16",
+      "rceptNo": "20261016000318"
+    },
+    {
       "id": "dart-20261012000021",
       "name": "김은용",
       "position": "상무",
@@ -142,32 +164,10 @@
       "action": "SELL",
       "filedAt": "2026-09-18",
       "rceptNo": "20260918000328"
-    },
-    {
-      "id": "dart-20260918000212",
-      "name": "조혜경",
-      "position": "독립이사",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 300,
-      "action": "BUY",
-      "filedAt": "2026-09-18",
-      "rceptNo": "20260918000212"
-    },
-    {
-      "id": "dart-20260918000191",
-      "name": "이혁재",
-      "position": "독립이사",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 148,
-      "action": "BUY",
-      "filedAt": "2026-09-18",
-      "rceptNo": "20260918000191"
     }
   ],
-  "fetchedAt": "2026-10-16T06:16:13.216Z",
-  "inspected": 5389,
-  "matched": 5370,
+  "fetchedAt": "2026-10-16T12:16:11.624Z",
+  "inspected": 5391,
+  "matched": 5372,
   "source": "DART OpenAPI elestock.json"
 }
