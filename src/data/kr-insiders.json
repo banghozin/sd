@@ -100,6 +100,17 @@
       "rceptNo": "20261001000203"
     },
     {
+      "id": "dart-20260930000861",
+      "name": "서진우",
+      "position": "부회장",
+      "stock": "SK하이닉스",
+      "amountKRW": 0,
+      "shareDelta": 80,
+      "action": "BUY",
+      "filedAt": "2026-09-30",
+      "rceptNo": "20260930000861"
+    },
+    {
       "id": "dart-20260929000342",
       "name": "김상민",
       "position": "전무",
@@ -122,6 +133,17 @@
       "rceptNo": "20260922000524"
     },
     {
+      "id": "dart-20260922000361",
+      "name": "정인철",
+      "position": "담당",
+      "stock": "SK하이닉스",
+      "amountKRW": 0,
+      "shareDelta": 142,
+      "action": "BUY",
+      "filedAt": "2026-09-22",
+      "rceptNo": "20260922000361"
+    },
+    {
       "id": "dart-20260921000197",
       "name": "최현자",
       "position": "사외이사",
@@ -142,32 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-09-21",
       "rceptNo": "20260921000336"
-    },
-    {
-      "id": "dart-20260918000338",
-      "name": "양현서",
-      "position": "상생사업 성과리더",
-      "stock": "카카오",
-      "amountKRW": 0,
-      "shareDelta": -7800,
-      "action": "SELL",
-      "filedAt": "2026-09-18",
-      "rceptNo": "20260918000338"
-    },
-    {
-      "id": "dart-20260918000328",
-      "name": "황유지",
-      "position": "메이커스 성과리더",
-      "stock": "카카오",
-      "amountKRW": 0,
-      "shareDelta": -7500,
-      "action": "SELL",
-      "filedAt": "2026-09-18",
-      "rceptNo": "20260918000328"
     }
   ],
-  "fetchedAt": "2026-10-20T00:17:35.230Z",
-  "inspected": 4827,
-  "matched": 4808,
+  "fetchedAt": "2026-10-20T06:16:09.481Z",
+  "inspected": 5392,
+  "matched": 5373,
   "source": "DART OpenAPI elestock.json"
 }
