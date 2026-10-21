@@ -1,7 +1,173 @@
 {
-  "trades": [],
-  "fetchedAt": "2026-10-21T06:20:21.808Z",
-  "inspected": 0,
-  "matched": 0,
+  "trades": [
+    {
+      "id": "dart-20261021000229",
+      "name": "정유한",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": 4400,
+      "action": "BUY",
+      "filedAt": "2026-10-21",
+      "rceptNo": "20261021000229"
+    },
+    {
+      "id": "dart-20261021000232",
+      "name": "전정호",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": 1053,
+      "action": "BUY",
+      "filedAt": "2026-10-21",
+      "rceptNo": "20261021000232"
+    },
+    {
+      "id": "dart-20261021000245",
+      "name": "이동철",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": 1000,
+      "action": "BUY",
+      "filedAt": "2026-10-21",
+      "rceptNo": "20261021000245"
+    },
+    {
+      "id": "dart-20261021000270",
+      "name": "강유훈",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": 1000,
+      "action": "BUY",
+      "filedAt": "2026-10-21",
+      "rceptNo": "20261021000270"
+    },
+    {
+      "id": "dart-20261021000251",
+      "name": "김정식",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": -660,
+      "action": "SELL",
+      "filedAt": "2026-10-21",
+      "rceptNo": "20261021000251"
+    },
+    {
+      "id": "dart-20261021000225",
+      "name": "최승락",
+      "position": "리더/부문장",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": 500,
+      "action": "BUY",
+      "filedAt": "2026-10-21",
+      "rceptNo": "20261021000225"
+    },
+    {
+      "id": "dart-20261019000211",
+      "name": "김성현",
+      "position": "부문장",
+      "stock": "KB금융",
+      "amountKRW": 0,
+      "shareDelta": 1532,
+      "action": "BUY",
+      "filedAt": "2026-10-19",
+      "rceptNo": "20261019000211"
+    },
+    {
+      "id": "dart-20261019000318",
+      "name": "최고은",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 80,
+      "action": "BUY",
+      "filedAt": "2026-10-19",
+      "rceptNo": "20261019000318"
+    },
+    {
+      "id": "dart-20261016000492",
+      "name": "이재용",
+      "position": "회장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 7667100,
+      "action": "BUY",
+      "filedAt": "2026-10-16",
+      "rceptNo": "20261016000492"
+    },
+    {
+      "id": "dart-20261016000318",
+      "name": "김성호",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": -1000,
+      "action": "SELL",
+      "filedAt": "2026-10-16",
+      "rceptNo": "20261016000318"
+    },
+    {
+      "id": "dart-20261012000021",
+      "name": "김은용",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -100,
+      "action": "SELL",
+      "filedAt": "2026-10-12",
+      "rceptNo": "20261012000021"
+    },
+    {
+      "id": "dart-20261002000450",
+      "name": "심동윤",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": -828,
+      "action": "SELL",
+      "filedAt": "2026-10-02",
+      "rceptNo": "20261002000450"
+    },
+    {
+      "id": "dart-20261002000443",
+      "name": "오성권",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": -50,
+      "action": "SELL",
+      "filedAt": "2026-10-02",
+      "rceptNo": "20261002000443"
+    },
+    {
+      "id": "dart-20261001000251",
+      "name": "나현수",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -500,
+      "action": "SELL",
+      "filedAt": "2026-10-01",
+      "rceptNo": "20261001000251"
+    },
+    {
+      "id": "dart-20261001000203",
+      "name": "이석림",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -100,
+      "action": "SELL",
+      "filedAt": "2026-10-01",
+      "rceptNo": "20261001000203"
+    }
+  ],
+  "fetchedAt": "2026-10-21T12:16:09.945Z",
+  "inspected": 5398,
+  "matched": 5379,
   "source": "DART OpenAPI elestock.json"
 }
