@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20261028000177",
+      "name": "국민연금공단",
+      "position": "-",
+      "stock": "삼성E&A",
+      "amountKRW": 0,
+      "shareDelta": 19600844,
+      "action": "BUY",
+      "filedAt": "2026-10-28",
+      "rceptNo": "20261028000177"
+    },
+    {
       "id": "dart-20261026000273",
       "name": "정인철",
       "position": "담당",
@@ -153,21 +164,10 @@
       "action": "SELL",
       "filedAt": "2026-10-12",
       "rceptNo": "20261012000021"
-    },
-    {
-      "id": "dart-20261002000450",
-      "name": "심동윤",
-      "position": "리더",
-      "stock": "NAVER",
-      "amountKRW": 0,
-      "shareDelta": -828,
-      "action": "SELL",
-      "filedAt": "2026-10-02",
-      "rceptNo": "20261002000450"
     }
   ],
-  "fetchedAt": "2026-10-27T06:16:06.757Z",
-  "inspected": 5395,
-  "matched": 5376,
+  "fetchedAt": "2026-10-28T06:18:01.027Z",
+  "inspected": 5396,
+  "matched": 5377,
   "source": "DART OpenAPI elestock.json"
 }
