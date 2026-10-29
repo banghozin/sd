@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20261029000580",
+      "name": "원숙연",
+      "position": "사외이사",
+      "stock": "하나금융지주",
+      "amountKRW": 0,
+      "shareDelta": 650,
+      "action": "BUY",
+      "filedAt": "2026-10-29",
+      "rceptNo": "20261029000580"
+    },
+    {
       "id": "dart-20261028000177",
       "name": "국민연금공단",
       "position": "-",
@@ -10,6 +21,17 @@
       "action": "BUY",
       "filedAt": "2026-10-28",
       "rceptNo": "20261028000177"
+    },
+    {
+      "id": "dart-20261026000273",
+      "name": "정인철",
+      "position": "담당",
+      "stock": "SK하이닉스",
+      "amountKRW": 0,
+      "shareDelta": 400,
+      "action": "BUY",
+      "filedAt": "2026-10-26",
+      "rceptNo": "20261026000273"
     },
     {
       "id": "dart-20261026000017",
@@ -142,32 +164,10 @@
       "action": "SELL",
       "filedAt": "2026-10-16",
       "rceptNo": "20261016000318"
-    },
-    {
-      "id": "dart-20261012000021",
-      "name": "김은용",
-      "position": "상무",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": -100,
-      "action": "SELL",
-      "filedAt": "2026-10-12",
-      "rceptNo": "20261012000021"
-    },
-    {
-      "id": "dart-20261002000450",
-      "name": "심동윤",
-      "position": "리더",
-      "stock": "NAVER",
-      "amountKRW": 0,
-      "shareDelta": -828,
-      "action": "SELL",
-      "filedAt": "2026-10-02",
-      "rceptNo": "20261002000450"
     }
   ],
-  "fetchedAt": "2026-10-29T06:17:41.338Z",
-  "inspected": 4830,
-  "matched": 4811,
+  "fetchedAt": "2026-10-29T12:18:00.208Z",
+  "inspected": 5394,
+  "matched": 5375,
   "source": "DART OpenAPI elestock.json"
 }
