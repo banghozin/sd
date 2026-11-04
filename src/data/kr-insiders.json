@@ -45,6 +45,17 @@
       "rceptNo": "20261028000177"
     },
     {
+      "id": "dart-20261026000273",
+      "name": "정인철",
+      "position": "담당",
+      "stock": "SK하이닉스",
+      "amountKRW": 0,
+      "shareDelta": 400,
+      "action": "BUY",
+      "filedAt": "2026-10-26",
+      "rceptNo": "20261026000273"
+    },
+    {
       "id": "dart-20261026000017",
       "name": "이헌",
       "position": "부사장",
@@ -153,21 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-10-19",
       "rceptNo": "20261019000318"
-    },
-    {
-      "id": "dart-20261016000492",
-      "name": "이재용",
-      "position": "회장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 7667100,
-      "action": "BUY",
-      "filedAt": "2026-10-16",
-      "rceptNo": "20261016000492"
     }
   ],
-  "fetchedAt": "2026-11-04T06:18:20.104Z",
-  "inspected": 4822,
-  "matched": 4803,
+  "fetchedAt": "2026-11-04T12:16:40.059Z",
+  "inspected": 5387,
+  "matched": 5368,
   "source": "DART OpenAPI elestock.json"
 }
