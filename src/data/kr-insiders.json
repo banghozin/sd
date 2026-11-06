@@ -1,6 +1,28 @@
 {
   "trades": [
     {
+      "id": "dart-20261106000410",
+      "name": "노태문",
+      "position": "대표사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 3000,
+      "action": "BUY",
+      "filedAt": "2026-11-06",
+      "rceptNo": "20261106000410"
+    },
+    {
+      "id": "dart-20261106000440",
+      "name": "김준성",
+      "position": "독립이사",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 506,
+      "action": "BUY",
+      "filedAt": "2026-11-06",
+      "rceptNo": "20261106000440"
+    },
+    {
       "id": "dart-20261106000022",
       "name": "홍희일",
       "position": "부사장",
@@ -142,32 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-10-23",
       "rceptNo": "20261023000478"
-    },
-    {
-      "id": "dart-20261021000229",
-      "name": "정유한",
-      "position": "리더",
-      "stock": "NAVER",
-      "amountKRW": 0,
-      "shareDelta": 4400,
-      "action": "BUY",
-      "filedAt": "2026-10-21",
-      "rceptNo": "20261021000229"
-    },
-    {
-      "id": "dart-20261021000232",
-      "name": "전정호",
-      "position": "리더",
-      "stock": "NAVER",
-      "amountKRW": 0,
-      "shareDelta": 1053,
-      "action": "BUY",
-      "filedAt": "2026-10-21",
-      "rceptNo": "20261021000232"
     }
   ],
-  "fetchedAt": "2026-11-06T06:18:22.334Z",
-  "inspected": 5393,
-  "matched": 5374,
+  "fetchedAt": "2026-11-06T12:16:34.851Z",
+  "inspected": 5395,
+  "matched": 5376,
   "source": "DART OpenAPI elestock.json"
 }
