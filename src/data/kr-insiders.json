@@ -12,6 +12,17 @@
       "rceptNo": "20261110000038"
     },
     {
+      "id": "dart-20261110000320",
+      "name": "김수진",
+      "position": "부사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -310,
+      "action": "SELL",
+      "filedAt": "2026-11-10",
+      "rceptNo": "20261110000320"
+    },
+    {
       "id": "dart-20261109000007",
       "name": "채교석",
       "position": "상무",
@@ -153,21 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-10-29",
       "rceptNo": "20261029000580"
-    },
-    {
-      "id": "dart-20261028000177",
-      "name": "국민연금공단",
-      "position": "-",
-      "stock": "삼성E&A",
-      "amountKRW": 0,
-      "shareDelta": 19600844,
-      "action": "BUY",
-      "filedAt": "2026-10-28",
-      "rceptNo": "20261028000177"
     }
   ],
-  "fetchedAt": "2026-11-10T06:17:52.351Z",
-  "inspected": 5394,
-  "matched": 5375,
+  "fetchedAt": "2026-11-10T12:18:17.627Z",
+  "inspected": 5395,
+  "matched": 5376,
   "source": "DART OpenAPI elestock.json"
 }
