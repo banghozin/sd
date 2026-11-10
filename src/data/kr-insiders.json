@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20261110000038",
+      "name": "김평진",
+      "position": "부사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -780,
+      "action": "SELL",
+      "filedAt": "2026-11-10",
+      "rceptNo": "20261110000038"
+    },
+    {
       "id": "dart-20261109000007",
       "name": "채교석",
       "position": "상무",
@@ -45,17 +56,6 @@
       "rceptNo": "20261106000440"
     },
     {
-      "id": "dart-20261106000093",
-      "name": "이병현",
-      "position": "부사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 498,
-      "action": "BUY",
-      "filedAt": "2026-11-06",
-      "rceptNo": "20261106000093"
-    },
-    {
       "id": "dart-20261106000022",
       "name": "홍희일",
       "position": "부사장",
@@ -65,6 +65,17 @@
       "action": "BUY",
       "filedAt": "2026-11-06",
       "rceptNo": "20261106000022"
+    },
+    {
+      "id": "dart-20261106000093",
+      "name": "이병현",
+      "position": "부사장",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 498,
+      "action": "BUY",
+      "filedAt": "2026-11-06",
+      "rceptNo": "20261106000093"
     },
     {
       "id": "dart-20261106000100",
@@ -153,21 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-10-28",
       "rceptNo": "20261028000177"
-    },
-    {
-      "id": "dart-20261026000273",
-      "name": "정인철",
-      "position": "담당",
-      "stock": "SK하이닉스",
-      "amountKRW": 0,
-      "shareDelta": 400,
-      "action": "BUY",
-      "filedAt": "2026-10-26",
-      "rceptNo": "20261026000273"
     }
   ],
-  "fetchedAt": "2026-11-09T12:18:31.390Z",
-  "inspected": 5393,
-  "matched": 5374,
+  "fetchedAt": "2026-11-10T06:17:52.351Z",
+  "inspected": 5394,
+  "matched": 5375,
   "source": "DART OpenAPI elestock.json"
 }
