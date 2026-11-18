@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20261118000151",
+      "name": "GOYAL SIDDHARTH",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": -1206,
+      "action": "SELL",
+      "filedAt": "2026-11-18",
+      "rceptNo": "20261118000151"
+    },
+    {
       "id": "dart-20261116000767",
       "name": "박무곤",
       "position": "상무",
@@ -153,21 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-11-09",
       "rceptNo": "20261109000357"
-    },
-    {
-      "id": "dart-20261106000410",
-      "name": "노태문",
-      "position": "대표사장",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 3000,
-      "action": "BUY",
-      "filedAt": "2026-11-06",
-      "rceptNo": "20261106000410"
     }
   ],
-  "fetchedAt": "2026-11-16T12:18:04.906Z",
-  "inspected": 5395,
-  "matched": 5376,
+  "fetchedAt": "2026-11-18T06:18:14.316Z",
+  "inspected": 5394,
+  "matched": 5375,
   "source": "DART OpenAPI elestock.json"
 }
