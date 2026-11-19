@@ -1,6 +1,17 @@
 {
   "trades": [
     {
+      "id": "dart-20261119000191",
+      "name": "임승연",
+      "position": "사외이사",
+      "stock": "신한지주",
+      "amountKRW": 0,
+      "shareDelta": 1000,
+      "action": "BUY",
+      "filedAt": "2026-11-19",
+      "rceptNo": "20261119000191"
+    },
+    {
       "id": "dart-20261118000151",
       "name": "GOYAL SIDDHARTH",
       "position": "상무",
@@ -153,21 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-11-09",
       "rceptNo": "20261109000007"
-    },
-    {
-      "id": "dart-20261109000357",
-      "name": "이승애",
-      "position": "상무",
-      "stock": "현대자동차",
-      "amountKRW": 0,
-      "shareDelta": 81,
-      "action": "BUY",
-      "filedAt": "2026-11-09",
-      "rceptNo": "20261109000357"
     }
   ],
-  "fetchedAt": "2026-11-18T12:16:40.363Z",
-  "inspected": 5384,
-  "matched": 5365,
+  "fetchedAt": "2026-11-19T06:16:56.314Z",
+  "inspected": 5383,
+  "matched": 5364,
   "source": "DART OpenAPI elestock.json"
 }
