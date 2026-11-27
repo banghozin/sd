@@ -45,6 +45,17 @@
       "rceptNo": "20261127000388"
     },
     {
+      "id": "dart-20261127001578",
+      "name": "이종주",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": -1396,
+      "action": "SELL",
+      "filedAt": "2026-11-27",
+      "rceptNo": "20261127001578"
+    },
+    {
       "id": "dart-20261127000004",
       "name": "정민용",
       "position": "상무",
@@ -54,6 +65,17 @@
       "action": "BUY",
       "filedAt": "2026-11-27",
       "rceptNo": "20261127000004"
+    },
+    {
+      "id": "dart-20261127001860",
+      "name": "조태훈",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 543,
+      "action": "BUY",
+      "filedAt": "2026-11-27",
+      "rceptNo": "20261127001860"
     },
     {
       "id": "dart-20261127000021",
@@ -67,6 +89,17 @@
       "rceptNo": "20261127000021"
     },
     {
+      "id": "dart-20261127002010",
+      "name": "조용선",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 487,
+      "action": "BUY",
+      "filedAt": "2026-11-27",
+      "rceptNo": "20261127002010"
+    },
+    {
       "id": "dart-20261127001233",
       "name": "이응규",
       "position": "상무",
@@ -76,6 +109,17 @@
       "action": "BUY",
       "filedAt": "2026-11-27",
       "rceptNo": "20261127001233"
+    },
+    {
+      "id": "dart-20261127001600",
+      "name": "오성권",
+      "position": "리더",
+      "stock": "NAVER",
+      "amountKRW": 0,
+      "shareDelta": -305,
+      "action": "SELL",
+      "filedAt": "2026-11-27",
+      "rceptNo": "20261127001600"
     },
     {
       "id": "dart-20261127000008",
@@ -89,6 +133,28 @@
       "rceptNo": "20261127000008"
     },
     {
+      "id": "dart-20261127001958",
+      "name": "정창규",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 237,
+      "action": "BUY",
+      "filedAt": "2026-11-27",
+      "rceptNo": "20261127001958"
+    },
+    {
+      "id": "dart-20261127001928",
+      "name": "양효순",
+      "position": "상무",
+      "stock": "삼성전자",
+      "amountKRW": 0,
+      "shareDelta": 197,
+      "action": "BUY",
+      "filedAt": "2026-11-27",
+      "rceptNo": "20261127001928"
+    },
+    {
       "id": "dart-20261127000007",
       "name": "이윤수",
       "position": "상무",
@@ -98,76 +164,10 @@
       "action": "BUY",
       "filedAt": "2026-11-27",
       "rceptNo": "20261127000007"
-    },
-    {
-      "id": "dart-20261127000168",
-      "name": "강남이",
-      "position": "상무",
-      "stock": "삼성에스디에스",
-      "amountKRW": 0,
-      "shareDelta": 10,
-      "action": "BUY",
-      "filedAt": "2026-11-27",
-      "rceptNo": "20261127000168"
-    },
-    {
-      "id": "dart-20261126000180",
-      "name": "어성수",
-      "position": "상무",
-      "stock": "삼성E&A",
-      "amountKRW": 0,
-      "shareDelta": 2359,
-      "action": "BUY",
-      "filedAt": "2026-11-26",
-      "rceptNo": "20261126000180"
-    },
-    {
-      "id": "dart-20261126000250",
-      "name": "최수민",
-      "position": "상무",
-      "stock": "삼성전자",
-      "amountKRW": 0,
-      "shareDelta": 1156,
-      "action": "BUY",
-      "filedAt": "2026-11-26",
-      "rceptNo": "20261126000250"
-    },
-    {
-      "id": "dart-20261125000725",
-      "name": "정현석",
-      "position": "상무",
-      "stock": "삼성E&A",
-      "amountKRW": 0,
-      "shareDelta": 500,
-      "action": "BUY",
-      "filedAt": "2026-11-25",
-      "rceptNo": "20261125000725"
-    },
-    {
-      "id": "dart-20261123000192",
-      "name": "윤풍영",
-      "position": "사장",
-      "stock": "SK하이닉스",
-      "amountKRW": 0,
-      "shareDelta": 1500,
-      "action": "BUY",
-      "filedAt": "2026-11-23",
-      "rceptNo": "20261123000192"
-    },
-    {
-      "id": "dart-20261119000191",
-      "name": "임승연",
-      "position": "사외이사",
-      "stock": "신한지주",
-      "amountKRW": 0,
-      "shareDelta": 1000,
-      "action": "BUY",
-      "filedAt": "2026-11-19",
-      "rceptNo": "20261119000191"
     }
   ],
-  "fetchedAt": "2026-11-27T06:18:48.263Z",
-  "inspected": 5387,
-  "matched": 5368,
+  "fetchedAt": "2026-11-27T12:18:11.791Z",
+  "inspected": 4829,
+  "matched": 4810,
   "source": "DART OpenAPI elestock.json"
 }
