@@ -221,10 +221,10 @@
       "id": "kr-bank",
       "name": "금융·은행",
       "market": "KR",
-      "changePct": -0.57,
-      "changePct1d": -0.57,
-      "changePct1w": -3.01,
-      "changePct1m": -1.85,
+      "changePct": -0.19,
+      "changePct1d": -0.19,
+      "changePct1w": -2.64,
+      "changePct1m": -1.48,
       "marketCapBillion": 0,
       "topTickers": [
         "KB금융",
@@ -334,7 +334,7 @@
       "ticker": "228820.KS"
     }
   ],
-  "fetchedAt": "2026-11-28T03:08:03.154Z",
+  "fetchedAt": "2026-11-28T09:08:24.048Z",
   "source": "Yahoo Finance (sector ETF proxies)",
   "count": {
     "total": 22,
